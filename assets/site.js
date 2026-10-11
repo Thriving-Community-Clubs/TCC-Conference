@@ -66,10 +66,16 @@
     var before = doc.getElementById("before");
     after.hidden = s !== "after";
     before.hidden = s === "after";
-    ORDER[s].forEach(function (id) {
+    var named = ORDER[s];
+    var unnamed = $all("#sections > section").filter(function (node) {
+      return named.indexOf(node.id) === -1 && node.id !== "after";
+    });
+    named.forEach(function (id) {
       var node = doc.getElementById(id);
       if (node) holder.appendChild(node);
     });
+    // Anything the list above does not name stays at the foot of the page.
+    unnamed.forEach(function (node) { holder.appendChild(node); });
   }
 
   /* ----- Day tabs ----- */

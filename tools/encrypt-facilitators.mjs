@@ -6,7 +6,7 @@
 
    The source file and the passcode must never be committed to this repository.
    Only the encrypted page this script writes is safe to publish. */
-import { pbkdf2Sync, randomBytes, createCipheriv } from "node:crypto";
+import { pbkdf2Sync, randomBytes, createCipheriv, createHash } from "node:crypto";
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join, resolve, relative } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -45,6 +45,10 @@ let source = readFileSync(sourcePath, "utf8").replace(/<!--[\s\S]*?-->/, "").tri
 if (!source.includes("{{PLAN}}")) console.warn("Note: no {{PLAN}} placeholder in the source.");
 source = source.replace("{{PLAN}}", plan);
 
+// Fingerprint added to each stylesheet and script address, so a browser never
+// pairs a new page with an older copy it has kept.
+const version = (path) => createHash("sha256").update(readFileSync(join(root, path))).digest("hex").slice(0, 10);
+
 const iter = 600000;
 const salt = randomBytes(16);
 const iv = randomBytes(12);
@@ -58,7 +62,10 @@ const payload = JSON.stringify({
 const updated = new Date().toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
 const page = readFileSync(join(here, "facilitators-shell.html"), "utf8")
   .replace("{{PAYLOAD}}", payload)
-  .replace("{{UPDATED}}", updated);
+  .replace("{{UPDATED}}", updated)
+  .replace("{{CSS_V}}", version("assets/site.css"))
+  .replace("{{FCSS_V}}", version("assets/facilitators.css"))
+  .replace("{{FJS_V}}", version("assets/facilitators.js"));
 
 mkdirSync(join(root, "facilitators"), { recursive: true });
 writeFileSync(join(root, "facilitators", "index.html"), page);

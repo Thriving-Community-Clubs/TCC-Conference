@@ -19,6 +19,13 @@ import content as C  # noqa: E402
 e = html.escape
 
 
+def version(path):
+    """Short fingerprint of a file, added to its address so browsers never pair
+    a new page with an older copy of the stylesheet or script."""
+    with open(os.path.join(ROOT, path), "rb") as f:
+        return hashlib.sha256(f.read()).hexdigest()[:10]
+
+
 def slide_name(key, page):
     return hashlib.sha256(f"tcc26-{key}-{page}".encode()).hexdigest()[:12] + ".webp"
 
@@ -289,6 +296,8 @@ def main():
         "LINK_DIRECTIONS": e(C.LINKS["directions"]),
         "FLOORPLAN": open(os.path.join(HERE, "floorplan.svg"), encoding="utf-8").read(),
         "UPDATED": updated,
+        "CSS_V": version("assets/site.css"),
+        "JS_V": version("assets/site.js"),
     }
     for k, v in values.items():
         tpl = tpl.replace("{{" + k + "}}", v)
