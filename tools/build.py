@@ -118,7 +118,11 @@ def session_html(day, s):
         label, href = s["more"]
         body.append(f'<p><a href="{e(href)}">{e(label)}</a></p>')
     if s.get("workbook"):
-        body.append(f'<p class="workbook">Workbook page {s["workbook"]}</p>')
+        n = s["workbook"]
+        if C.WORKBOOK_FILE:
+            body.append(f'<p class="workbook"><a href="#workbook-page-{n}">Workbook page {n}</a></p>')
+        else:
+            body.append(f'<p class="workbook">Workbook page {n}</p>')
     for key in s.get("slides", []):
         body.append(slides_block(day, start, key, s["title"]))
     if s.get("slides") or s.get("options"):
@@ -195,7 +199,7 @@ def contacts_html():
 
 
 def people_html():
-    h, k, i = C.HOST, C.KEYNOTE, C.ILLUSTRATOR
+    h, k = C.HOST, C.KEYNOTE
     bio_first = f"<p>{e(k['bio'][0])}</p>"
     bio_rest = "".join(f"<p>{e(par)}</p>" for par in k["bio"][1:])
     leads = "".join(
@@ -210,11 +214,7 @@ def people_html():
         f'<p class="slot">{e(k["session"])}</p></div>'
         f'<div class="bio">{bio_first}'
         f'<details class="fold"><summary>More about Sue</summary><div class="fold-body">{bio_rest}</div></details>'
-        '</div></article>'
-        f'<article class="person person-text"><div><h3>{e(i["name"])}</h3><p class="role">{e(i["role"])}</p></div>'
-        f'<div class="bio"><p>{e(i["about"])}</p>'
-        f'<p><a href="{e(i["link"][1])}" rel="noopener">{e(i["link"][0])}</a></p></div></article>'
-        '</div>'
+        '</div></article></div>'
         f'<h3 class="leads-title">Leading your sessions</h3><ul class="leads">{leads}</ul>'
     )
 
@@ -228,18 +228,44 @@ def after_html():
         )
     else:
         parts.append("<p>The feedback survey will be here shortly.</p>")
+    if C.WORKBOOK_FILE:
+        parts.append('<p>You can <a href="#workbook">read or download the workbook</a> further down this page.</p>')
     return "".join(parts)
 
 
 def workbook_html():
-    if C.WORKBOOK_FILE:
+    if not C.WORKBOOK_FILE:
         return (
-            f'<a href="{e(C.WORKBOOK_FILE)}">Delegate workbook (PDF)</a>'
-            "<span>View or download a digital copy.</span>"
+            '<div class="wb"><h3 id="workbook">Delegate workbook</h3>'
+            "<p>You will get a printed copy at registration. A digital copy to view and download will be here after the conference.</p></div>"
+        )
+    size = os.path.getsize(os.path.join(ROOT, C.WORKBOOK_FILE)) / 1e6
+    total = len(C.WORKBOOK_PAGES)
+    pages = []
+    for n, (printed, alt) in enumerate(C.WORKBOOK_PAGES, 1):
+        anchor = f' id="workbook-page-{printed}"' if printed else ""
+        label = f"Page {printed}" if printed else ""
+        cap = f"<figcaption>{label}</figcaption>" if label else ""
+        described = f"Workbook page {printed}. {alt}" if printed else alt
+        pages.append(
+            f'<li{anchor}><figure>{cap}<img src="workbook/page-{n:02d}.webp" alt="{e(described)}" '
+            f'width="1200" height="1696" loading="lazy" decoding="async"></figure></li>'
         )
     return (
-        "<strong>Delegate workbook</strong>"
-        "<span>You will get a printed copy at registration. A digital copy to view and download will be here after the conference.</span>"
+        '<div class="wb"><h3 id="workbook">Delegate workbook</h3>'
+        "<p>You will get a printed copy at registration. You can also read it here or download a copy to keep.</p>"
+        f'<p><a class="button button-outline" href="{e(C.WORKBOOK_FILE)}">Download the workbook (PDF, {size:.0f} MB)</a></p>'
+        f'<details class="fold" id="workbook-reader"><summary>Read the workbook here ({total} pages)</summary>'
+        f'<ol class="wb-pages">{"".join(pages)}</ol></details></div>'
+    )
+
+
+def illustrator_html():
+    i = C.ILLUSTRATOR
+    return (
+        f'<h3>{e(i["name"])}</h3><p class="role">{e(i["role"])}</p>'
+        f'<p>{e(i["about"])}</p>'
+        f'<p><a href="{e(i["link"][1])}" rel="noopener">{e(i["link"][0])}</a></p>'
     )
 
 
@@ -254,6 +280,7 @@ def main():
         "CONTACTS": contacts_html(),
         "AFTER": after_html(),
         "PEOPLE": people_html(),
+        "ILLUSTRATOR": illustrator_html(),
         "WORKBOOK": workbook_html(),
         "LINK_PARKING": e(C.LINKS["parking"]),
         "LINK_CHOICES": e(C.LINKS["choices"]),

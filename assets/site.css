@@ -235,14 +235,12 @@ ul, ol { padding: 0; list-style: none; }
 /* ---------- People ---------- */
 
 .people { display: grid; gap: 28px; margin-top: 18px; }
-.person { display: grid; grid-template-columns: 112px 1fr; gap: 16px; align-items: start; }
-.person img { width: 112px; height: 112px; object-fit: cover; }
-.person h3 { font: italic 700 24px/1.1 var(--font); color: var(--navy); }
+.person { display: grid; grid-template-columns: 76px 1fr; gap: 14px; align-items: start; }
+.person img { width: 76px; height: 76px; object-fit: cover; }
+.person h3 { font: italic 700 22px/1.1 var(--font); color: var(--navy); }
 .person .role { font-weight: 700; margin-top: 4px; }
 .person .slot { font-size: 15px; margin-top: 4px; }
 .person .bio { grid-column: 1 / -1; }
-.person-text { grid-template-columns: 1fr; }
-.person-text .bio { margin-top: -6px; }
 .person .bio p + p { margin-top: 10px; }
 .person .fold { margin-top: 12px; }
 .person .fold-body p + p { margin-top: 10px; }
@@ -285,6 +283,22 @@ ul, ol { padding: 0; list-style: none; }
 .key-conf { background: var(--navy); color: var(--white); }
 .key-line { border: var(--hair) solid var(--navy); color: var(--navy); }
 
+/* ---------- Workbook and illustrator ---------- */
+
+.wb { margin-top: 34px; }
+.wb h3 { margin-bottom: 6px; }
+.wb .button { margin-top: 4px; }
+.wb .fold { margin-top: 18px; }
+.wb-pages { padding-bottom: 18px; }
+.wb-pages li + li { margin-top: 18px; }
+.wb-pages figcaption { font: 700 15px/1.3 var(--font); margin-bottom: 6px; }
+.wb-pages img { width: 100%; border: var(--hair) solid var(--grey); background: var(--wash); }
+
+.illustrator { max-width: 62ch; }
+.illustrator h3 { font: italic 700 22px/1.1 var(--font); }
+.illustrator .role { font-weight: 700; margin-top: 4px; }
+#illustrator { padding-bottom: 36px; }
+
 /* ---------- Resources, contacts, footer ---------- */
 
 .links li { padding: 13px 0; border-top: var(--hair) solid var(--grey); }
@@ -305,12 +319,10 @@ ul, ol { padding: 0; list-style: none; }
 
 @media (min-width: 700px) {
   :root { --gutter: 24px; }
-  .person { grid-template-columns: 168px 1fr; gap: 22px; }
-  .person img { width: 168px; height: 168px; }
+  .person { grid-template-columns: 96px 1fr; gap: 18px; }
+  .person img { width: 96px; height: 96px; }
   .person .bio { grid-column: 2; }
-  .person-text { grid-template-columns: 1fr; }
-  .person-text .bio { grid-column: 1; max-width: 62ch; }
-  .leads { display: grid; grid-template-columns: 1fr 1fr; column-gap: 28px; }
+      .leads { display: grid; grid-template-columns: 1fr 1fr; column-gap: 28px; }
   .leads li:nth-last-child(2) { border-bottom: var(--hair) solid var(--grey); }
   body { font-size: 18px; }
   .row { grid-template-columns: 104px 1fr; }

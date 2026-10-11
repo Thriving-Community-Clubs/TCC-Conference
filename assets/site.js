@@ -42,9 +42,9 @@
   /* ----- Stage: before, during, after ----- */
 
   var ORDER = {
-    before: ["before", "agenda", "yours", "people", "venue", "getting", "resources", "help"],
-    during: ["agenda", "yours", "venue", "help", "people", "getting", "resources", "before"],
-    after: ["after", "agenda", "resources", "people", "help", "yours", "venue", "getting"]
+    before: ["before", "agenda", "yours", "people", "venue", "getting", "help", "resources", "illustrator"],
+    during: ["agenda", "yours", "venue", "help", "people", "getting", "before", "resources", "illustrator"],
+    after: ["after", "agenda", "people", "help", "yours", "venue", "getting", "resources", "illustrator"]
   };
   var currentStage = null;
 
@@ -108,6 +108,10 @@
     if (day) showDay(day.id, true);
     var d = target.matches("details") ? target : $("details", target);
     if (d && target.classList.contains("row")) d.open = true;
+    // Open anything folded away around the target, such as a workbook page.
+    for (var up = target.parentElement; up; up = up.parentElement) {
+      if (up.tagName === "DETAILS") up.open = true;
+    }
     target.scrollIntoView();
   }
   window.addEventListener("hashchange", revealTarget);

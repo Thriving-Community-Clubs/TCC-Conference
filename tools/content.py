@@ -14,8 +14,8 @@ SHOW_CLUB_STORIES = False
 SLIDO_URL = ""
 # Paste the feedback survey link here after the conference.
 FEEDBACK_URL = ""
-# Set to the workbook PDF path (for example "files/delegate-workbook.pdf") after the conference.
-WORKBOOK_FILE = ""
+# The workbook PDF, made by tools/make_workbook.py. Set to "" to take the workbook off the page.
+WORKBOOK_FILE = "files/delegate-workbook.pdf"
 
 LINKS = {
     "parking": "https://nottingham.firstparking.co.uk/Event/Register/hXFbnJEB",
@@ -51,6 +51,28 @@ ILLUSTRATOR = {
     "about": "Tom is a scribe artist who specialises in live visual capture for conferences, talks and events. He will be drawing the conference as it happens, and you will see his illustrations at the round up on both days.",
     "link": ("See Tom's work at scribeyak.com", "https://scribeyak.com/"),
 }
+
+# The workbook as shown on the page: (page number or None, description for people who cannot see the image).
+# The numbers printed in the workbook match the PDF's own page count (the cover is page 1).
+# One entry per page of the PDF, in order. Images are made by tools/make_workbook.py.
+WORKBOOK_PAGES = [
+    (None, "Front cover: Better Everywhere, Thriving Community Clubs Conference 2026."),
+    (None, "Photograph of a player with a football, framed by a white star."),
+    (3, "Welcome message."),
+    (4, "Your name and County FA, then starter questions on knowing my patch, teamwork and collaboration, and development mindset."),
+    (5, "Breakout workshops: space for notes on the workshop you attended."),
+    (6, "Teamwork and Collaboration: connect, share, steal or adapt, act, and a score from 1 to 10 for four challenges."),
+    (7, "Pillar Networking: root causes, barriers blocking progress, and tactics and interventions."),
+    (8, "Accelerating Progression: the Pyramid of Progression and a two-season plan by quarter."),
+    (9, "Empowering the Club Workforce: five questions on volunteer growth, development pathways and paid roles."),
+    (10, "Lead, Manage, Do: notes from the keynote and the three questions."),
+    (11, "Growing Pains: common pressures, common threads and how to spot them coming."),
+    (12, "Demonstrating Impact: the clubs you have supported and your approach to reviews."),
+    (13, "My Better Everywhere Gameplan and my commitment."),
+    (14, "Notes."),
+    (None, "Photograph of a young player smiling, framed by a white star."),
+    (None, "Back cover."),
+]
 
 # Name and job title, in the order they first appear on the agenda.
 SESSION_LEADS = [
@@ -124,7 +146,7 @@ DAY1 = [
     {"id": "d1-breakout", "kind": "session", "start": "11:00", "end": "12:00",
      "title": "Breakout workshops", "room": "Main Room 1 or Main Room 2",
      "who": "Go to the workshop you have been allocated",
-     "workbook": 4,
+     "workbook": 5,
      "options": [
          {"name": "A Digital Journey (Data and Digital)", "room": MR1,
           "who": "Tom Lee, Sarah Cummings and Luke Bailey",
@@ -140,26 +162,26 @@ DAY1 = [
      "title": "Teamwork and Collaboration", "room": "Starts in Main Room 1, then your group",
      "who": "Andy Clay",
      "about": "See what great collaboration looks like through real examples from across the network. Tackle a real challenge, see what colleagues elsewhere are doing, and decide what you are taking back. Leave with one thing somebody else is doing that could make your job easier.",
-     "workbook": 5, "groups": "d1",
+     "workbook": 6, "groups": "d1",
      "slides": ["d1-teamwork"]},
     {"id": "d1-pillar", "kind": "session", "start": "14:00", "end": "15:00",
      "title": "Pillar Networking", "room": "Starts in Main Room 1, then your pillar",
      "who": "Sarah Cummings",
      "about": "Use your own Club Development Review data to get underneath the red and amber ratings on your pillar: the root causes, what is blocking progress, and the tactics and interventions that would fix both.",
-     "workbook": 6, "pillars": True,
+     "workbook": 7, "pillars": True,
      "slides": ["d1-pillar"]},
     {"id": "d1-break", "kind": "pause", "start": "15:00", "end": "15:20", "title": "Break"},
     {"id": "d1-progression", "kind": "session", "start": "15:20", "end": "16:10",
      "title": "Accelerating Progression", "room": "Starts in Main Room 1, then find a space in any of the four rooms",
      "who": "Tom Lee",
      "about": "Turn what you learned in Pillar Networking into a two-season plan for your Thriving Community Clubs: what comes first, what comes second, and when FA Club Consultant one-to-one support is deployed.",
-     "workbook": 7,
+     "workbook": 8,
      "slides": ["d1-progression"]},
     {"id": "d1-roundup", "kind": "session", "start": "16:10", "end": "16:30",
      "title": "Day 1 round up and group photo", "room": MR1,
      "who": "Charlotte Richardson and Tom Lee",
      "about": "We pull the day together, Tom Bradshaw shares the illustrations he has drawn so far, and we finish with a group photo.",
-     "more": ("About Tom Bradshaw", "#people")},
+     "more": ("About Tom Bradshaw", "#illustrator")},
     {"id": "d1-checkin", "kind": "pause", "start": "16:30", "end": "19:00",
      "title": "Hotel check-in and downtime",
      "note": "Check in at The Orchard Hotel, use the facilities, catch up with colleagues or just relax."},
@@ -179,7 +201,7 @@ DAY2 = [
      "title": "Empowering the Club Workforce", "room": MR1,
      "who": "Steph Powell, Ellie Reid, Mick Baikie and Laura Smith",
      "about": "Understand the volunteer development framework and find practical ways to support off-pitch volunteers. By the end you will have the makings of a County FA plan and a club-based plan covering growth, development, diversification and celebration.",
-     "workbook": 8,
+     "workbook": 9,
      "slides": ["d2-workforce"]},
     {"id": "d2-club1", "kind": "session", "club": True, "start": "10:30", "end": "10:50",
      "title": "Club story: AFC Pogmoor", "room": MR1,
@@ -190,19 +212,19 @@ DAY2 = [
      "who": "Sue Day MBE, Director of Women's Football at The FA, with Charlotte Richardson",
      "about": "Our keynote from Sue Day. There is space for your notes in the workbook.",
      "more": ("About Sue Day", "#people"),
-     "workbook": 9},
+     "workbook": 10},
     {"id": "d2-lmd", "kind": "session", "start": "12:00", "end": "12:30",
      "title": "Lead, Manage, Do", "room": "Starts in Main Room 1, then your group",
      "who": "Andy Clay",
      "about": "Are we actually putting it into practice? Peer-to-peer conversations built on real examples and three questions: what needs to happen, who have I got around me, and what is my role?",
-     "workbook": 9, "groups": "d2",
+     "workbook": 10, "groups": "d2",
      "slides": ["d2-lmd"]},
     {"id": "d2-lunch", "kind": "pause", "start": "12:30", "end": "13:30", "title": "Lunch"},
     {"id": "d2-growing", "kind": "session", "start": "13:30", "end": "14:30", "end_clubs": "14:10",
      "title": "Growing Pains", "room": MR1,
      "who": "Richard Neal, Frank Bell and Mark Pover",
      "about": "Get ready for the growth pressures that come with Thriving Community Clubs, with real examples. Leave knowing the pressures clubs face when they grow quickly, how to spot them on the horizon, and what to have ready.",
-     "workbook": 10},
+     "workbook": 11},
     {"id": "d2-club2", "kind": "session", "club": True, "start": "14:10", "end": "14:30",
      "title": "Club story: Knowle FC", "room": MR1,
      "who": "In conversation with Charlotte Richardson"},
@@ -210,7 +232,7 @@ DAY2 = [
      "title": "Demonstrating Impact", "room": MR1,
      "who": "Sarah Cummings and Luke Bailey",
      "about": "How we demonstrate real impact through Club Development Reviews, what those reviews look like, and what to expect for your clubs and your county.",
-     "workbook": 11,
+     "workbook": 12,
      "slides": ["d2-impact"]},
     {"id": "d2-club3", "kind": "session", "club": True, "start": "14:40", "end": "15:00",
      "title": "Club story: Brereton FC", "room": MR1,
@@ -224,7 +246,7 @@ DAY2 = [
      "title": "Day 2 round up and conference reflections", "room": MR1,
      "who": "Charlotte Richardson and Tom Lee",
      "about": "Bring the two days together in your Better Everywhere Gameplan, with Tom Bradshaw's illustrations of the conference. Write your pledge in your workbook, then share a short version on Slido.",
-     "workbook": 12,
+     "workbook": 13,
      "slides": ["d2-roundup"]},
     {"id": "d2-depart", "kind": "pause", "start": "15:45", "end": "15:45", "hide_end": True,
      "title": "Conference closes"},

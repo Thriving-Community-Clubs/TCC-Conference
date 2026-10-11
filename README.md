@@ -21,7 +21,8 @@ After a change, run this from the top of the repository:
 | --- | --- |
 | Add the Slido link | `SLIDO_URL` |
 | Add the feedback survey after the conference | `FEEDBACK_URL` |
-| Publish the digital workbook | put the PDF in `files/` and set `WORKBOOK_FILE` |
+| Replace the workbook | run `python3 tools/make_workbook.py "/path/to/workbook.pdf"`, check `WORKBOOK_PAGES`, rebuild |
+| Take the workbook off the page | set `WORKBOOK_FILE = ""` |
 | Show the three club stories on Day 2 | `SHOW_CLUB_STORIES = True` |
 | Change which slides delegates see | `SLIDE_PAGES` (page numbers of the master deck PDF), then re-run `make_slides.py` |
 
