@@ -2,7 +2,11 @@
 """Prepares a resource (an image or a PDF) for showing on the page.
 
 Usage (from the repository root):
-    python3 tools/add_resource.py <short-name> "/path/to/file.png-or-pdf"
+    python3 tools/add_resource.py <short-name> "/path/to/file.png-or-pdf" [--split-spreads] [--keep-whole=2,5]
+
+--split-spreads cuts each double-width PDF page (two pages side by side) into two
+single pages, which are far easier to read on a phone. --keep-whole lists PDF pages
+to leave uncut, for example artwork that runs across both halves.
 
 Writes resources/<short-name>/page-1.webp (one image per page for a PDF) and,
 for a PDF, a copy at files/<short-name>.pdf for download. It prints the lines
@@ -32,9 +36,16 @@ def save(im, out):
 
 
 def main():
-    if len(sys.argv) != 3:
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    flags = [a for a in sys.argv[1:] if a.startswith("--")]
+    if len(args) != 2:
         raise SystemExit(__doc__)
-    name, src = sys.argv[1], sys.argv[2]
+    name, src = args
+    split = "--split-spreads" in flags
+    keep = set()
+    for f in flags:
+        if f.startswith("--keep-whole="):
+            keep = {int(n) for n in f.split("=", 1)[1].split(",") if n}
     out_dir = os.path.join(ROOT, "resources", name)
     os.makedirs(out_dir, exist_ok=True)
     for old in glob.glob(os.path.join(out_dir, "*.webp")):
@@ -47,9 +58,17 @@ def main():
         shutil.copyfile(src, os.path.join(ROOT, pdf))
         with tempfile.TemporaryDirectory() as tmp:
             subprocess.run(["pdftoppm", "-r", "150", "-png", src, os.path.join(tmp, "p")], check=True)
+            out = 0
             for n, png in enumerate(sorted(glob.glob(os.path.join(tmp, "p-*.png"))), 1):
-                rel = f"resources/{name}/page-{n}.webp"
-                pages.append((rel, save(Image.open(png), os.path.join(ROOT, rel))))
+                im = Image.open(png)
+                halves = [im]
+                if split and n not in keep and im.width > im.height * 1.6:
+                    mid = im.width // 2
+                    halves = [im.crop((0, 0, mid, im.height)), im.crop((mid, 0, im.width, im.height))]
+                for part in halves:
+                    out += 1
+                    rel = f"resources/{name}/page-{out}.webp"
+                    pages.append((rel, save(part, os.path.join(ROOT, rel))))
     else:
         rel = f"resources/{name}/page-1.webp"
         pages.append((rel, save(Image.open(src), os.path.join(ROOT, rel))))

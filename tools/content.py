@@ -138,7 +138,8 @@ PILLAR_ROOMS = [
 
 # Resources shown under a pillar in the Pillar Networking session.
 # Keyed by the pillar name used in PILLAR_ROOMS. Prepare files with tools/add_resource.py.
-# Each page is (image path, width, height, description for people who cannot see it).
+# Each page is (image path, width, height, description for people who cannot see it[, caption]).
+# The caption defaults to "Page n of N".
 PILLAR_RESOURCES = {
     "Leadership & Governance": [
         {
@@ -216,6 +217,128 @@ PILLAR_RESOURCES = {
                 ]),
                 ("Volunteer planning, in the PlayBook", [
                     ("Open the PlayBook (log in needed)", "https://theplaybook.thefa.com/dashboard"),
+                ]),
+            ],
+        },
+    ],
+    "Facilities": [
+        {
+            "title": "Facilities: help and support guide",
+            "pdf": "files/facilities-support-guide.pdf",
+            "pages": [
+                ("resources/facilities-support-guide/page-1.webp", 1241, 1754,
+                 "Facilities help and support guide, page 1. Everything currently available to help clubs improve, fund, run and look after their pitches and facilities. One, facilities guidance from England Football: pavilion and changing room guidance, pitch and goalpost safety, grass pitch use during drought, and hosting an InPost locker. Two, funding for facilities from the Football Foundation, covering pitches, buildings and site, equipment and safety, and programmes, with a note of what is not funded. The links are listed below the pages."),
+                ("resources/facilities-support-guide/page-2.webp", 1241, 1754,
+                 "Facilities help and support guide, page 2. Three, the Community Engagement Toolkit from the Football Foundation and its five stages of engagement. Four, The Greener Game with E.ON Next. Five, saving energy. Six, workshops and guides in the PlayBook: the 3G Pitch Activation Workshop, the Facilities Grass Pitches Workshop, the Home Advantage Programme guide and the Facilities and Investment Technical Expertise reference guide."),
+            ],
+            "links": [
+                ("Facilities guidance, England Football", [
+                    ("Go to Facilities Guidance", "https://www.englandfootball.com/participate/leagues-and-clubs/Facilities-Guidance"),
+                    ("Pavilion and Changing Room Guidance (PDF)", "https://cdn.englandfootball.com/-/media/EnglandFootball/Files/run/leagues-and-clubs/PAVILION-AND-CHANGING-ROOM-GUIDANCE.pdf?rev=b4684735da3749419418d492815cc66f"),
+                    ("Pitch and Goalpost Safety (PDF)", "https://cdn.englandfootball.com/-/media/EnglandFootball/Files/run/leagues-and-clubs/FA-Guide-to-pitch-and-goalpost-safety.pdf?rev=47beadcc779549a4a54604f49cb4c345"),
+                    ("Grass Pitch Use During Drought (PDF)", "https://cdn.englandfootball.com/-/media/EnglandFootball/Files/run/leagues-and-clubs/Grass-Pitch-Usage-During-Drought---Guidance-for-Clubs-Leagues-and-Match-Officials.pdf?rev=b399d4fa79734f51af52ace0298d0572"),
+                    ("Host an InPost locker", "https://www.englandfootball.com/participate/leagues-and-clubs/InPost"),
+                ]),
+                ("Funding for facilities, Football Foundation", [
+                    ("See all funding", "https://footballfoundation.org.uk/looking-for-funding"),
+                    ("3G Pitches", "https://footballfoundation.org.uk/grant/3g-pitch"),
+                    ("Grass Pitch improvement", "https://footballfoundation.org.uk/get-your-pitch-match-fit"),
+                    ("Creation of new grass pitches", "https://footballfoundation.org.uk/grant/new-grass-pitch"),
+                    ("Grass Pitch Drainage", "https://footballfoundation.org.uk/grant/grass-pitch-drainage"),
+                    ("Small-sided facility improvements", "https://footballfoundation.org.uk/grant/playing-surface-improvement"),
+                    ("Changing Pavilions & Clubhouses", "https://footballfoundation.org.uk/grant/changing-pavilions-and-clubhouses"),
+                    ("Catering Units", "https://footballfoundation.org.uk/grant/Catering-Unit"),
+                    ("Storage Containers", "https://footballfoundation.org.uk/grant/storage-containers"),
+                    ("Fencing", "https://footballfoundation.org.uk/grant/fencing"),
+                    ("Goalposts", "https://footballfoundation.org.uk/grant/goalposts"),
+                    ("3G Pitch Maintenance Machinery & Equipment", "https://footballfoundation.org.uk/grant/3g-maintenance"),
+                    ("Grass Pitch Maintenance Machinery & Equipment", "https://footballfoundation.org.uk/grant/grass-pitch-maintenance-machinery-and-equipment"),
+                    ("Premier League Defibrillator Fund", "https://footballfoundation.org.uk/grant/premier-league-defibrillator-fund"),
+                    ("PlayZones", "https://footballfoundation.org.uk/playzones-programme"),
+                    ("Hubs", "https://footballfoundation.org.uk/hubs-programme"),
+                    ("Active Through Football", "https://footballfoundation.org.uk/active-through-football"),
+                    ("Lionesses HERe to Play Fund", "https://footballfoundation.org.uk/lionesses-here-to-play"),
+                    ("Premier League Stadium Fund", "https://premierleaguestadiumfund.co.uk/"),
+                ]),
+                ("Community Engagement Toolkit, Football Foundation", [
+                    ("Open the toolkit", "https://footballfoundation.org.uk/Community-Engagement-Toolkit"),
+                    ("Guidance by facility type", "https://footballfoundation.org.uk/cet-home-page/facility-types"),
+                    ("Guidance by priority group", "https://footballfoundation.org.uk/cet-home-page/under-represented-audiences"),
+                ]),
+                ("The Greener Game, with E.ON Next", [
+                    ("About the Greener Game", "https://www.englandfootball.com/participate/leagues-and-clubs/Greener-Game"),
+                    ("Join the programme", "https://app.smartsheet.com/b/form/072c1176827c4c209d776ad83d66383e"),
+                    ("Request the free energy support pack", "https://app.smartsheet.com/b/form/d16b72b54a1a4e9384e097523fa42f2d"),
+                    ("Email greenergame@thefa.com", "mailto:greenergame@thefa.com?subject=Greener%20Game"),
+                ]),
+                ("Saving energy, Football Foundation", [
+                    ("Read all the energy-saving tips", "https://footballfoundation.org.uk/energy-saving-hints-tips"),
+                ]),
+                ("Workshops and guides, in the PlayBook", [
+                    ("Open the PlayBook (log in needed)", "https://theplaybook.thefa.com/dashboard"),
+                ]),
+            ],
+        },
+        {
+            "title": "Howdens Game Changer Programme: application guidance for clubs",
+            "pdf": "files/howdens-game-changer-application-guidance.pdf",
+            "links_label": "Links from this guidance",
+            "pages": [
+                ("resources/howdens-game-changer-application-guidance/page-1.webp", 1241, 1241,
+                 "Front cover: Howdens Game Changer Programme, application guidance for clubs.", "Page 1 of 24"),
+                ("resources/howdens-game-changer-application-guidance/page-2.webp", 1400, 700,
+                 "Transforming kitchens for clubs and communities.", "Pages 2 and 3 of 24"),
+                ("resources/howdens-game-changer-application-guidance/page-3.webp", 1240, 1241,
+                 "Photograph of a newly fitted club kitchen.", "Page 4 of 24"),
+                ("resources/howdens-game-changer-application-guidance/page-4.webp", 1241, 1241,
+                 "Welcome. Howdens and The FA have extended their partnership for another year to offer more grassroots clubs the opportunity to apply for a Howdens kitchen. Applications for the 2026 programme open on 1 September 2026 and close on 31 October 2026. From James Kendall, Director of Football Development, The FA.", "Page 5 of 24"),
+                ("resources/howdens-game-changer-application-guidance/page-5.webp", 1240, 1241,
+                 "Photograph of a Howdens Game Changer Programme sign.", "Page 6 of 24"),
+                ("resources/howdens-game-changer-application-guidance/page-6.webp", 1241, 1241,
+                 "About the programme. Howdens partnered with The FA in 2023 to invest 3 million pounds in improving grassroots club kitchens, with a further 1 million pounds now secured.", "Page 7 of 24"),
+                ("resources/howdens-game-changer-application-guidance/page-7.webp", 1240, 1241,
+                 "Who can apply? England Football Accredited clubs that are 2 or 3 star, or 1 star with at least six teams, including National League Pyramid clubs. The club must own its facilities, or have a lease or licence of five years or longer with the landlord's consent.", "Page 8 of 24"),
+                ("resources/howdens-game-changer-application-guidance/page-8.webp", 1241, 1241,
+                 "Who can't apply? Clubs outside those accreditation levels, individuals and sole traders, national governing bodies, Premier League and Football League clubs, educational establishments providing facilities solely for their students, local authorities and professional club community organisations.", "Page 9 of 24"),
+                ("resources/howdens-game-changer-application-guidance/page-9.webp", 1240, 1241,
+                 "What we will support: Howdens supplies the kitchen, including cabinets, worktops, sinks, taps and appliances. What we will not support: plumbing and electrical work, flooring, decoration, furniture, small freestanding appliances and structural works.", "Page 10 of 24"),
+                ("resources/howdens-game-changer-application-guidance/page-10.webp", 1241, 1241,
+                 "Photograph of a football in front of a goal.", "Page 11 of 24"),
+                ("resources/howdens-game-changer-application-guidance/page-11.webp", 1240, 1241,
+                 "Photograph of a club kitchen with a coffee machine and drinks fridge.", "Page 12 of 24"),
+                ("resources/howdens-game-changer-application-guidance/page-12.webp", 1241, 1241,
+                 "What do you need to consider before getting started on your application? Things to consider, and the types of projects the programme wants to fund.", "Page 13 of 24"),
+                ("resources/howdens-game-changer-application-guidance/page-13.webp", 1240, 1241,
+                 "A hand-drawn sketch plan of a kitchen and servery, with measurements.", "Page 14 of 24"),
+                ("resources/howdens-game-changer-application-guidance/page-14.webp", 1241, 1241,
+                 "Getting started with your application: the form must be completed in one go, and what to include with it, such as a dimensioned sketch plan, photos, evidence of security of tenure, landlord's consent and insurance.", "Page 15 of 24"),
+                ("resources/howdens-game-changer-application-guidance/page-15.webp", 1240, 1241,
+                 "Getting started with your application, continued. How your application will be assessed: during November and December 2026, with decisions in February 2027, and the criteria used to prioritise.", "Page 16 of 24"),
+                ("resources/howdens-game-changer-application-guidance/page-16.webp", 1241, 1241,
+                 "If you are successful, what happens next: the award pack, the on-site meeting with your local Howdens depot and fitter, design, sign-off and installation.", "Page 17 of 24"),
+                ("resources/howdens-game-changer-application-guidance/page-17.webp", 1240, 1241,
+                 "Frequently asked questions: what the award can be used for, refurbishment and redecoration, accepting the award, and how the project is monitored.", "Page 18 of 24"),
+                ("resources/howdens-game-changer-application-guidance/page-18.webp", 1241, 1241,
+                 "Frequently asked questions on eligibility and the application process: when the window is open, how long the form takes, bid consultants, and who is eligible.", "Page 19 of 24"),
+                ("resources/howdens-game-changer-application-guidance/page-19.webp", 1240, 1241,
+                 "Frequently asked questions, continued: security of tenure, not nominating a fitter, and clubs with more than one site.", "Page 20 of 24"),
+                ("resources/howdens-game-changer-application-guidance/page-20.webp", 1241, 1241,
+                 "Photograph of a circular saw cutting a worktop, with the words Crafted at the heart of your community.", "Page 21 of 24"),
+                ("resources/howdens-game-changer-application-guidance/page-21.webp", 1240, 1241,
+                 "Frequently asked questions, continued: how to apply, previous Football Foundation funding, when you will hear, installation timing, work already started, reapplying and why an application might be rejected.", "Page 22 of 24"),
+                ("resources/howdens-game-changer-application-guidance/page-22.webp", 1241, 1241,
+                 "Frequently asked questions, continued: funding for other works, who to contact, who funds the programme, its aim, and other Football Foundation grants.", "Page 23 of 24"),
+                ("resources/howdens-game-changer-application-guidance/page-23.webp", 1241, 1241,
+                 "Back cover.", "Page 24 of 24"),
+            ],
+            "links": [
+                ("Applying", [
+                    ("Open the application form", "https://app.smartsheet.com/b/form/019fced56c2c7dc6bfcba19ca698bea7"),
+                    ("Email howdens@footballfoundation.org.uk", "mailto:howdens@footballfoundation.org.uk"),
+                ]),
+                ("Related", [
+                    ("View the Howdens kitchen range", "https://eng.football/dINMCN"),
+                    ("Premier League Stadium Fund: clubhouses grant information", "https://premierleaguestadiumfund.co.uk/clubhouses-grant-information"),
                 ]),
             ],
         },

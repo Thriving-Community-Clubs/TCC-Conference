@@ -101,8 +101,10 @@ def resources_fold(pillar):
         pages = item["pages"]
         many = len(pages) > 1
         figures = []
-        for n, (src, w, h, alt) in enumerate(pages, 1):
-            cap = f'<span class="res-count">Page {n} of {len(pages)}</span>' if many else ""
+        for n, page in enumerate(pages, 1):
+            src, w, h, alt = page[:4]
+            label = page[4] if len(page) > 4 else f"Page {n} of {len(pages)}"
+            cap = f'<span class="res-count">{e(label)}</span>' if many else ""
             figures.append(
                 f'{cap}<a href="{e(src)}" target="_blank" rel="noopener">'
                 f'<img src="{e(src)}" alt="{e(alt)}" width="{w}" height="{h}" loading="lazy" decoding="async"></a>'
@@ -121,13 +123,21 @@ def resources_fold(pillar):
                 for heading, group in item["links"]
             )
             links_html = (
-                f'<details class="fold res-links"><summary>Links from this guide ({total})</summary>'
+                f'<details class="fold res-links"><summary>{e(item.get("links_label", "Links from this guide"))} ({total})</summary>'
                 f'<div class="fold-body">{groups}</div></details>'
             )
         tip = "Tap a page to enlarge it." if many else "Tap the image to enlarge it."
+        # A long document shows its first page, with the rest folded away.
+        if len(figures) > 4:
+            shown = figures[0] + (
+                f'<details class="fold res-more"><summary>Show the other {len(figures) - 1} pages</summary>'
+                f'<div class="fold-body">{"".join(figures[1:])}</div></details>'
+            )
+        else:
+            shown = "".join(figures)
         out.append(
             f'<figure class="res-item"><figcaption>{e(item["title"])}</figcaption>'
-            f'{"".join(figures)}<p class="hint">{tip} {link}</p>{links_html}</figure>'
+            f'{shown}<p class="hint">{tip} {link}</p>{links_html}</figure>'
         )
     return (
         f'<details class="fold res"><summary>Resources for {e(pillar)} ({len(items)})</summary>'

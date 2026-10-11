@@ -194,9 +194,10 @@ ul, ol { padding: 0; list-style: none; }
 .res-item a + .res-count { margin-top: 14px; }
 .res-count { display: block; font-size: 14px; margin-bottom: 4px; }
 .res-item .hint { margin-top: 6px; }
-.pillars .res .res-links { margin-top: 10px; border-top: var(--hair) solid var(--grey); border-bottom: var(--hair) solid var(--grey); }
-.pillars .res .res-links > summary { color: var(--navy); }
-.pillars .res .res-links .fold-body { margin-left: 0; padding-bottom: 12px; }
+.pillars .res .res-links, .pillars .res .res-more { margin-top: 10px; border-top: var(--hair) solid var(--grey); border-bottom: var(--hair) solid var(--grey); }
+.pillars .res .res-links > summary, .pillars .res .res-more > summary { color: var(--navy); }
+.pillars .res .res-links .fold-body, .pillars .res .res-more .fold-body { margin-left: 0; padding-bottom: 12px; }
+.res-more .res-count:first-child { margin-top: 2px; }
 .res-group { font: 700 15px/1.3 var(--font); margin: 12px 0 4px; }
 .res-links ul { list-style: none; padding: 0; }
 .res-links li { padding: 7px 0; font-size: 16px; line-height: 1.35; }
