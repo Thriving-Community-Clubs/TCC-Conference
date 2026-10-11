@@ -183,6 +183,43 @@ PILLAR_RESOURCES = {
             ],
         },
     ],
+    "Volunteers": [
+        {
+            "title": "Volunteers: help and support guide",
+            "pdf": "files/volunteers-support-guide.pdf",
+            "pages": [
+                ("resources/volunteers-support-guide/page-1.webp", 1241, 1754,
+                 "Volunteers help and support guide, page 1. Everything currently available to help clubs and leagues recruit, develop, keep and celebrate their volunteers. One, learning and development from England Football Learning: The FA Club Maker, Run Football Club Edition, Run Football League Edition, EE Playmaker, the Personal Development Compass and England Football Learning. Two, Growing Volunteers from England Football, with resources to download: Volunteer Planning Toolkit, Volunteer Welcome Pack, Volunteer Roles and Tasks guide, Football Volunteer Agreement, volunteer profile videos and editable role profiles. The links are listed below the pages."),
+                ("resources/volunteers-support-guide/page-2.webp", 1241, 1754,
+                 "Volunteers help and support guide, page 2. Three, celebrating volunteers with The England Football Family: membership, the Grassroots Football Awards, thank-you films and finding volunteering opportunities. Four, volunteer planning in the PlayBook: the Volunteer Planning Toolkit for clubs and leagues, the Volunteer Planning Workshop for workshop delivery, and the Volunteer Planning Checklist for County FAs."),
+            ],
+            # The guide's links, so they can be opened from the page. The image of the guide cannot be clicked.
+            "links": [
+                ("Learning and development, England Football Learning", [
+                    ("See all volunteer courses", "https://www.englandfootball.com/participate/volunteer/Learning-and-Development-for-Volunteers"),
+                    ("The FA Club Maker", "https://learn.englandfootball.com/mylearning?courseUrl=https://mylearning.englandfootball.com/learn/courses/232/club-maker"),
+                    ("Run Football: Club Edition", "https://learn.englandfootball.com/mylearning?courseUrl=https://mylearning.englandfootball.com/learn/courses/233/run-football-club-edition/"),
+                    ("Run Football: League Edition", "https://mylearning.englandfootball.com/learn/courses/390/run-football-league-edition/lessons"),
+                    ("EE Playmaker", "https://learn.englandfootball.com/courses/football/ee-playmaker"),
+                    ("Personal Development Compass", "https://mylearning.englandfootball.com/learn/courses/388/personal-development-compass-building-personal-capability/lessons"),
+                    ("Personal Development Compass workbooks", "https://community.thefa.com/youth-leadership-volunteering/b/latest-news/posts/england-football-personal-development-compass-workbooks"),
+                    ("England Football Learning", "https://learn.englandfootball.com/"),
+                ]),
+                ("Growing volunteers, England Football", [
+                    ("Go to Growing Volunteers", "https://www.englandfootball.com/participate/volunteer/Growing-Volunteers"),
+                    ("Find volunteering opportunities on Find Football", "https://find.englandfootball.com/onboarding/volunteer"),
+                ]),
+                ("Celebrating volunteers, The England Football Family", [
+                    ("Go to Celebrating Volunteers and the Volunteer Video Hub", "https://www.englandfootball.com/participate/volunteer/Celebrating-Volunteers"),
+                    ("Join the England Football Family", "https://www.englandfootball.com/participate/volunteer/Volunteer-Membership-Registration"),
+                    ("Grassroots Football Awards", "https://www.englandfootball.com/participate/Grassroots-Football-Awards"),
+                ]),
+                ("Volunteer planning, in the PlayBook", [
+                    ("Open the PlayBook (log in needed)", "https://theplaybook.thefa.com/dashboard"),
+                ]),
+            ],
+        },
+    ],
     "Coaches": [
         {
             "title": "County FA Coach Development Lead: role purpose",
