@@ -205,23 +205,30 @@ def contacts_html():
     )
 
 
+def person_card(d):
+    """Photo, name and role, then the first paragraph of the bio with the rest folded away."""
+    slot = f'<p class="slot">{e(d["session"])}</p>' if d.get("session") else ""
+    bio = d.get("bio") or []
+    bio_html = ""
+    if bio:
+        rest = "".join(f"<p>{e(par)}</p>" for par in bio[1:])
+        fold = (
+            f'<details class="fold"><summary>More about {e(d["first"])}</summary>'
+            f'<div class="fold-body">{rest}</div></details>'
+        ) if rest else ""
+        bio_html = f'<div class="bio"><p>{e(bio[0])}</p>{fold}</div>'
+    return (
+        f'<article class="person"><img src="{d["photo"]}" alt="{e(d["alt"])}" width="480" height="480" loading="lazy">'
+        f'<div><h3>{e(d["name"])}</h3><p class="role">{e(d["role"])}</p>{slot}</div>{bio_html}</article>'
+    )
+
+
 def people_html():
-    h, k = C.HOST, C.KEYNOTE
-    bio_first = f"<p>{e(k['bio'][0])}</p>"
-    bio_rest = "".join(f"<p>{e(par)}</p>" for par in k["bio"][1:])
     leads = "".join(
         f'<li><strong>{e(n)}</strong><span>{e(t)}</span></li>' for n, t in C.SESSION_LEADS
     )
     return (
-        '<div class="people">'
-        f'<article class="person"><img src="{h["photo"]}" alt="{e(h["alt"])}" width="480" height="480" loading="lazy">'
-        f'<div><h3>{e(h["name"])}</h3><p class="role">{e(h["role"])}</p></div></article>'
-        f'<article class="person"><img src="{k["photo"]}" alt="{e(k["alt"])}" width="480" height="480" loading="lazy">'
-        f'<div><h3>{e(k["name"])}</h3><p class="role">{e(k["role"])}</p>'
-        f'<p class="slot">{e(k["session"])}</p></div>'
-        f'<div class="bio">{bio_first}'
-        f'<details class="fold"><summary>More about Sue</summary><div class="fold-body">{bio_rest}</div></details>'
-        '</div></article></div>'
+        f'<div class="people">{person_card(C.HOST)}{person_card(C.KEYNOTE)}</div>'
         f'<h3 class="leads-title">Leading your sessions</h3><ul class="leads">{leads}</ul>'
     )
 

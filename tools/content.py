@@ -32,11 +32,17 @@ CONTACTS = [
 ]
 
 # People shown on the delegate page.
-HOST = {"name": "Charlotte Richardson", "role": "Your host", "photo": "img/charlotte-richardson.webp",
-        "alt": "Charlotte Richardson"}
+HOST = {
+    "name": "Charlotte Richardson", "first": "Charlotte", "role": "Sports broadcaster and conference host",
+    "photo": "img/charlotte-richardson.webp", "alt": "Charlotte Richardson",
+    "bio": [
+        "Charlotte is a freelance presenter, reporter and football commentator who became talkSPORT's first female commentator and covers the whole football pyramid on radio and TV. Her broadcasting career began in BBC local radio before she was chosen to report for Final Score, and she is a regular voice on Times Radio Breakfast and a pitch-side presenter and live host for Charlton TV at The Valley.",
+        "Grassroots football runs through her work. She is an FA Club Consultant and travels the country presenting the FA Club Hub podcast, In The Box, and before moving into broadcasting she worked in marketing and communications at Gillingham FC and Kent FA. In 2016 she founded Eighth Wonder, a programme to develop football's future female leaders, aimed at 14 to 20 year olds, which has helped more than 35 women into coaching.",
+    ],
+}
 
 KEYNOTE = {
-    "name": "Sue Day MBE", "role": "Director of Women's Football, The FA", "photo": "img/sue-day.webp",
+    "name": "Sue Day MBE", "first": "Sue", "role": "Director of Women's Football, The FA", "photo": "img/sue-day.webp",
     "alt": "Sue Day",
     "session": "Keynote: Leading the Orchestra. Day 2, 11.10am, Main Room 1.",
     "bio": [
