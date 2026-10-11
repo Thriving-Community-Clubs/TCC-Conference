@@ -136,6 +136,40 @@ PILLAR_ROOMS = [
     ("Community", "community", MR1, "Sarah Cummings, Andy Baker and Rus Smith"),
 ]
 
+# Resources shown under a pillar in the Pillar Networking session.
+# Keyed by the pillar name used in PILLAR_ROOMS. Prepare files with tools/add_resource.py.
+# Each page is (image path, width, height, description for people who cannot see it).
+PILLAR_RESOURCES = {
+    "Coaches": [
+        {
+            "title": "County FA Coach Development Lead: role purpose",
+            "pages": [
+                ("resources/coach-development-lead-role-purpose/page-1.webp", 1400, 787,
+                 "County FA Coach Development Lead role purpose. One, support sustainable clubs: support England Football Accredited Clubs to become more sustainable by embedding the Thriving Community Club framework, aligning support services and facilitating collaboration between stakeholders. Two, grow coaching and coach development: lead the growth and sustainability of high-quality coaching and coach development in England Football Accredited Clubs, working with Coaching Leads on people-centred programmes aligned with the FA Learning Coach Development Framework. Three, create meaningful learning opportunities: ensure all coaches have access to meaningful learning, mentoring and development that helps them create positive experiences for every player. Question: how could you collaborate to overcome some of the coach and volunteer challenges faced by your clubs?"),
+            ],
+        },
+        {
+            "title": "Club Coaching Leads Development Programme: what, so what, now what?",
+            "pages": [
+                ("resources/club-coaching-leads-development-programme/page-1.webp", 1086, 1448,
+                 "Club Coaching Leads Development Programme. Purpose: support the coaching pillar of the Thriving Community Club framework; 4,000 trained club coaching leads deployed within 2 and 3 star England Accredited clubs; 25% of coaches attending local CPD. To date: pilot programmes, consultation, content build, consultation, content design, consultation, roll out. Build considerations: FA Learning principles, adult learning principles, FA coach developer framework, enquiry-based learning, prior mentor developer series. Delivered by County FA coach development leads; Band 1 counties can nominate a casual coach developer to support, and Band 2 to 5 counties can propose one based on capacity, approved at the discretion of the regional manager. Coming next: training and familiarisation, monitoring and evaluation, ongoing support and development, retaining FA Club Coaching Lead status, alignment with England Accredited Clubs renewal, reward and recognition, scope of delivery, and a blended approach."),
+            ],
+        },
+        {
+            "title": "Game plan for grassroots coaching",
+            "pdf": "files/game-plan-for-grassroots-coaching.pdf",
+            "pages": [
+                ("resources/game-plan-for-grassroots-coaching/page-1.webp", 1400, 788,
+                 "Game plan for grassroots coaching: developing coaches, inspiring players, strengthening communities. At the centre: developers, delivery and diversity. Around them: connect learning, engage people, recognise progress and build partnerships."),
+                ("resources/game-plan-for-grassroots-coaching/page-2.webp", 1400, 788,
+                 "Developer workforce pyramid: 17 in the full-time coach development team, 40 County FA Coach Development Leads, 200 in the casual coach development workforce, and 4,000 Club Coaching Leads in Thriving Community Clubs."),
+                ("resources/game-plan-for-grassroots-coaching/page-3.webp", 1400, 788,
+                 "The learning offer. Live, strategic priorities with same month delivery: Know Your Format in September, Coaching fundamentals in November, Volume and variety in May. Super Library, equality, diversity and inclusion priorities with anytime delivery: Football without limits and Coaching Female Players. Library, always on: Getting Started, Enjoy and Participate, Lead and Manage Teams, and Helping Individuals."),
+            ],
+        },
+    ],
+}
+
 # kind: "session" opens to show detail; "pause" is a plain row (breaks, meals, arrivals).
 # "end_clubs" is the end time used when SHOW_CLUB_STORIES is True.
 # "club" marks a club story row that only appears when SHOW_CLUB_STORIES is True.

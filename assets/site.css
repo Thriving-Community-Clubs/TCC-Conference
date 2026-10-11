@@ -183,6 +183,21 @@ ul, ol { padding: 0; list-style: none; }
 .counties { display: block; font-size: 15px; margin-top: 2px; }
 .pillars li { display: grid; grid-template-columns: 44px 1fr; gap: 12px; align-items: center; padding: 9px 0; border-top: var(--hair) solid var(--grey); }
 .pillars span { display: block; font-size: 15px; }
+.pillars .res { grid-column: 1 / -1; margin-top: 8px; border-bottom: var(--hair) solid var(--grey); }
+.pillars .res > summary { padding: 11px 30px 11px 0; min-height: 44px; font-size: 16px; color: var(--red); }
+.pillars .res > summary::after { top: 17px; }
+.pillars .res[open] > summary::after { top: 21px; }
+.pillars .res .fold-body { max-width: none; padding-bottom: 6px; }
+.res-item { margin: 4px 0 22px; }
+.res-item figcaption { font: 700 16px/1.3 var(--font); margin-bottom: 8px; }
+.res-item img { width: 100%; border: var(--hair) solid var(--grey); background: var(--wash); }
+.res-item a + .res-count { margin-top: 14px; }
+.res-count { display: block !important; font-size: 14px !important; margin-bottom: 4px; }
+.res-item .hint { margin-top: 6px; }
+/* On phones the resources use the full width of the page, not just the column beside the time. */
+@media (max-width: 699px) {
+  .pillars .res .fold-body { margin-left: -90px; }
+}
 
 /* live state */
 .row.is-past { color: #5b6880; }

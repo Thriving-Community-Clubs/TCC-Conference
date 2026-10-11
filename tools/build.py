@@ -83,12 +83,44 @@ def groups_list(which):
     )
 
 
+def resources_fold(pillar):
+    """Resources for one pillar, folded away under its name. Nothing when there are none."""
+    items = getattr(C, "PILLAR_RESOURCES", {}).get(pillar, [])
+    if not items:
+        return ""
+    out = []
+    for item in items:
+        pages = item["pages"]
+        many = len(pages) > 1
+        figures = []
+        for n, (src, w, h, alt) in enumerate(pages, 1):
+            cap = f'<span class="res-count">Page {n} of {len(pages)}</span>' if many else ""
+            figures.append(
+                f'{cap}<a href="{e(src)}" target="_blank" rel="noopener">'
+                f'<img src="{e(src)}" alt="{e(alt)}" width="{w}" height="{h}" loading="lazy" decoding="async"></a>'
+            )
+        if item.get("pdf"):
+            size = os.path.getsize(os.path.join(ROOT, item["pdf"])) / 1e6
+            link = f'<a href="{e(item["pdf"])}">Download the PDF ({size:.0f} MB)</a>'
+        else:
+            link = f'<a href="{e(pages[0][0])}" target="_blank" rel="noopener">Open full size</a>'
+        out.append(
+            f'<figure class="res-item"><figcaption>{e(item["title"])}</figcaption>'
+            f'{"".join(figures)}<p class="hint">Tap the image to enlarge it. {link}</p></figure>'
+        )
+    return (
+        f'<details class="fold res"><summary>Resources for {e(pillar)} ({len(items)})</summary>'
+        f'<div class="fold-body">{"".join(out)}</div></details>'
+    )
+
+
 def pillars_list():
     rows = []
     for name, icon, room, leads in C.PILLAR_ROOMS:
         rows.append(
             f'<li class="pillar"><img src="assets/pillar-{icon}.png" alt="" width="44" height="50">'
-            f'<div><strong>{e(name)}</strong><span>{e(room)}</span><span class="with">With {e(leads)}</span></div></li>'
+            f'<div><strong>{e(name)}</strong><span>{e(room)}</span><span class="with">With {e(leads)}</span></div>'
+            f'{resources_fold(name)}</li>'
         )
     return '<h4>Where each pillar meets</h4><ul class="pillars">' + "".join(rows) + "</ul>"
 
