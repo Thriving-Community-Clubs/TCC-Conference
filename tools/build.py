@@ -116,10 +116,14 @@ def resources_fold(pillar):
         links_html = ""
         if item.get("links"):
             total = sum(len(group) for _, group in item["links"])
+
+            def one(link):
+                label, url = link[0], link[1]
+                note = f'<span class="res-note">{e(link[2])}</span>' if len(link) > 2 else ""
+                return f'<li><a href="{e(url)}" rel="noopener">{e(label)}</a>{note}</li>'
+
             groups = "".join(
-                f'<p class="res-group">{e(heading)}</p><ul>'
-                + "".join(f'<li><a href="{e(url)}" rel="noopener">{e(label)}</a></li>' for label, url in group)
-                + "</ul>"
+                f'<p class="res-group">{e(heading)}</p><ul>' + "".join(one(link) for link in group) + "</ul>"
                 for heading, group in item["links"]
             )
             links_html = (

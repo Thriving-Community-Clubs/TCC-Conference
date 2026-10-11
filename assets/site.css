@@ -201,6 +201,7 @@ ul, ol { padding: 0; list-style: none; }
 .res-group { font: 700 15px/1.3 var(--font); margin: 12px 0 4px; }
 .res-links ul { list-style: none; padding: 0; }
 .res-links li { padding: 7px 0; font-size: 16px; line-height: 1.35; }
+.res-note { display: block; font-size: 14px; margin-top: 2px; }
 /* On phones the resources use the full width of the page, not just the column beside the time. */
 @media (max-width: 699px) {
   .pillars .res .fold-body { margin-left: -90px; }

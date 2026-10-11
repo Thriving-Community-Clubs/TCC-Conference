@@ -139,6 +139,7 @@ PILLAR_ROOMS = [
 # Resources shown under a pillar in the Pillar Networking session.
 # Keyed by the pillar name used in PILLAR_ROOMS. Prepare files with tools/add_resource.py.
 # Each page is (image path, width, height, description for people who cannot see it[, caption]).
+# Each link is (label, address[, note shown beside it]).
 # The caption defaults to "Page n of N".
 PILLAR_RESOURCES = {
     "Leadership & Governance": [
@@ -180,6 +181,8 @@ PILLAR_RESOURCES = {
                 ]),
                 ("Tools, guidance and workshops, in the PlayBook", [
                     ("Open the PlayBook (log in needed)", "https://theplaybook.thefa.com/dashboard"),
+                    ("Open the Club Structures Assistant", "https://club-structures.muckle-llp.com/",
+                     "Signpost only to eligible clubs you are directly supporting."),
                 ]),
             ],
         },
@@ -368,6 +371,29 @@ PILLAR_RESOURCES = {
                  "Developer workforce pyramid: 17 in the full-time coach development team, 40 County FA Coach Development Leads, 200 in the casual coach development workforce, and 4,000 Club Coaching Leads in Thriving Community Clubs."),
                 ("resources/game-plan-for-grassroots-coaching/page-3.webp", 1400, 788,
                  "The learning offer. Live, strategic priorities with same month delivery: Know Your Format in September, Coaching fundamentals in November, Volume and variety in May. Super Library, equality, diversity and inclusion priorities with anytime delivery: Football without limits and Coaching Female Players. Library, always on: Getting Started, Enjoy and Participate, Lead and Manage Teams, and Helping Individuals."),
+            ],
+        },
+    ],
+    "Community": [
+        {
+            "title": "Community: help and support guide",
+            "pdf": "files/community-support-guide.pdf",
+            "pages": [
+                ("resources/community-support-guide/page-1.webp", 1241, 1754,
+                 "Community help and support guide, page 1. Everything currently available to help clubs connect with their community, evidence their impact, secure funding and tell their story. One, the Stakeholder Cribsheet, an online publication. Two, Building Common-Unity in your club, a workshop on Asset Based Community Development. Three, Build My Bid, a funding support service in the PlayBook. Four, the Club Impact Calculator in the PlayBook, which produces a Club Impact Report. The links are listed below the pages."),
+                ("resources/community-support-guide/page-2.webp", 1241, 1754,
+                 "Community help and support guide, page 2. Five, communications and marketing: the Effective Communications and Marketing workshop, covering the basics, the tools and the people, with three resources to use afterwards: the Club Communications and Social Media Planner, 10 Things Your Website Should Have, and the Effective Communications 11-a-side Team."),
+            ],
+            "links": [
+                ("Stakeholder Cribsheet, online publication", [
+                    ("Read the Stakeholder Cribsheet", "https://www.calameo.com/esports-media/read/001230235c30c3517ad02?authid=x8qk1vVkmvAs"),
+                ]),
+                ("Build My Bid, funding support service", [
+                    ("Complete the Build My Bid expression of interest form", "https://app.smartsheet.com/b/form/019d1ab14e687d73ab6ad61108b97c2f"),
+                ]),
+                ("Everything else, in the PlayBook", [
+                    ("Open the PlayBook (log in needed)", "https://theplaybook.thefa.com/dashboard"),
+                ]),
             ],
         },
     ],
