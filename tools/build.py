@@ -104,9 +104,23 @@ def resources_fold(pillar):
             link = f'<a href="{e(item["pdf"])}">Download the PDF ({size:.0f} MB)</a>'
         else:
             link = f'<a href="{e(pages[0][0])}" target="_blank" rel="noopener">Open full size</a>'
+        links_html = ""
+        if item.get("links"):
+            total = sum(len(group) for _, group in item["links"])
+            groups = "".join(
+                f'<p class="res-group">{e(heading)}</p><ul>'
+                + "".join(f'<li><a href="{e(url)}" rel="noopener">{e(label)}</a></li>' for label, url in group)
+                + "</ul>"
+                for heading, group in item["links"]
+            )
+            links_html = (
+                f'<details class="fold res-links"><summary>Links from this guide ({total})</summary>'
+                f'<div class="fold-body">{groups}</div></details>'
+            )
+        tip = "Tap a page to enlarge it." if many else "Tap the image to enlarge it."
         out.append(
             f'<figure class="res-item"><figcaption>{e(item["title"])}</figcaption>'
-            f'{"".join(figures)}<p class="hint">Tap the image to enlarge it. {link}</p></figure>'
+            f'{"".join(figures)}<p class="hint">{tip} {link}</p>{links_html}</figure>'
         )
     return (
         f'<details class="fold res"><summary>Resources for {e(pillar)} ({len(items)})</summary>'

@@ -140,6 +140,49 @@ PILLAR_ROOMS = [
 # Keyed by the pillar name used in PILLAR_ROOMS. Prepare files with tools/add_resource.py.
 # Each page is (image path, width, height, description for people who cannot see it).
 PILLAR_RESOURCES = {
+    "Leadership & Governance": [
+        {
+            "title": "Leadership & Governance: help and support guide",
+            "pdf": "files/leadership-governance-support-guide.pdf",
+            "pages": [
+                ("resources/leadership-governance-support-guide/page-1.webp", 1240, 1752,
+                 "Leadership & Governance help and support guide, page 1. Everything currently available under this pillar, and where to find it. One, the Club Leadership Programme with UCFB. Two, Financial Controls from England Football. Three, legal and governance support from The FA and Muckle LLP, with FA Bitesize Guides and guidance on data protection and club structures. Four, video guides on The Club Hub on YouTube. The links are listed below the pages."),
+                ("resources/leadership-governance-support-guide/page-2.webp", 1240, 1752,
+                 "Leadership & Governance help and support guide, page 2. Five, tools and guidance in the PlayBook: VAT assessment information, VAT guidance, a VAT flow chart and a VAT case study toolkit for clubs, the Club Structures Assistant and the Resource Sharing Agreement. Six, workshops for 2026 in the PlayBook: Financial Controls and VAT, and Club Legal Structures and Governance."),
+            ],
+            # The guide's links, so they can be opened from the page. The image of the guide cannot be clicked.
+            "links": [
+                ("Club Leadership Programme, with UCFB", [
+                    ("View the Club Leadership Programme", "https://www.ucfb.ac.uk/your-degree/executive-education/fa-club-leadership-programme/"),
+                ]),
+                ("Financial Controls, England Football", [
+                    ("Read the Financial Controls guidance", "https://www.englandfootball.com/participate/leagues-and-clubs/Financial-Control"),
+                ]),
+                ("Legal and governance support, The FA and Muckle LLP", [
+                    ("The FA and Muckle LLP hub", "https://www.muckle-llp.com/what-we-do/sectors/sports/the-football-association/"),
+                    ("FA Bitesize Guide: Financial Controls", "https://www.muckle-llp.com/what-we-do/sectors/sports/the-football-association/fa-bitesize-guides/fa-bitesize-financial-controls/"),
+                    ("FA Bitesize Guide: Governance Standards", "https://www.muckle-llp.com/what-we-do/sectors/sports/the-football-association/fa-bitesize-guides/fa-bitesize-governance/"),
+                    ("FA Bitesize Guide: Incorporation & Legal Structures", "https://www.muckle-llp.com/what-we-do/sectors/sports/the-football-association/fa-bitesize-guides/fa-bitesize-incorporation-legal-structures/"),
+                    ("FA Bitesize Guide: Leadership", "https://www.muckle-llp.com/what-we-do/sectors/sports/the-football-association/fa-bitesize-guides/fa-bitesize-leadership/"),
+                    ("FA Bitesize Guide: Risk Management", "https://www.muckle-llp.com/what-we-do/sectors/sports/the-football-association/fa-bitesize-guides/fa-bitesize-risk-management/"),
+                    ("FA Bitesize Guide: Special Tax Status & Trading", "https://www.muckle-llp.com/what-we-do/sectors/sports/the-football-association/fa-bitesize-guides/fa-bitesize-special-tax-status-trading/"),
+                    ("FA Data Protection Factsheets", "https://www.muckle-llp.com/what-we-do/sectors/sports/the-football-association/gdpr-factsheets/"),
+                    ("FA Data Protection Templates", "https://www.muckle-llp.com/what-we-do/sectors/sports/the-football-association/fa-template-documents/"),
+                    ("The FA's Guide to Club Structures (PDF)", "https://www.muckle-llp.com/files/pdf/19799_THE_FA_REMAKE-OF-THE-CLUB-STRUCTURES_L.pdf"),
+                ]),
+                ("Video guides, The Club Hub on YouTube", [
+                    ("Football Club Governance with Muckle LLP: the full playlist", "https://youtube.com/playlist?list=PLlPyxLEijGBoCmdjykakE8KbtfOgV3Z_-"),
+                    ("Managing data & risk at your football club", "https://youtu.be/OFaBeM8kZic"),
+                    ("Which legal structure should your football club have?", "https://youtu.be/MpzkJFACpzg"),
+                    ("How leadership can help shape a successful football club", "https://youtu.be/XZxDjCfL4pM"),
+                    ("How to optimise your football club's finances", "https://youtu.be/03nZvOi0XpM"),
+                ]),
+                ("Tools, guidance and workshops, in the PlayBook", [
+                    ("Open the PlayBook (log in needed)", "https://theplaybook.thefa.com/dashboard"),
+                ]),
+            ],
+        },
+    ],
     "Coaches": [
         {
             "title": "County FA Coach Development Lead: role purpose",
