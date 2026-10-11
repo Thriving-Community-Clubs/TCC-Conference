@@ -31,6 +31,39 @@ CONTACTS = [
     ("Andy Clay", "07484 929866", "+447484929866"),
 ]
 
+# People shown on the delegate page.
+HOST = {"name": "Charlotte Richardson", "role": "Your host", "photo": "img/charlotte-richardson.webp",
+        "alt": "Charlotte Richardson"}
+
+KEYNOTE = {
+    "name": "Sue Day MBE", "role": "Director of Women's Football, The FA", "photo": "img/sue-day.webp",
+    "alt": "Sue Day",
+    "session": "Keynote: Leading the Orchestra. Day 2, 11.10am, Main Room 1.",
+    "bio": [
+        "Sue joined The FA in December 2024 as Director of Women's Football, where she is responsible for the next phase of development for the women's and girls' game and disability football in England, including delivery of the 2024-28 women's strategy.",
+        "She previously spent six years on the board of the Rugby Football Union as Chief Operations Officer and Chief Financial Officer, where she played a leading role in establishing Premiership Women's Rugby as an independent league and in England's successful bid to host the 2025 Women's Rugby World Cup. A chartered accountant, she spent over 20 years at KPMG, becoming a partner in 2015.",
+        "A former England captain, Sue won 59 caps between 1997 and 2007, played in three Rugby World Cups, won three Grand Slams and remains England women's record try-scorer with 61 tries. She was the first female President of Wasps FC and is a founding trustee of the Women's Sport Trust. She was awarded an MBE in 2020 for services to gender equality in sport and was named in the World Rugby Hall of Fame class of 2026.",
+    ],
+}
+
+ILLUSTRATOR = {
+    "name": "Tom Bradshaw", "role": "Live illustrator, ScribeYak",
+    "about": "Tom is a scribe artist who specialises in live visual capture for conferences, talks and events. He will be drawing the conference as it happens, and you will see his illustrations at the round up on both days.",
+    "link": ("See Tom's work at scribeyak.com", "https://scribeyak.com/"),
+}
+
+# Name and job title, in the order they first appear on the agenda.
+SESSION_LEADS = [
+    ("Tom Lee", "National Club Development Manager (Grassroots)"),
+    ("Phil Woodward", "Head of Clubs and Facilities"),
+    ("Mick Baikie", "Senior Club Development Manager"),
+    ("Sarah Cummings", "National Club Development Manager"),
+    ("Luke Bailey", "Club and Facilities Officer"),
+    ("Richard Neal", "National Club Development Manager (NLS)"),
+    ("Andy Clay", "Clubs and Facilities Development Manager"),
+    ("Ian Grange", "Senior National Development Manager (Networks & Programmes)"),
+]
+
 MR1 = "Main Room 1"
 MR2 = "Main Room 2"
 CR1 = "Conference Room 1"
@@ -124,7 +157,9 @@ DAY1 = [
      "slides": ["d1-progression"]},
     {"id": "d1-roundup", "kind": "session", "start": "16:10", "end": "16:30",
      "title": "Day 1 round up and group photo", "room": MR1,
-     "who": "Charlotte Richardson and Tom Lee"},
+     "who": "Charlotte Richardson and Tom Lee",
+     "about": "We pull the day together, Tom Bradshaw shares the illustrations he has drawn so far, and we finish with a group photo.",
+     "more": ("About Tom Bradshaw", "#people")},
     {"id": "d1-checkin", "kind": "pause", "start": "16:30", "end": "19:00",
      "title": "Hotel check-in and downtime",
      "note": "Check in at The Orchard Hotel, use the facilities, catch up with colleagues or just relax."},
@@ -152,8 +187,9 @@ DAY2 = [
     {"id": "d2-break", "kind": "pause", "start": "10:50", "end": "11:10", "title": "Break"},
     {"id": "d2-keynote", "kind": "session", "start": "11:10", "end": "12:00",
      "title": "Keynote: Leading the Orchestra", "room": MR1,
-     "who": "Sue Day, with Charlotte Richardson",
+     "who": "Sue Day MBE, Director of Women's Football at The FA, with Charlotte Richardson",
      "about": "Our keynote from Sue Day. There is space for your notes in the workbook.",
+     "more": ("About Sue Day", "#people"),
      "workbook": 9},
     {"id": "d2-lmd", "kind": "session", "start": "12:00", "end": "12:30",
      "title": "Lead, Manage, Do", "room": "Starts in Main Room 1, then your group",
@@ -187,7 +223,7 @@ DAY2 = [
     {"id": "d2-roundup", "kind": "session", "start": "15:15", "end": "15:45",
      "title": "Day 2 round up and conference reflections", "room": MR1,
      "who": "Charlotte Richardson and Tom Lee",
-     "about": "Bring the two days together in your Better Everywhere Gameplan. Write your pledge in your workbook, then share a short version on Slido.",
+     "about": "Bring the two days together in your Better Everywhere Gameplan, with Tom Bradshaw's illustrations of the conference. Write your pledge in your workbook, then share a short version on Slido.",
      "workbook": 12,
      "slides": ["d2-roundup"]},
     {"id": "d2-depart", "kind": "pause", "start": "15:45", "end": "15:45", "hide_end": True,

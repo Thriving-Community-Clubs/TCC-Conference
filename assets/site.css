@@ -232,6 +232,25 @@ ul, ol { padding: 0; list-style: none; }
 .pending { margin-top: 22px; padding: 14px; background: var(--wash); }
 .pending h3 { font-size: 18px; margin-bottom: 4px; }
 
+/* ---------- People ---------- */
+
+.people { display: grid; gap: 28px; margin-top: 18px; }
+.person { display: grid; grid-template-columns: 112px 1fr; gap: 16px; align-items: start; }
+.person img { width: 112px; height: 112px; object-fit: cover; }
+.person h3 { font: italic 700 24px/1.1 var(--font); color: var(--navy); }
+.person .role { font-weight: 700; margin-top: 4px; }
+.person .slot { font-size: 15px; margin-top: 4px; }
+.person .bio { grid-column: 1 / -1; }
+.person-text { grid-template-columns: 1fr; }
+.person-text .bio { margin-top: -6px; }
+.person .bio p + p { margin-top: 10px; }
+.person .fold { margin-top: 12px; }
+.person .fold-body p + p { margin-top: 10px; }
+.leads-title { margin: 34px 0 4px; }
+.leads li { padding: 11px 0; border-top: var(--hair) solid var(--grey); }
+.leads li:last-child { border-bottom: var(--hair) solid var(--grey); }
+.leads span { display: block; font-size: 15px; margin-top: 1px; }
+
 /* ---------- Venue ---------- */
 
 #venue h3 { margin: 28px 0 6px; }
@@ -286,6 +305,13 @@ ul, ol { padding: 0; list-style: none; }
 
 @media (min-width: 700px) {
   :root { --gutter: 24px; }
+  .person { grid-template-columns: 168px 1fr; gap: 22px; }
+  .person img { width: 168px; height: 168px; }
+  .person .bio { grid-column: 2; }
+  .person-text { grid-template-columns: 1fr; }
+  .person-text .bio { grid-column: 1; max-width: 62ch; }
+  .leads { display: grid; grid-template-columns: 1fr 1fr; column-gap: 28px; }
+  .leads li:nth-last-child(2) { border-bottom: var(--hair) solid var(--grey); }
   body { font-size: 18px; }
   .row { grid-template-columns: 104px 1fr; }
   .plan-label { display: block; }

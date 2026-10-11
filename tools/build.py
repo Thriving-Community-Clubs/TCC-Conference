@@ -114,6 +114,9 @@ def session_html(day, s):
     if s.get("pillars"):
         body.append(pillars_list())
         body.append('<p class="hint">Your pillar will be listed under <a href="#yours">Your sessions</a> and confirmed at registration.</p>')
+    if s.get("more"):
+        label, href = s["more"]
+        body.append(f'<p><a href="{e(href)}">{e(label)}</a></p>')
     if s.get("workbook"):
         body.append(f'<p class="workbook">Workbook page {s["workbook"]}</p>')
     for key in s.get("slides", []):
@@ -191,6 +194,31 @@ def contacts_html():
     )
 
 
+def people_html():
+    h, k, i = C.HOST, C.KEYNOTE, C.ILLUSTRATOR
+    bio_first = f"<p>{e(k['bio'][0])}</p>"
+    bio_rest = "".join(f"<p>{e(par)}</p>" for par in k["bio"][1:])
+    leads = "".join(
+        f'<li><strong>{e(n)}</strong><span>{e(t)}</span></li>' for n, t in C.SESSION_LEADS
+    )
+    return (
+        '<div class="people">'
+        f'<article class="person"><img src="{h["photo"]}" alt="{e(h["alt"])}" width="480" height="480" loading="lazy">'
+        f'<div><h3>{e(h["name"])}</h3><p class="role">{e(h["role"])}</p></div></article>'
+        f'<article class="person"><img src="{k["photo"]}" alt="{e(k["alt"])}" width="480" height="480" loading="lazy">'
+        f'<div><h3>{e(k["name"])}</h3><p class="role">{e(k["role"])}</p>'
+        f'<p class="slot">{e(k["session"])}</p></div>'
+        f'<div class="bio">{bio_first}'
+        f'<details class="fold"><summary>More about Sue</summary><div class="fold-body">{bio_rest}</div></details>'
+        '</div></article>'
+        f'<article class="person person-text"><div><h3>{e(i["name"])}</h3><p class="role">{e(i["role"])}</p></div>'
+        f'<div class="bio"><p>{e(i["about"])}</p>'
+        f'<p><a href="{e(i["link"][1])}" rel="noopener">{e(i["link"][0])}</a></p></div></article>'
+        '</div>'
+        f'<h3 class="leads-title">Leading your sessions</h3><ul class="leads">{leads}</ul>'
+    )
+
+
 def after_html():
     parts = []
     if C.FEEDBACK_URL:
@@ -225,6 +253,7 @@ def main():
         "COUNTY_OPTIONS": county_options(),
         "CONTACTS": contacts_html(),
         "AFTER": after_html(),
+        "PEOPLE": people_html(),
         "WORKBOOK": workbook_html(),
         "LINK_PARKING": e(C.LINKS["parking"]),
         "LINK_CHOICES": e(C.LINKS["choices"]),

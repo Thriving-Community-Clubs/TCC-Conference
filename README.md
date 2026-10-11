@@ -43,6 +43,18 @@ Each slide also has a short description in `SLIDE_ALT` for people who cannot see
 
 The page follows the England Football Thriving design system: England Football red and white lead, navy for body copy, square corners, hairlines, no shadows or gradients. Arial stands in for FS Dillon. Logos and pillar icons in `assets/` are the supplied files, resized and never redrawn.
 
-## Not in this repository
+## The facilitator page
 
-The facilitator page sits behind a passcode. Its content is encrypted before it is added here, and the unencrypted source must never be committed.
+`facilitators/index.html` is for facilitators and the conference team. Its content is encrypted, and the page only opens with the passcode.
+
+- The readable source and the passcode are kept outside this repository. Never commit either.
+- To rebuild the page after a change to the source, or to change the passcode:
+
+      node tools/encrypt-facilitators.mjs /path/outside/this/repo/facilitators-source.html "the passcode"
+
+- The passcode is forgiving about capitals and about spaces in place of hyphens.
+- Anyone can download the encrypted page, so the passcode is the only protection. It keeps casual visitors out. Do not put anything on the page that would be a real problem if it became public.
+
+| To do this | Change this in `tools/content.py` |
+| --- | --- |
+| Update the host, keynote or session leads | `HOST`, `KEYNOTE`, `SESSION_LEADS` |

@@ -42,9 +42,9 @@
   /* ----- Stage: before, during, after ----- */
 
   var ORDER = {
-    before: ["before", "agenda", "yours", "venue", "getting", "resources", "help"],
-    during: ["agenda", "yours", "venue", "help", "getting", "resources", "before"],
-    after: ["after", "agenda", "resources", "help", "yours", "venue", "getting"]
+    before: ["before", "agenda", "yours", "people", "venue", "getting", "resources", "help"],
+    during: ["agenda", "yours", "venue", "help", "people", "getting", "resources", "before"],
+    after: ["after", "agenda", "resources", "people", "help", "yours", "venue", "getting"]
   };
   var currentStage = null;
 
