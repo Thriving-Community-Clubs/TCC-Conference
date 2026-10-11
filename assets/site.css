@@ -244,6 +244,9 @@ ul, ol { padding: 0; list-style: none; }
 .person .bio p + p { margin-top: 10px; }
 .person .fold { margin-top: 12px; }
 .person .fold-body p + p { margin-top: 10px; }
+.slido { margin-top: 18px; }
+.slido img { image-rendering: pixelated; }
+.slido .button { margin-top: 2px; }
 .leads-title { margin: 34px 0 4px; }
 .leads li { padding: 11px 0; border-top: var(--hair) solid var(--grey); }
 .leads li:last-child { border-bottom: var(--hair) solid var(--grey); }

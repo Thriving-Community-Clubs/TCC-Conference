@@ -233,6 +233,26 @@ def people_html():
     )
 
 
+def slido_html():
+    """The Slido section, or nothing when no link is set."""
+    if not C.SLIDO_URL:
+        return ""
+    code = e(C.SLIDO_CODE)
+    return (
+        '<section class="block" id="slido" aria-labelledby="slido-h"><div class="wrap">'
+        '<h2 id="slido-h">Slido</h2>'
+        '<div class="person slido">'
+        '<a href="img/slido-qr.png" aria-label="Open the Slido QR code at full size">'
+        '<img src="img/slido-qr.png" alt="QR code to join the conference Slido" width="700" height="700"></a>'
+        '<div><h3>Join in on your phone</h3>'
+        f'<p class="role">Joining code #{code}</p></div>'
+        '<div class="bio"><p>We use Slido for your questions, polls and pledges across both days.</p>'
+        f'<p><a class="button" href="{e(C.SLIDO_URL)}" rel="noopener">Open Slido</a></p>'
+        f'<p class="hint">On another device, scan the code, or go to slido.com and enter #{code}.</p></div>'
+        '</div></div></section>'
+    )
+
+
 def after_html():
     parts = []
     if C.FEEDBACK_URL:
@@ -293,6 +313,8 @@ def main():
         "COUNTY_OPTIONS": county_options(),
         "CONTACTS": contacts_html(),
         "AFTER": after_html(),
+        "SLIDO": slido_html(),
+        "SLIDO_NAV": '<li><a href="#slido">Slido</a></li>' if C.SLIDO_URL else "",
         "PEOPLE": people_html(),
         "ILLUSTRATOR": illustrator_html(),
         "WORKBOOK": workbook_html(),

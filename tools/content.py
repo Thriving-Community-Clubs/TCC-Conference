@@ -10,8 +10,10 @@ TZ = "+01:00"
 # to the Day 2 agenda and shortens the sessions before them to match the deck.
 SHOW_CLUB_STORIES = False
 
-# Paste the Slido link here when it is ready (leave "" to hide the buttons).
-SLIDO_URL = ""
+# The Slido event. Set SLIDO_URL to "" to hide the Slido section and buttons.
+SLIDO_URL = "https://app.sli.do/event/b9EDPXgxX4wQAkY91z1iSJ"
+# The joining code people type at slido.com, without the #.
+SLIDO_CODE = "1283463"
 # Paste the feedback survey link here after the conference.
 FEEDBACK_URL = ""
 # The workbook PDF, made by tools/make_workbook.py. Set to "" to take the workbook off the page.
