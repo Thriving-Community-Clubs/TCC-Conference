@@ -26,6 +26,14 @@ def version(path):
         return hashlib.sha256(f.read()).hexdigest()[:10]
 
 
+def file_size(path):
+    """A file's size as people expect to read it: '290 KB' or '11 MB'."""
+    size = os.path.getsize(os.path.join(ROOT, path))
+    if size < 950_000:
+        return f"{max(1, round(size / 1000))} KB"
+    return f"{size / 1e6:.0f} MB"
+
+
 def slide_name(key, page):
     return hashlib.sha256(f"tcc26-{key}-{page}".encode()).hexdigest()[:12] + ".webp"
 
@@ -100,8 +108,7 @@ def resources_fold(pillar):
                 f'<img src="{e(src)}" alt="{e(alt)}" width="{w}" height="{h}" loading="lazy" decoding="async"></a>'
             )
         if item.get("pdf"):
-            size = os.path.getsize(os.path.join(ROOT, item["pdf"])) / 1e6
-            link = f'<a href="{e(item["pdf"])}">Download the PDF ({size:.0f} MB)</a>'
+            link = f'<a href="{e(item["pdf"])}">Download the PDF ({file_size(item["pdf"])})</a>'
         else:
             link = f'<a href="{e(pages[0][0])}" target="_blank" rel="noopener">Open full size</a>'
         links_html = ""
@@ -319,7 +326,6 @@ def workbook_html():
             '<div class="wb"><h3 id="workbook">Delegate workbook</h3>'
             "<p>You will get a printed copy at registration. A digital copy to view and download will be here after the conference.</p></div>"
         )
-    size = os.path.getsize(os.path.join(ROOT, C.WORKBOOK_FILE)) / 1e6
     total = len(C.WORKBOOK_PAGES)
     pages = []
     for n, (printed, alt) in enumerate(C.WORKBOOK_PAGES, 1):
@@ -334,7 +340,7 @@ def workbook_html():
     return (
         '<div class="wb"><h3 id="workbook">Delegate workbook</h3>'
         "<p>You will get a printed copy at registration. You can also read it here or download a copy to keep.</p>"
-        f'<p><a class="button button-outline" href="{e(C.WORKBOOK_FILE)}">Download the workbook (PDF, {size:.0f} MB)</a></p>'
+        f'<p><a class="button button-outline" href="{e(C.WORKBOOK_FILE)}">Download the workbook (PDF, {file_size(C.WORKBOOK_FILE)})</a></p>'
         f'<details class="fold" id="workbook-reader"><summary>Read the workbook here ({total} pages)</summary>'
         f'<ol class="wb-pages">{"".join(pages)}</ol></details></div>'
     )
