@@ -95,3 +95,6 @@
 .timeline .res-fold > summary { font-size: 16px; line-height: 1.3; padding-top: 12px; padding-bottom: 12px; }
 .res-fold .fold-body p { font-size: 15px; }
 .res-fold .button { font-size: 15px; }
+.fb-qr { margin: 18px 0 0; width: 140px; }
+.fb-qr img { display: block; width: 140px; height: 140px; image-rendering: pixelated; border: var(--hair) solid var(--grey); }
+.fb-qr figcaption { font-size: 14px; margin-top: 6px; }

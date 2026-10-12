@@ -6,7 +6,7 @@
    Everything else: use the saved copy if there is one, otherwise fetch and keep it. */
 "use strict";
 
-var VERSION = "a4b17027a2";
+var VERSION = "f2daa87e78";
 var CORE = "tcc26-core-" + VERSION;
 var EXTRA = "tcc26-extra";
 var CORE_FILES = [
@@ -27,6 +27,7 @@ var CORE_FILES = [
   "img/charlotte-richardson.webp",
   "img/cover-1600.webp",
   "img/cover-800.webp",
+  "img/feedback-qr.png",
   "img/slido-qr.png",
   "img/sue-day.webp",
   "slides/0068ac314560.webp",
