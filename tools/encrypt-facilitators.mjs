@@ -59,10 +59,15 @@ const data = Buffer.concat([cipher.update(source, "utf8"), cipher.final(), ciphe
 const payload = JSON.stringify({
   v: 1, iter, salt: salt.toString("base64"), iv: iv.toString("base64"), data: data.toString("base64"),
 });
-const updated = new Date().toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+// "Monday 12 October 2026 at 11.05am", in Nottingham time.
+const parts = Object.fromEntries(new Intl.DateTimeFormat("en-GB", {
+  timeZone: "Europe/London", weekday: "long", day: "numeric", month: "long", year: "numeric",
+  hour: "numeric", minute: "2-digit", hour12: true,
+}).formatToParts(new Date()).map((p) => [p.type, p.value]));
+const updated = `${parts.weekday} ${parts.day} ${parts.month} ${parts.year} at ${parts.hour}.${parts.minute}${parts.dayPeriod.toLowerCase()}`;
 const page = readFileSync(join(here, "facilitators-shell.html"), "utf8")
   .replace("{{PAYLOAD}}", payload)
-  .replace("{{UPDATED}}", updated)
+  .replaceAll("{{UPDATED}}", updated)
   .replace("{{CSS_V}}", version("assets/site.css"))
   .replace("{{FCSS_V}}", version("assets/facilitators.css"))
   .replace("{{FJS_V}}", version("assets/facilitators.js"));

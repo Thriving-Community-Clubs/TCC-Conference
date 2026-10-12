@@ -290,6 +290,25 @@
     });
   }
 
+  /* ----- Without signal ----- */
+
+  // Keep a copy of the page on the phone (see sw.js).
+  if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) {
+    window.addEventListener("load", function () {
+      navigator.serviceWorker.register("sw.js").catch(function () { /* the page works without it */ });
+    });
+  }
+
+  var offline = el("div", "offline");
+  offline.setAttribute("role", "status");
+  offline.appendChild(el("div", "wrap", "No signal. You are seeing the copy saved on this device. Times and slides still work."));
+  var jump = $(".jump");
+  if (jump && jump.parentNode) jump.parentNode.insertBefore(offline, jump.nextSibling);
+  function updateOffline() { offline.hidden = navigator.onLine !== false; }
+  window.addEventListener("online", updateOffline);
+  window.addEventListener("offline", updateOffline);
+  updateOffline();
+
   /* ----- Run ----- */
 
   function tick() {

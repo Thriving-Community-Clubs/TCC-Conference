@@ -1,0 +1,34 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Thriving Community Clubs//Conference 2026//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Thriving Community Clubs Conference 2026
+BEGIN:VEVENT
+UID:tcc26-day1@thriving-community-clubs.github.io
+DTSTAMP:20261012T000000Z
+DTSTART:20261020T083000Z
+DTEND:20261020T153000Z
+SUMMARY:Thriving Community Clubs Conference 2026: Day 1
+LOCATION:East Midlands Conference Centre\, Beeston Lane\, Nottingham NG7 
+ 2RJ
+DESCRIPTION:Registration opens at 9.30am and we start at 10.30am in Main 
+ Room 1. The drinks reception\, street food dinner and games start at 7.0
+ 0pm in Main Room 1 and Main Room 2. Agenda\, slides and venue plan: http
+ s://thriving-community-clubs.github.io/TCC-Conference/
+URL:https://thriving-community-clubs.github.io/TCC-Conference/
+END:VEVENT
+BEGIN:VEVENT
+UID:tcc26-day2@thriving-community-clubs.github.io
+DTSTAMP:20261012T000000Z
+DTSTART:20261021T080000Z
+DTEND:20261021T144500Z
+SUMMARY:Thriving Community Clubs Conference 2026: Day 2
+LOCATION:East Midlands Conference Centre\, Beeston Lane\, Nottingham NG7 
+ 2RJ
+DESCRIPTION:Registration and hotel check-out from 9.00am. We start at 9.3
+ 0am in Main Room 1 and close at 3.45pm. Agenda\, slides and venue plan: 
+ https://thriving-community-clubs.github.io/TCC-Conference/
+URL:https://thriving-community-clubs.github.io/TCC-Conference/
+END:VEVENT
+END:VCALENDAR

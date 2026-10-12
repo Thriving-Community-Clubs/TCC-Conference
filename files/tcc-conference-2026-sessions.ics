@@ -1,0 +1,290 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Thriving Community Clubs//Conference 2026//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Thriving Community Clubs Conference 2026\, every session
+BEGIN:VEVENT
+UID:d1-registration@thriving-community-clubs.github.io
+DTSTAMP:20261012T000000Z
+DTSTART:20261020T083000Z
+DTEND:20261020T093000Z
+SUMMARY:Conference: Registration\, refreshments and networking
+LOCATION:East Midlands Conference Centre\, Beeston Lane\, Nottingham NG7 
+ 2RJ
+DESCRIPTION:Agenda and slides: https://thriving-community-clubs.github.io
+ /TCC-Conference/#d1-registration
+URL:https://thriving-community-clubs.github.io/TCC-Conference/
+END:VEVENT
+BEGIN:VEVENT
+UID:d1-welcome@thriving-community-clubs.github.io
+DTSTAMP:20261012T000000Z
+DTSTART:20261020T093000Z
+DTEND:20261020T094000Z
+SUMMARY:Conference: Hello and welcome
+LOCATION:Main Room 1\, East Midlands Conference Centre\, Beeston Lane\, N
+ ottingham NG7 2RJ
+DESCRIPTION:Charlotte Richardson\, your host\, and Tom Lee. Agenda and sl
+ ides: https://thriving-community-clubs.github.io/TCC-Conference/#d1-welc
+ ome
+URL:https://thriving-community-clubs.github.io/TCC-Conference/
+END:VEVENT
+BEGIN:VEVENT
+UID:d1-scene@thriving-community-clubs.github.io
+DTSTAMP:20261012T000000Z
+DTSTART:20261020T094000Z
+DTEND:20261020T100000Z
+SUMMARY:Conference: Setting the scene
+LOCATION:Main Room 1\, East Midlands Conference Centre\, Beeston Lane\, N
+ ottingham NG7 2RJ
+DESCRIPTION:Phil Woodward and Mick Baikie. Agenda and slides: https://thr
+ iving-community-clubs.github.io/TCC-Conference/#d1-scene
+URL:https://thriving-community-clubs.github.io/TCC-Conference/
+END:VEVENT
+BEGIN:VEVENT
+UID:d1-breakout@thriving-community-clubs.github.io
+DTSTAMP:20261012T000000Z
+DTSTART:20261020T100000Z
+DTEND:20261020T110000Z
+SUMMARY:Conference: Breakout workshops
+LOCATION:Main Room 1 or Main Room 2\, East Midlands Conference Centre\, B
+ eeston Lane\, Nottingham NG7 2RJ
+DESCRIPTION:Go to the workshop you have been allocated. Agenda and slides
+ : https://thriving-community-clubs.github.io/TCC-Conference/#d1-breakout
+URL:https://thriving-community-clubs.github.io/TCC-Conference/
+END:VEVENT
+BEGIN:VEVENT
+UID:d1-lunch@thriving-community-clubs.github.io
+DTSTAMP:20261012T000000Z
+DTSTART:20261020T110000Z
+DTEND:20261020T120000Z
+SUMMARY:Conference: Lunch
+LOCATION:East Midlands Conference Centre\, Beeston Lane\, Nottingham NG7 
+ 2RJ
+DESCRIPTION:Agenda and slides: https://thriving-community-clubs.github.io
+ /TCC-Conference/#d1-lunch
+URL:https://thriving-community-clubs.github.io/TCC-Conference/
+END:VEVENT
+BEGIN:VEVENT
+UID:d1-teamwork@thriving-community-clubs.github.io
+DTSTAMP:20261012T000000Z
+DTSTART:20261020T120000Z
+DTEND:20261020T130000Z
+SUMMARY:Conference: Teamwork and Collaboration
+LOCATION:Starts in Main Room 1\, then your group\, East Midlands Conferen
+ ce Centre\, Beeston Lane\, Nottingham NG7 2RJ
+DESCRIPTION:Andy Clay. Agenda and slides: https://thriving-community-club
+ s.github.io/TCC-Conference/#d1-teamwork
+URL:https://thriving-community-clubs.github.io/TCC-Conference/
+END:VEVENT
+BEGIN:VEVENT
+UID:d1-pillar@thriving-community-clubs.github.io
+DTSTAMP:20261012T000000Z
+DTSTART:20261020T130000Z
+DTEND:20261020T140000Z
+SUMMARY:Conference: Pillar Networking
+LOCATION:Starts in Main Room 1\, then your pillar\, East Midlands Confere
+ nce Centre\, Beeston Lane\, Nottingham NG7 2RJ
+DESCRIPTION:Sarah Cummings. Agenda and slides: https://thriving-community
+ -clubs.github.io/TCC-Conference/#d1-pillar
+URL:https://thriving-community-clubs.github.io/TCC-Conference/
+END:VEVENT
+BEGIN:VEVENT
+UID:d1-break@thriving-community-clubs.github.io
+DTSTAMP:20261012T000000Z
+DTSTART:20261020T140000Z
+DTEND:20261020T142000Z
+SUMMARY:Conference: Break
+LOCATION:East Midlands Conference Centre\, Beeston Lane\, Nottingham NG7 
+ 2RJ
+DESCRIPTION:Agenda and slides: https://thriving-community-clubs.github.io
+ /TCC-Conference/#d1-break
+URL:https://thriving-community-clubs.github.io/TCC-Conference/
+END:VEVENT
+BEGIN:VEVENT
+UID:d1-progression@thriving-community-clubs.github.io
+DTSTAMP:20261012T000000Z
+DTSTART:20261020T142000Z
+DTEND:20261020T151000Z
+SUMMARY:Conference: Accelerating Progression
+LOCATION:Starts in Main Room 1\, then find a space in any of the four roo
+ ms\, East Midlands Conference Centre\, Beeston Lane\, Nottingham NG7 2RJ
+DESCRIPTION:Tom Lee. Agenda and slides: https://thriving-community-clubs.
+ github.io/TCC-Conference/#d1-progression
+URL:https://thriving-community-clubs.github.io/TCC-Conference/
+END:VEVENT
+BEGIN:VEVENT
+UID:d1-roundup@thriving-community-clubs.github.io
+DTSTAMP:20261012T000000Z
+DTSTART:20261020T151000Z
+DTEND:20261020T153000Z
+SUMMARY:Conference: Day 1 round up and group photo
+LOCATION:Main Room 1\, East Midlands Conference Centre\, Beeston Lane\, N
+ ottingham NG7 2RJ
+DESCRIPTION:Charlotte Richardson and Tom Lee. Agenda and slides: https://
+ thriving-community-clubs.github.io/TCC-Conference/#d1-roundup
+URL:https://thriving-community-clubs.github.io/TCC-Conference/
+END:VEVENT
+BEGIN:VEVENT
+UID:d1-checkin@thriving-community-clubs.github.io
+DTSTAMP:20261012T000000Z
+DTSTART:20261020T153000Z
+DTEND:20261020T180000Z
+SUMMARY:Conference: Hotel check-in and downtime
+LOCATION:Check in at The Orchard Hotel\, use the facilities\, catch up wi
+ th colleagues or just relax.\, East Midlands Conference Centre\, Beeston
+  Lane\, Nottingham NG7 2RJ
+DESCRIPTION:Agenda and slides: https://thriving-community-clubs.github.io
+ /TCC-Conference/#d1-checkin
+URL:https://thriving-community-clubs.github.io/TCC-Conference/
+END:VEVENT
+BEGIN:VEVENT
+UID:d1-evening@thriving-community-clubs.github.io
+DTSTAMP:20261012T000000Z
+DTSTART:20261020T180000Z
+DTEND:20261020T220000Z
+SUMMARY:Conference: Drinks reception\, street food dinner and interactive
+  games
+LOCATION:Main Room 1 and Main Room 2. Dress is smart casual.\, East Midla
+ nds Conference Centre\, Beeston Lane\, Nottingham NG7 2RJ
+DESCRIPTION:Agenda and slides: https://thriving-community-clubs.github.io
+ /TCC-Conference/#d1-evening
+URL:https://thriving-community-clubs.github.io/TCC-Conference/
+END:VEVENT
+BEGIN:VEVENT
+UID:d2-registration@thriving-community-clubs.github.io
+DTSTAMP:20261012T000000Z
+DTSTART:20261021T080000Z
+DTEND:20261021T083000Z
+SUMMARY:Conference: Registration\, refreshments\, networking and hotel ch
+ eck-out
+LOCATION:East Midlands Conference Centre\, Beeston Lane\, Nottingham NG7 
+ 2RJ
+DESCRIPTION:Agenda and slides: https://thriving-community-clubs.github.io
+ /TCC-Conference/#d2-registration
+URL:https://thriving-community-clubs.github.io/TCC-Conference/
+END:VEVENT
+BEGIN:VEVENT
+UID:d2-welcome@thriving-community-clubs.github.io
+DTSTAMP:20261012T000000Z
+DTSTART:20261021T083000Z
+DTEND:20261021T084000Z
+SUMMARY:Conference: Hello and welcome
+LOCATION:Main Room 1\, East Midlands Conference Centre\, Beeston Lane\, N
+ ottingham NG7 2RJ
+DESCRIPTION:Charlotte Richardson\, your host\, and Tom Lee. Agenda and sl
+ ides: https://thriving-community-clubs.github.io/TCC-Conference/#d2-welc
+ ome
+URL:https://thriving-community-clubs.github.io/TCC-Conference/
+END:VEVENT
+BEGIN:VEVENT
+UID:d2-workforce@thriving-community-clubs.github.io
+DTSTAMP:20261012T000000Z
+DTSTART:20261021T084000Z
+DTEND:20261021T095000Z
+SUMMARY:Conference: Empowering the Club Workforce
+LOCATION:Main Room 1\, East Midlands Conference Centre\, Beeston Lane\, N
+ ottingham NG7 2RJ
+DESCRIPTION:Steph Powell\, Ellie Reid\, Mick Baikie and Laura Smith. Agen
+ da and slides: https://thriving-community-clubs.github.io/TCC-Conference
+ /#d2-workforce
+URL:https://thriving-community-clubs.github.io/TCC-Conference/
+END:VEVENT
+BEGIN:VEVENT
+UID:d2-break@thriving-community-clubs.github.io
+DTSTAMP:20261012T000000Z
+DTSTART:20261021T095000Z
+DTEND:20261021T101000Z
+SUMMARY:Conference: Break
+LOCATION:East Midlands Conference Centre\, Beeston Lane\, Nottingham NG7 
+ 2RJ
+DESCRIPTION:Agenda and slides: https://thriving-community-clubs.github.io
+ /TCC-Conference/#d2-break
+URL:https://thriving-community-clubs.github.io/TCC-Conference/
+END:VEVENT
+BEGIN:VEVENT
+UID:d2-keynote@thriving-community-clubs.github.io
+DTSTAMP:20261012T000000Z
+DTSTART:20261021T101000Z
+DTEND:20261021T110000Z
+SUMMARY:Conference: Keynote: Leading the Orchestra
+LOCATION:Main Room 1\, East Midlands Conference Centre\, Beeston Lane\, N
+ ottingham NG7 2RJ
+DESCRIPTION:Sue Day MBE\, Director of Women's Football at The FA\, with C
+ harlotte Richardson. Agenda and slides: https://thriving-community-clubs
+ .github.io/TCC-Conference/#d2-keynote
+URL:https://thriving-community-clubs.github.io/TCC-Conference/
+END:VEVENT
+BEGIN:VEVENT
+UID:d2-lmd@thriving-community-clubs.github.io
+DTSTAMP:20261012T000000Z
+DTSTART:20261021T110000Z
+DTEND:20261021T113000Z
+SUMMARY:Conference: Lead\, Manage\, Do
+LOCATION:Starts in Main Room 1\, then your group\, East Midlands Conferen
+ ce Centre\, Beeston Lane\, Nottingham NG7 2RJ
+DESCRIPTION:Andy Clay. Agenda and slides: https://thriving-community-club
+ s.github.io/TCC-Conference/#d2-lmd
+URL:https://thriving-community-clubs.github.io/TCC-Conference/
+END:VEVENT
+BEGIN:VEVENT
+UID:d2-lunch@thriving-community-clubs.github.io
+DTSTAMP:20261012T000000Z
+DTSTART:20261021T113000Z
+DTEND:20261021T123000Z
+SUMMARY:Conference: Lunch
+LOCATION:East Midlands Conference Centre\, Beeston Lane\, Nottingham NG7 
+ 2RJ
+DESCRIPTION:Agenda and slides: https://thriving-community-clubs.github.io
+ /TCC-Conference/#d2-lunch
+URL:https://thriving-community-clubs.github.io/TCC-Conference/
+END:VEVENT
+BEGIN:VEVENT
+UID:d2-growing@thriving-community-clubs.github.io
+DTSTAMP:20261012T000000Z
+DTSTART:20261021T123000Z
+DTEND:20261021T133000Z
+SUMMARY:Conference: Growing Pains
+LOCATION:Main Room 1\, East Midlands Conference Centre\, Beeston Lane\, N
+ ottingham NG7 2RJ
+DESCRIPTION:Richard Neal\, Frank Bell and Mark Pover. Agenda and slides: 
+ https://thriving-community-clubs.github.io/TCC-Conference/#d2-growing
+URL:https://thriving-community-clubs.github.io/TCC-Conference/
+END:VEVENT
+BEGIN:VEVENT
+UID:d2-impact@thriving-community-clubs.github.io
+DTSTAMP:20261012T000000Z
+DTSTART:20261021T133000Z
+DTEND:20261021T140000Z
+SUMMARY:Conference: Demonstrating Impact
+LOCATION:Main Room 1\, East Midlands Conference Centre\, Beeston Lane\, N
+ ottingham NG7 2RJ
+DESCRIPTION:Sarah Cummings and Luke Bailey. Agenda and slides: https://th
+ riving-community-clubs.github.io/TCC-Conference/#d2-impact
+URL:https://thriving-community-clubs.github.io/TCC-Conference/
+END:VEVENT
+BEGIN:VEVENT
+UID:d2-vision@thriving-community-clubs.github.io
+DTSTAMP:20261012T000000Z
+DTSTART:20261021T140000Z
+DTEND:20261021T141500Z
+SUMMARY:Conference: Future Vision
+LOCATION:Main Room 1\, East Midlands Conference Centre\, Beeston Lane\, N
+ ottingham NG7 2RJ
+DESCRIPTION:Phil Woodward and Mick Baikie. Agenda and slides: https://thr
+ iving-community-clubs.github.io/TCC-Conference/#d2-vision
+URL:https://thriving-community-clubs.github.io/TCC-Conference/
+END:VEVENT
+BEGIN:VEVENT
+UID:d2-roundup@thriving-community-clubs.github.io
+DTSTAMP:20261012T000000Z
+DTSTART:20261021T141500Z
+DTEND:20261021T144500Z
+SUMMARY:Conference: Day 2 round up and conference reflections
+LOCATION:Main Room 1\, East Midlands Conference Centre\, Beeston Lane\, N
+ ottingham NG7 2RJ
+DESCRIPTION:Charlotte Richardson and Tom Lee. Agenda and slides: https://
+ thriving-community-clubs.github.io/TCC-Conference/#d2-roundup
+URL:https://thriving-community-clubs.github.io/TCC-Conference/
+END:VEVENT
+END:VCALENDAR

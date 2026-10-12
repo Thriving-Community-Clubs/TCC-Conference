@@ -9,7 +9,8 @@ import html
 import json
 import os
 import sys
-from datetime import date
+from datetime import date, datetime, timedelta, timezone
+from urllib.parse import urlencode
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -369,8 +370,125 @@ def illustrator_html():
     )
 
 
+# ----- Calendar files -----
+
+VENUE = "East Midlands Conference Centre, Beeston Lane, Nottingham NG7 2RJ"
+PAGE_URL = "https://thriving-community-clubs.github.io/TCC-Conference/"
+CAL_BOTH = "files/tcc-conference-2026.ics"
+CAL_SESSIONS = "files/tcc-conference-2026-sessions.ics"
+
+# The whole of each day, for people who want one entry per day.
+CAL_DAYS = [
+    ("tcc26-day1", "2026-10-20", "09:30", "16:30",
+     "Thriving Community Clubs Conference 2026: Day 1",
+     "Registration opens at 9.30am and we start at 10.30am in Main Room 1. "
+     "The drinks reception, street food dinner and games start at 7.00pm in Main Room 1 and Main Room 2. "
+     "Agenda, slides and venue plan: " + PAGE_URL),
+    ("tcc26-day2", "2026-10-21", "09:00", "15:45",
+     "Thriving Community Clubs Conference 2026: Day 2",
+     "Registration and hotel check-out from 9.00am. We start at 9.30am in Main Room 1 and close at 3.45pm. "
+     "Agenda, slides and venue plan: " + PAGE_URL),
+]
+
+
+def utc(day, hhmm):
+    local = datetime.fromisoformat(f"{day}T{hhmm}:00{C.TZ}")
+    return local.astimezone(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+
+
+def ics_text(value):
+    return value.replace("\\", "\\\\").replace(";", "\\;").replace(",", "\\,").replace("\n", "\\n")
+
+
+def ics_fold(line):
+    """Lines in a calendar file must be under 75 bytes; longer ones continue with a space."""
+    out, raw = [], line.encode("utf-8")
+    while len(raw) > 73:
+        cut = 73
+        while (raw[cut] & 0xC0) == 0x80:  # do not split a character
+            cut -= 1
+        out.append(raw[:cut].decode("utf-8"))
+        raw = b" " + raw[cut:]
+    out.append(raw.decode("utf-8"))
+    return "\r\n".join(out)
+
+
+def ics(name, events, stamp):
+    lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Thriving Community Clubs//Conference 2026//EN",
+             "CALSCALE:GREGORIAN", "METHOD:PUBLISH", "X-WR-CALNAME:" + ics_text(name)]
+    for uid, day, start, end, title, where, about in events:
+        lines += ["BEGIN:VEVENT", f"UID:{uid}@thriving-community-clubs.github.io", f"DTSTAMP:{stamp}",
+                  f"DTSTART:{utc(day, start)}", f"DTEND:{utc(day, end)}",
+                  "SUMMARY:" + ics_text(title), "LOCATION:" + ics_text(where),
+                  "DESCRIPTION:" + ics_text(about), "URL:" + PAGE_URL, "END:VEVENT"]
+    lines.append("END:VCALENDAR")
+    return "\r\n".join(ics_fold(x) for x in lines) + "\r\n"
+
+
+def write_calendars():
+    stamp = date.today().strftime("%Y%m%dT000000Z")
+    days = [(uid, d, a, b, t, VENUE, about) for uid, d, a, b, t, about in CAL_DAYS]
+    sessions = []
+    for d in C.DAYS:
+        for s in d["sessions"]:
+            if s.get("club") and not C.SHOW_CLUB_STORIES:
+                continue
+            if end_of(s) <= s["start"]:
+                continue
+            where = s.get("room") or s.get("note") or ""
+            about = (s.get("who") + ". " if s.get("who") else "") + "Agenda and slides: " + PAGE_URL + "#" + s["id"]
+            sessions.append((s["id"], d["date"], s["start"], end_of(s), "Conference: " + s["title"],
+                             f"{where}, {VENUE}" if where else VENUE, about))
+    for path, name, events in [(CAL_BOTH, "Thriving Community Clubs Conference 2026", days),
+                               (CAL_SESSIONS, "Thriving Community Clubs Conference 2026, every session", sessions)]:
+        with open(os.path.join(ROOT, path), "w", encoding="utf-8", newline="") as f:
+            f.write(ics(name, events, stamp))
+
+
+def google_link(uid, day, start, end, title, about):
+    query = urlencode({"action": "TEMPLATE", "text": title, "dates": f"{utc(day, start)}/{utc(day, end)}",
+                       "details": about, "location": VENUE, "ctz": "Europe/London"})
+    return "https://calendar.google.com/calendar/render?" + query
+
+
+def calendar_html():
+    google = "".join(
+        f'<li><a href="{e(google_link(*d))}" rel="noopener">{"Day 1" if d[0].endswith("1") else "Day 2"} in Google Calendar</a></li>'
+        for d in CAL_DAYS
+    )
+    return (
+        f'<p><a class="button" href="{CAL_BOTH}" download>Add both days to your calendar</a></p>'
+        '<p class="hint">Opens in Outlook, Apple Calendar and most phone calendars. It adds two entries, one for each day.</p>'
+        f'<ul class="cal-more"><li><a href="{CAL_SESSIONS}" download>Add every session instead</a></li>{google}</ul>'
+    )
+
+
+# ----- Saved copy for when there is no signal -----
+
+def write_service_worker():
+    """Lists what a phone keeps for use without signal, and fingerprints it so
+    phones fetch a fresh copy whenever any of it changes."""
+    core = ["./", f"assets/site.css?v={version('assets/site.css')}", f"assets/site.js?v={version('assets/site.js')}",
+            CAL_BOTH, CAL_SESSIONS]
+    for folder, ext in [("assets", ".png"), ("img", ""), ("slides", ".webp")]:
+        for name in sorted(os.listdir(os.path.join(ROOT, folder))):
+            if name.endswith(ext) and not name.startswith("."):
+                core.append(f"{folder}/{name}")
+    h = hashlib.sha256()
+    for item in ["index.html"] + core[1:]:
+        h.update(item.encode())
+        with open(os.path.join(ROOT, item.split("?")[0]), "rb") as f:
+            h.update(f.read())
+    tpl = open(os.path.join(HERE, "sw-template.js"), encoding="utf-8").read()
+    out = tpl.replace("__VERSION__", h.hexdigest()[:10]).replace("__CORE__", json.dumps(core, indent=2))
+    with open(os.path.join(ROOT, "sw.js"), "w", encoding="utf-8") as f:
+        f.write(out)
+    return len(core)
+
+
 def main():
     tpl = open(os.path.join(HERE, "template.html"), encoding="utf-8").read()
+    write_calendars()
     updated = date.today().strftime("%-d %B %Y")
     values = {
         "AGENDA": agenda_html(),
@@ -391,6 +509,7 @@ def main():
         "LINK_DIRECTIONS": e(C.LINKS["directions"]),
         "FLOORPLAN": open(os.path.join(HERE, "floorplan.svg"), encoding="utf-8").read(),
         "UPDATED": updated,
+        "CALENDAR": calendar_html(),
         "CSS_V": version("assets/site.css"),
         "JS_V": version("assets/site.js"),
     }
@@ -403,6 +522,7 @@ def main():
     with open(out, "w", encoding="utf-8") as f:
         f.write(tpl)
     print("wrote", out, len(tpl), "bytes")
+    print("saved for use without signal:", write_service_worker(), "files")
 
 
 if __name__ == "__main__":

@@ -366,3 +366,11 @@ ul, ol { padding: 0; list-style: none; }
   .jump, .now, .tabs, .slides { display: none; }
   .day[hidden] { display: block !important; }
 }
+
+/* calendar and offline */
+.cal-more { margin-top: 10px; }
+.cal-more li { padding: 4px 0; }
+.gap-s { margin-top: 16px; }
+.offline { background: var(--navy); color: var(--white); font-weight: 700; font-size: 15px; padding: 10px 0; }
+.offline[hidden] { display: none; }
+@media print { .offline { display: none; } }

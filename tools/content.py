@@ -118,12 +118,12 @@ GROUPS = [
     },
     {
         "counties": ["Oxfordshire FA", "Staffordshire FA", "Northumberland FA", "Nottinghamshire FA", "Somerset FA", "Suffolk FA", "Cambridgeshire FA", "Worcestershire FA"],
-        "d1": {"room": MR2, "group": "Group 1", "leads": "Chris Smith and Alex Scott"},
+        "d1": {"room": MR2, "group": "Group 4", "leads": "Chris Smith and Alex Scott"},
         "d2": {"room": CR2, "group": "Group 4", "leads": "Alex Scott"},
     },
     {
         "counties": ["Bedfordshire FA", "Cumberland FA", "Dorset FA", "East Riding FA", "North Riding FA", "Wiltshire FA", "Cornwall FA", "Shropshire FA", "Huntingdonshire FA", "Herefordshire FA", "Westmorland FA"],
-        "d1": {"room": MR2, "group": "Group 2", "leads": "Katie Phillipson and Marc Di Carlo"},
+        "d1": {"room": MR2, "group": "Group 5", "leads": "Katie Phillipson and Marc Di Carlo"},
         "d2": {"room": MR2, "group": "Group 5", "leads": "Marc Di Carlo"},
     },
 ]
