@@ -257,7 +257,7 @@ def groups_json():
     out = {}
     for g in C.GROUPS:
         for c in g["counties"]:
-            out[c] = {"d1": g["d1"], "d2": g["d2"]}
+            out[c] = {"d1": g["d1"], "d2": None if c in C.DAY1_ONLY else g["d2"]}
     return json.dumps(out, ensure_ascii=False)
 
 

@@ -98,3 +98,4 @@
 .fb-qr { margin: 18px 0 0; width: 140px; }
 .fb-qr img { display: block; width: 140px; height: 140px; image-rendering: pixelated; border: var(--hair) solid var(--grey); }
 .fb-qr figcaption { font-size: 14px; margin-top: 6px; }
+.fac-about { margin-top: 4px; font-size: 15px; }

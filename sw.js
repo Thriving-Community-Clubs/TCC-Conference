@@ -6,13 +6,13 @@
    Everything else: use the saved copy if there is one, otherwise fetch and keep it. */
 "use strict";
 
-var VERSION = "780f9250e3";
+var VERSION = "d089e376ea";
 var CORE = "tcc26-core-" + VERSION;
 var EXTRA = "tcc26-extra";
 var CORE_FILES = [
   "./",
   "assets/site.css?v=ae8735082a",
-  "assets/site.js?v=d7d4eb6344",
+  "assets/site.js?v=fb51fa091c",
   "files/tcc-conference-2026.ics",
   "files/tcc-conference-2026-sessions.ics",
   "assets/accredited-club-programme-red.png",

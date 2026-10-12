@@ -275,7 +275,13 @@
     result.appendChild(el("h3", null, name));
     var dl = el("dl");
     slot(dl, "Day 1, Tuesday at 1.00pm", "Teamwork and Collaboration", g.d1);
-    slot(dl, "Day 2, Wednesday at 12.00pm", "Lead, Manage, Do", g.d2);
+    if (g.d2) slot(dl, "Day 2, Wednesday at 12.00pm", "Lead, Manage, Do", g.d2);
+    else {
+      var wrap = el("div", "slot");
+      wrap.appendChild(el("dt", null, "Day 2"));
+      wrap.appendChild(el("dd", null, "Your County FA is booked for Day 1 only. If that has changed, ask at registration for your Lead, Manage, Do group."));
+      dl.appendChild(wrap);
+    }
     result.appendChild(dl);
     result.hidden = false;
   }

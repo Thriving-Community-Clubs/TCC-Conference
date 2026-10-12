@@ -134,23 +134,20 @@
   }
 
   function jobsFor(data, name) {
-    var out = [];
-    data.sessions.forEach(function (s) {
-      s.jobs.forEach(function (j) {
-        if (j.who.indexOf(name) === -1) return;
-        var others = j.who.filter(function (n) { return n !== name; });
-        var role = j.role + (others.length ? ", with " + joinNames(others) : "");
-        var last = out[out.length - 1];
-        if (last && last.session === s) {
-          // Two jobs in one session, such as introducing it and then facilitating a room.
-          last.role += (j.room !== last.room ? " in " + last.room : "") + ". Then " + role.charAt(0).toLowerCase() + role.slice(1);
-          last.room = j.room;
-          return;
-        }
-        out.push({ session: s, role: role, room: j.room });
-      });
+    var p = data.people[name];
+    if (!p) return [];
+    return p.items.map(function (i) {
+      return { session: { d: i.d, s: i.s, e: i.e, t: i.t, tbc: i.tbc }, role: i.role, room: i.room };
     });
-    return out;
+  }
+
+  function aboutLine(p) {
+    var bits = [];
+    if (p.note) bits.push(p.note);
+    else if (p.org) bits.push(p.org);
+    if (p.days && p.days.length === 2) bits.push("Here on both days");
+    else if (p.days && p.days.length === 1) bits.push("Here on Day " + p.days[0] + " only");
+    return bits.join(". ") + (bits.length ? "." : "");
   }
 
   function showPerson(data, name, box) {
@@ -158,6 +155,9 @@
     if (!name) { box.hidden = true; return; }
     var jobs = jobsFor(data, name);
     box.appendChild(el("h3", null, name));
+    var about = aboutLine(data.people[name] || {});
+    if (about) box.appendChild(el("p", "fac-about", about));
+    if (!jobs.length) box.appendChild(el("p", "fac-check", "No session roles are listed for you."));
     var day = null, list = null;
     jobs.forEach(function (j) {
       var s = j.session;
@@ -204,7 +204,7 @@
     var select = document.getElementById("fac-name");
     var box = document.getElementById("fac-result");
     var names = {};
-    data.sessions.forEach(function (s) { s.jobs.forEach(function (j) { j.who.forEach(function (n) { names[n] = true; }); }); });
+    Object.keys(data.people).forEach(function (n) { names[n] = true; });
     Object.keys(names).sort().forEach(function (n) {
       var o = el("option", null, n);
       o.value = n;
