@@ -39,6 +39,8 @@ Each slide also has a short description in `SLIDE_ALT` for people who cannot see
 - **Before, during and after.** The page reorders itself: joining information leads beforehand, the agenda leads from the evening before Day 1, and the feedback survey leads once the conference closes.
 - **Now and next.** On the two days, the dark panel at the top shows the current session and the next one.
 - **Slides.** Each session's slides appear when the session starts and stay up afterwards. The image files are in this public repository from the moment they are added, so the timing hides them from the page; it does not secure them. Do not add a slide that must stay private.
+- **Without signal.** `sw.js` keeps a copy of the page, its stylesheet and script, logos, photos and every slide on the phone after the first visit, so the page opens with no connection. Pages are fetched fresh when there is signal (after 4 seconds the saved copy is shown instead). Workbook pages, resources and PDFs are kept once opened. `sw.js` is written by `tools/build.py` from `tools/sw-template.js`; edit the template, never `sw.js`.
+- **Calendar files.** `tools/build.py` also writes `files/tcc-conference-2026.ics` (both days) and `files/tcc-conference-2026-sessions.ics` (every session) from the agenda, so rebuild after any time change.
 - **Preview another time.** Add `?preview=2026-10-20T13:05` to the page address to see it as it will look at that moment (Nottingham time).
 
 ## Design
@@ -54,6 +56,7 @@ The page follows the England Football Thriving design system: England Football r
 
       node tools/encrypt-facilitators.mjs /path/outside/this/repo/facilitators-source.html "the passcode"
 
+- The "Your sessions" picker on the facilitator page reads a JSON block (`id="fac-data"`) inside the source, listing every session, who is doing what and where, and the team briefings. Update it when roles change. Calendar files on that page are built in the browser, so nothing readable is published.
 - The passcode is forgiving about capitals and about spaces in place of hyphens.
 - Anyone can download the encrypted page, so the passcode is the only protection. It keeps casual visitors out. Do not put anything on the page that would be a real problem if it became public.
 
