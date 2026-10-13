@@ -100,9 +100,10 @@ CR1 = "Conference Room 1"
 CR2 = "Conference Room 2"
 
 # Group membership is the same on both days. Taken from the attendee session allocation
-# spreadsheet (12 Oct): County FAs listed are those with staff attending.
+# spreadsheet (13 Oct): County FAs listed are those with staff attending.
+# Day 1 rooms for groups 3 to 5 changed on 13 Oct to match the deck.
 # County FAs whose staff attend Day 1 only (no Lead, Manage, Do group).
-DAY1_ONLY = {"Cheshire FA", "Westmorland FA"}
+DAY1_ONLY = {"Westmorland FA"}
 
 GROUPS = [
     {
@@ -111,23 +112,23 @@ GROUPS = [
         "d2": {"room": CR1, "group": "Group 1", "leads": "Luke Bowles, Jo de Tute and Dominic Foley"},
     },
     {
-        "counties": ["Berks & Bucks FA", "Kent FA", "Cheshire FA", "Sheffield & Hallamshire FA", "Manchester FA", "Liverpool FA", "Devon FA"],
+        "counties": ["Berks & Bucks FA", "Kent FA", "Cheshire FA", "Sheffield & Hallamshire FA", "Leicestershire FA", "Manchester FA", "Liverpool FA", "Devon FA"],
         "d1": {"room": MR1, "group": "Group 2", "leads": "Andy Baker and Ashley Donovan"},
         "d2": {"room": MR1, "group": "Group 2", "leads": "Ashley Donovan"},
     },
     {
         "counties": ["Derbyshire FA", "Northamptonshire FA", "Middlesex FA", "Gloucestershire FA", "Hertfordshire FA", "Lincolnshire FA", "London FA", "Norfolk FA", "Sussex FA"],
-        "d1": {"room": MR1, "group": "Group 3", "leads": "Karl Lingham and Jemma Fairey"},
+        "d1": {"room": MR2, "group": "Group 3", "leads": "Karl Lingham and Jemma Fairey"},
         "d2": {"room": MR1, "group": "Group 3", "leads": "Jemma Fairey"},
     },
     {
         "counties": ["Oxfordshire FA", "Staffordshire FA", "Northumberland FA", "Nottinghamshire FA", "Somerset FA", "Suffolk FA", "Cambridgeshire FA"],
-        "d1": {"room": MR2, "group": "Group 4", "leads": "Chris Smith and Alex Scott"},
+        "d1": {"room": CR1, "group": "Group 4", "leads": "Chris Smith and Alex Scott"},
         "d2": {"room": CR2, "group": "Group 4", "leads": "Alex Scott"},
     },
     {
-        "counties": ["Bedfordshire FA", "Cumberland FA", "Dorset FA", "East Riding FA", "North Riding FA", "Wiltshire FA", "Cornwall FA", "Shropshire FA", "Huntingdonshire FA", "Herefordshire FA", "Westmorland FA"],
-        "d1": {"room": MR2, "group": "Group 5", "leads": "Katie Phillipson and Marc Di Carlo"},
+        "counties": ["Bedfordshire FA", "Cumberland FA", "Dorset FA", "East Riding FA", "North Riding FA", "Wiltshire FA", "Cornwall FA", "Huntingdonshire FA", "Herefordshire FA", "Westmorland FA"],
+        "d1": {"room": CR2, "group": "Group 5", "leads": "Katie Phillipson and Marc Di Carlo"},
         "d2": {"room": MR2, "group": "Group 5", "leads": "Marc Di Carlo"},
     },
 ]
@@ -139,6 +140,22 @@ PILLAR_ROOMS = [
     ("Facilities", "facilities", CR1, "Ian Grange, Liam Devlin, Mark Pover and Simon Wood"),
     ("Community", "community", MR1, "Sarah Cummings, Andy Baker and Rus Smith"),
 ]
+
+# Resources shown inside a session in the agenda, keyed by session id.
+SESSION_RESOURCES = {
+    "d1-teamwork": [
+        {
+            "title": "Steal & Adapt: good practice from your band",
+            "pdf": "files/steal-and-adapt.pdf",
+            "pages": [
+                ("resources/steal-and-adapt/page-1.webp", 1400, 990, "Steal and Adapt, Band A. Examples of good practice around collaboration within County FA teams, FA Club Consultants and other County FA support staff from counties in Band A. What could you steal and adapt for your County?", "Band A"),
+                ("resources/steal-and-adapt/page-2.webp", 1400, 990, "Steal and Adapt, Band B. Examples of good practice around collaboration from counties in Band B. What could you steal and adapt for your County?", "Band B"),
+                ("resources/steal-and-adapt/page-3.webp", 1400, 990, "Steal and Adapt, Band C. Examples of good practice around collaboration from counties in Band C. What could you steal and adapt for your County?", "Band C"),
+                ("resources/steal-and-adapt/page-4.webp", 1400, 990, "Steal and Adapt, Band D. Examples of good practice around collaboration from counties in Band D. What could you steal and adapt for your County?", "Band D"),
+            ],
+        },
+    ],
+}
 
 # Resources shown under a pillar in the Pillar Networking session.
 # Keyed by the pillar name used in PILLAR_ROOMS. Prepare files with tools/add_resource.py.

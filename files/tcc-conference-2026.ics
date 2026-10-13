@@ -6,7 +6,7 @@ METHOD:PUBLISH
 X-WR-CALNAME:Thriving Community Clubs Conference 2026
 BEGIN:VEVENT
 UID:tcc26-day1@thriving-community-clubs.github.io
-DTSTAMP:20261012T000000Z
+DTSTAMP:20261013T000000Z
 DTSTART:20261020T083000Z
 DTEND:20261020T153000Z
 SUMMARY:Thriving Community Clubs Conference 2026: Day 1
@@ -20,7 +20,7 @@ URL:https://thriving-community-clubs.github.io/TCC-Conference/
 END:VEVENT
 BEGIN:VEVENT
 UID:tcc26-day2@thriving-community-clubs.github.io
-DTSTAMP:20261012T000000Z
+DTSTAMP:20261013T000000Z
 DTSTART:20261021T080000Z
 DTEND:20261021T144500Z
 SUMMARY:Thriving Community Clubs Conference 2026: Day 2

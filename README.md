@@ -24,6 +24,8 @@ After a change, run this from the top of the repository:
 | Replace the workbook | run `python3 tools/make_workbook.py "/path/to/workbook.pdf"`, check `WORKBOOK_PAGES`, rebuild |
 | Take the workbook off the page | set `WORKBOOK_FILE = ""` |
 | Add a resource under a pillar | run `python3 tools/add_resource.py <short-name> "/path/to/file"`, paste what it prints into `PILLAR_RESOURCES`, add a title and descriptions, rebuild |
+| Update who goes to which breakout and pillar ("Choose your name") | run `python3 tools/import_allocations.py "/path/to/Attendee Session Allocation.xlsx"`, then rebuild. It stops if a County FA's groups in the sheet disagree with `GROUPS` |
+| Add files to a session in the agenda | `SESSION_RESOURCES`, keyed by session id |
 | Show the three club stories on Day 2 | `SHOW_CLUB_STORIES = True` |
 | Change which slides delegates see | `SLIDE_PAGES` (page numbers of the master deck PDF), then re-run `make_slides.py` |
 

@@ -286,6 +286,58 @@
     result.hidden = false;
   }
 
+  /* By name: breakout workshop and pillar */
+
+  var peopleEl = doc.getElementById("people-data");
+  var people = peopleEl ? JSON.parse(peopleEl.textContent) : {};
+  var personSelect = doc.getElementById("person");
+  var personResult = doc.getElementById("person-result");
+
+  function personSlot(dl, when, title, x) {
+    var wrap = el("div", "slot");
+    wrap.appendChild(el("dt", null, when));
+    var dd = el("dd");
+    dd.appendChild(el("strong", null, x.r));
+    var line = title;
+    if (x.role === "lead") line += ". You are leading this session";
+    else if (x.role === "facilitator") line += ". You are facilitating";
+    else if (x.l) line += " with " + x.l;
+    dd.appendChild(doc.createTextNode(line));
+    wrap.appendChild(dd);
+    dl.appendChild(wrap);
+  }
+
+  function showPerson(name) {
+    var p = people[name];
+    personResult.textContent = "";
+    if (!p) { personResult.hidden = true; return; }
+    personResult.appendChild(el("h3", null, name));
+    var dl = el("dl");
+    if (p.w) personSlot(dl, "Day 1, Tuesday at 11.00am, breakout workshop", p.w.t, p.w);
+    if (p.p) personSlot(dl, "Day 1, Tuesday at 2.00pm, Pillar Networking", p.p.t, p.p);
+    personResult.appendChild(dl);
+    personResult.hidden = false;
+  }
+
+  if (personSelect) {
+    var savedPerson = null;
+    try { savedPerson = localStorage.getItem("tcc26-person"); } catch (err) { /* private browsing */ }
+    if (savedPerson && people[savedPerson]) { personSelect.value = savedPerson; showPerson(savedPerson); }
+    personSelect.addEventListener("change", function () {
+      showPerson(personSelect.value);
+      try { localStorage.setItem("tcc26-person", personSelect.value); } catch (err) { /* ignore */ }
+      // Fill in the County FA too, when we know it.
+      var c = people[personSelect.value] && people[personSelect.value].c;
+      if (c && select && groups[c] && !select.value) {
+        select.value = c;
+        showCounty(c);
+        try { localStorage.setItem("tcc26-county", c); } catch (err) { /* ignore */ }
+      }
+    });
+  }
+
+  /* By County FA: group sessions */
+
   if (select) {
     var saved = null;
     try { saved = localStorage.getItem("tcc26-county"); } catch (err) { /* private browsing */ }

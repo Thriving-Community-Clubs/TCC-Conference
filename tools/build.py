@@ -92,9 +92,10 @@ def groups_list(which):
     )
 
 
-def resources_fold(pillar):
-    """Resources for one pillar, folded away under its name. Nothing when there are none."""
-    items = getattr(C, "PILLAR_RESOURCES", {}).get(pillar, [])
+def resources_fold(pillar, items=None, label=None):
+    """Resources for one pillar (or a session), folded away. Nothing when there are none."""
+    if items is None:
+        items = getattr(C, "PILLAR_RESOURCES", {}).get(pillar, [])
     if not items:
         return ""
     out = []
@@ -145,7 +146,7 @@ def resources_fold(pillar):
             f'{shown}<p class="hint">{tip} {link}</p>{links_html}</figure>'
         )
     return (
-        f'<details class="fold res"><summary>Resources for {e(pillar)} ({len(items)})</summary>'
+        f'<details class="fold res"><summary>{e(label or "Resources for " + pillar)} ({len(items)})</summary>'
         f'<div class="fold-body">{"".join(out)}</div></details>'
     )
 
@@ -186,9 +187,11 @@ def session_html(day, s):
             )
     if s.get("groups"):
         body.append(groups_list(s["groups"]))
+    if getattr(C, "SESSION_RESOURCES", {}).get(s["id"]):
+        body.append(resources_fold(None, C.SESSION_RESOURCES[s["id"]], "Session resources"))
     if s.get("pillars"):
         body.append(pillars_list())
-        body.append('<p class="hint">Your pillar will be listed under <a href="#yours">Your sessions</a> and confirmed at registration.</p>')
+        body.append('<p class="hint">Find your pillar under <a href="#yours">Your sessions</a>, by choosing your name.</p>')
     if s.get("more"):
         label, href = s["more"]
         body.append(f'<p><a href="{e(href)}">{e(label)}</a></p>')
@@ -259,6 +262,32 @@ def groups_json():
         for c in g["counties"]:
             out[c] = {"d1": g["d1"], "d2": None if c in C.DAY1_ONLY else g["d2"]}
     return json.dumps(out, ensure_ascii=False)
+
+
+def people_json():
+    """Breakout workshop and pillar for each person, from tools/allocations.json."""
+    path = os.path.join(HERE, "allocations.json")
+    data = json.load(open(path, encoding="utf-8")) if os.path.exists(path) else {}
+    leads = {
+        "A Digital Journey": "Sarah Cummings, Luke Bailey and Tom Lee",
+        "National League System": "Richard Neal and Andrew Lomas",
+    }
+    pillars = {name: who for name, _icon, _room, who in C.PILLAR_ROOMS}
+    out = {}
+    for name, p in data.items():
+        item = {"c": p.get("county", "")}
+        if "workshop" in p:
+            w = p["workshop"]
+            item["w"] = {"t": w["title"], "r": w["room"], "l": leads.get(w["title"], ""), "role": w["role"]}
+        if "pillar" in p:
+            q = p["pillar"]
+            item["p"] = {"t": q["pillar"], "r": q["room"], "l": pillars.get(q["pillar"], ""), "role": q["role"]}
+        out[name] = item
+    return json.dumps(out, ensure_ascii=False).replace("</", "<\\/"), sorted(out)
+
+
+def person_options(names):
+    return "".join(f"<option>{e(n)}</option>" for n in names)
 
 
 def county_options():
@@ -489,11 +518,14 @@ def write_service_worker():
 def main():
     tpl = open(os.path.join(HERE, "template.html"), encoding="utf-8").read()
     write_calendars()
+    people = people_json()
     updated = date.today().strftime("%-d %B %Y")
     values = {
         "AGENDA": agenda_html(),
         "SCHEDULE_JSON": schedule_json(),
         "GROUPS_JSON": groups_json(),
+        "PEOPLE_JSON": people[0],
+        "PERSON_OPTIONS": person_options(people[1]),
         "COUNTY_OPTIONS": county_options(),
         "CONTACTS": contacts_html(),
         "AFTER": after_html(),

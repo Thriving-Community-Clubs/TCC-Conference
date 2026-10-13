@@ -1,0 +1,1834 @@
+{
+ "Alex Caird": {
+  "county": "Somerset FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Leadership & Governance",
+   "room": "Conference Room 2",
+   "role": null
+  }
+ },
+ "Alex Scott": {
+  "county": "Staffordshire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Community",
+   "room": "Main Room 1",
+   "role": null
+  }
+ },
+ "Andrew Lomas": {
+  "county": "",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": "lead"
+  },
+  "pillar": {
+   "pillar": "Community",
+   "room": "Main Room 1",
+   "role": null
+  }
+ },
+ "Andy Baker": {
+  "county": "",
+  "days": [
+   1
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Community",
+   "room": "Main Room 1",
+   "role": "facilitator"
+  }
+ },
+ "Andy Brown": {
+  "county": "Durham FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Community",
+   "room": "Main Room 1",
+   "role": null
+  }
+ },
+ "Andy Clay": {
+  "county": "",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Volunteers",
+   "room": "Main Room 2",
+   "role": null
+  }
+ },
+ "Andy Somers": {
+  "county": "",
+  "days": [
+   1
+  ],
+  "pillar": {
+   "pillar": "Coaches",
+   "room": "Main Room 2",
+   "role": "lead"
+  }
+ },
+ "Anna Quick": {
+  "county": "",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Facilities",
+   "room": "Conference Room 1",
+   "role": null
+  }
+ },
+ "Ashley Cornick": {
+  "county": "Wiltshire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Leadership & Governance",
+   "room": "Conference Room 2",
+   "role": null
+  }
+ },
+ "Ashley Donovan": {
+  "county": "Sheffield & Hallamshire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Leadership & Governance",
+   "room": "Conference Room 2",
+   "role": null
+  }
+ },
+ "Ben Haines": {
+  "county": "Northamptonshire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Facilities",
+   "room": "Conference Room 1",
+   "role": null
+  }
+ },
+ "Charlie Thurgood": {
+  "county": "Sussex FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Facilities",
+   "room": "Conference Room 1",
+   "role": null
+  }
+ },
+ "Chris Bull": {
+  "county": "Liverpool FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Facilities",
+   "room": "Conference Room 1",
+   "role": null
+  }
+ },
+ "Chris Johnson": {
+  "county": "East Riding FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Coaches",
+   "room": "Main Room 2",
+   "role": null
+  }
+ },
+ "Chris Wood": {
+  "county": "North Riding FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Community",
+   "room": "Main Room 1",
+   "role": null
+  }
+ },
+ "Christopher Abbott": {
+  "county": "Cambridgeshire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Leadership & Governance",
+   "room": "Conference Room 2",
+   "role": null
+  }
+ },
+ "Danny Staley": {
+  "county": "Nottinghamshire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Leadership & Governance",
+   "room": "Conference Room 2",
+   "role": null
+  }
+ },
+ "Darryl Gheerawo": {
+  "county": "Surrey FA",
+  "days": [
+   1
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Facilities",
+   "room": "Conference Room 1",
+   "role": null
+  }
+ },
+ "David Jones": {
+  "county": "Northumberland FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Coaches",
+   "room": "Main Room 2",
+   "role": null
+  }
+ },
+ "Dominic Foley": {
+  "county": "Lancashire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Leadership & Governance",
+   "room": "Conference Room 2",
+   "role": null
+  }
+ },
+ "Dominika Netschova": {
+  "county": "Surrey FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Community",
+   "room": "Main Room 1",
+   "role": null
+  }
+ },
+ "Ellie Reid": {
+  "county": "",
+  "days": [
+   2
+  ],
+  "pillar": {
+   "pillar": "Volunteers",
+   "room": "Main Room 2",
+   "role": "facilitator"
+  }
+ },
+ "Elliot Bowe": {
+  "county": "Norfolk FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Leadership & Governance",
+   "room": "Conference Room 2",
+   "role": null
+  }
+ },
+ "Frank Bell": {
+  "county": "",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": "facilitator"
+  },
+  "pillar": {
+   "pillar": "Leadership & Governance",
+   "room": "Conference Room 2",
+   "role": "facilitator"
+  }
+ },
+ "Gabriella Sutton": {
+  "county": "Nottinghamshire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Volunteers",
+   "room": "Main Room 2",
+   "role": null
+  }
+ },
+ "Gary Marheineke": {
+  "county": "Huntingdonshire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Leadership & Governance",
+   "room": "Conference Room 2",
+   "role": null
+  }
+ },
+ "Gemma Avery": {
+  "county": "",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Community",
+   "room": "Main Room 1",
+   "role": null
+  }
+ },
+ "George Leyshon-James": {
+  "county": "Herefordshire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Coaches",
+   "room": "Main Room 2",
+   "role": null
+  }
+ },
+ "Georgia Hill": {
+  "county": "Oxfordshire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Facilities",
+   "room": "Conference Room 1",
+   "role": null
+  }
+ },
+ "Harry Mark": {
+  "county": "Kent FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Community",
+   "room": "Main Room 1",
+   "role": null
+  }
+ },
+ "Harry O'Neill": {
+  "county": "Manchester FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Volunteers",
+   "room": "Main Room 2",
+   "role": null
+  }
+ },
+ "Ian Grange": {
+  "county": "",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Facilities",
+   "room": "Conference Room 1",
+   "role": "lead"
+  }
+ },
+ "Ian Lawrence": {
+  "county": "",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Facilities",
+   "room": "Conference Room 1",
+   "role": null
+  }
+ },
+ "Izzy Heath": {
+  "county": "Berks & Bucks FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Volunteers",
+   "room": "Main Room 2",
+   "role": null
+  }
+ },
+ "Jack Ball": {
+  "county": "Cheshire FA",
+  "days": [
+   1
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Facilities",
+   "room": "Conference Room 1",
+   "role": null
+  }
+ },
+ "Jack Repton": {
+  "county": "Derbyshire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Coaches",
+   "room": "Main Room 2",
+   "role": null
+  }
+ },
+ "Jack Young": {
+  "county": "Bedfordshire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Coaches",
+   "room": "Main Room 2",
+   "role": null
+  }
+ },
+ "James Buhlemann": {
+  "county": "Norfolk FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Community",
+   "room": "Main Room 1",
+   "role": null
+  }
+ },
+ "James Cutler": {
+  "county": "Dorset FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Leadership & Governance",
+   "room": "Conference Room 2",
+   "role": null
+  }
+ },
+ "James Geddes": {
+  "county": "Northamptonshire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Community",
+   "room": "Main Room 1",
+   "role": null
+  }
+ },
+ "James Styles": {
+  "county": "Liverpool FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Volunteers",
+   "room": "Main Room 2",
+   "role": null
+  }
+ },
+ "Jamie Adams-Mercer": {
+  "county": "Lancashire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Volunteers",
+   "room": "Main Room 2",
+   "role": null
+  }
+ },
+ "Jason Levy": {
+  "county": "Essex FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Coaches",
+   "room": "Main Room 2",
+   "role": null
+  }
+ },
+ "Jemma Fairey": {
+  "county": "London FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Leadership & Governance",
+   "room": "Conference Room 2",
+   "role": null
+  }
+ },
+ "Jessica Boyle": {
+  "county": "Dorset FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Community",
+   "room": "Main Room 1",
+   "role": null
+  }
+ },
+ "Jim McGettrick": {
+  "county": "Birmingham FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Coaches",
+   "room": "Main Room 2",
+   "role": null
+  }
+ },
+ "Jo de Tute": {
+  "county": "West Riding FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Leadership & Governance",
+   "room": "Conference Room 2",
+   "role": null
+  }
+ },
+ "Joe Mathias": {
+  "county": "Manchester FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Community",
+   "room": "Main Room 1",
+   "role": null
+  }
+ },
+ "Jonny Gilberthorpe": {
+  "county": "Sheffield & Hallamshire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Facilities",
+   "room": "Conference Room 1",
+   "role": null
+  }
+ },
+ "Karl Percival": {
+  "county": "Leicestershire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Coaches",
+   "room": "Main Room 2",
+   "role": null
+  }
+ },
+ "Karl Sear": {
+  "county": "Essex FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Community",
+   "room": "Main Room 1",
+   "role": null
+  }
+ },
+ "Katie Critchley": {
+  "county": "Cambridgeshire FA",
+  "days": [
+   1
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Coaches",
+   "room": "Main Room 2",
+   "role": null
+  }
+ },
+ "Kel Crook": {
+  "county": "Hampshire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Volunteers",
+   "room": "Main Room 2",
+   "role": null
+  }
+ },
+ "Kirsty Dixon": {
+  "county": "Lincolnshire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Volunteers",
+   "room": "Main Room 2",
+   "role": null
+  }
+ },
+ "Kyle Williams": {
+  "county": "Herefordshire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Facilities",
+   "room": "Conference Room 1",
+   "role": null
+  }
+ },
+ "Laura Holmes": {
+  "county": "Cheshire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Leadership & Governance",
+   "room": "Conference Room 2",
+   "role": null
+  }
+ },
+ "Laura Smith": {
+  "county": "",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Volunteers",
+   "room": "Main Room 2",
+   "role": "facilitator"
+  }
+ },
+ "Lee Brown": {
+  "county": "",
+  "days": [
+   1
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Coaches",
+   "room": "Main Room 2",
+   "role": "lead"
+  }
+ },
+ "Leigh Jeffrey": {
+  "county": "Lancashire FA",
+  "days": [
+   1
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Community",
+   "room": "Main Room 1",
+   "role": null
+  }
+ },
+ "Lewis Cook": {
+  "county": "Cornwall FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Community",
+   "room": "Main Room 1",
+   "role": null
+  }
+ },
+ "Lewis Stafford": {
+  "county": "Wiltshire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Coaches",
+   "room": "Main Room 2",
+   "role": null
+  }
+ },
+ "Liam Devlin": {
+  "county": "",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Facilities",
+   "room": "Conference Room 1",
+   "role": "lead"
+  }
+ },
+ "Liam Houston": {
+  "county": "West Riding FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Volunteers",
+   "room": "Main Room 2",
+   "role": null
+  }
+ },
+ "Lisa Marley": {
+  "county": "Cornwall FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Leadership & Governance",
+   "room": "Conference Room 2",
+   "role": null
+  }
+ },
+ "Luke Bailey": {
+  "county": "",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": "lead"
+  },
+  "pillar": {
+   "pillar": "Coaches",
+   "room": "Main Room 2",
+   "role": null
+  }
+ },
+ "Luke Bowles": {
+  "county": "Birmingham FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Community",
+   "room": "Main Room 1",
+   "role": null
+  }
+ },
+ "Luke Collins": {
+  "county": "Northumberland FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Leadership & Governance",
+   "room": "Conference Room 2",
+   "role": null
+  }
+ },
+ "Luke Craggs": {
+  "county": "Lincolnshire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Community",
+   "room": "Main Room 1",
+   "role": null
+  }
+ },
+ "Luke Rosier": {
+  "county": "Oxfordshire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Volunteers",
+   "room": "Main Room 2",
+   "role": null
+  }
+ },
+ "Marc Di Carlo": {
+  "county": "Bedfordshire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Leadership & Governance",
+   "room": "Conference Room 2",
+   "role": null
+  }
+ },
+ "Mark Hilton": {
+  "county": "",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": "facilitator"
+  },
+  "pillar": {
+   "pillar": "Leadership & Governance",
+   "room": "Conference Room 2",
+   "role": "facilitator"
+  }
+ },
+ "Mark Pover": {
+  "county": "",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": "facilitator"
+  },
+  "pillar": {
+   "pillar": "Facilities",
+   "room": "Conference Room 1",
+   "role": "facilitator"
+  }
+ },
+ "Matt Counsell": {
+  "county": "Gloucestershire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Leadership & Governance",
+   "room": "Conference Room 2",
+   "role": null
+  }
+ },
+ "Matt Stebbings": {
+  "county": "Suffolk FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Leadership & Governance",
+   "room": "Conference Room 2",
+   "role": null
+  }
+ },
+ "Max Milward": {
+  "county": "Devon FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Facilities",
+   "room": "Conference Room 1",
+   "role": null
+  }
+ },
+ "Mick Baikie": {
+  "county": "",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Volunteers",
+   "room": "Main Room 2",
+   "role": "facilitator"
+  }
+ },
+ "Nayim Ahmed": {
+  "county": "London FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Volunteers",
+   "room": "Main Room 2",
+   "role": null
+  }
+ },
+ "Nick Emery": {
+  "county": "Essex FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Facilities",
+   "room": "Conference Room 1",
+   "role": null
+  }
+ },
+ "Nick Garlick": {
+  "county": "Devon FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Leadership & Governance",
+   "room": "Conference Room 2",
+   "role": null
+  }
+ },
+ "Niki Koumi": {
+  "county": "Middlesex FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Community",
+   "room": "Main Room 1",
+   "role": null
+  }
+ },
+ "Paul Kwatia": {
+  "county": "Sussex FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Coaches",
+   "room": "Main Room 2",
+   "role": null
+  }
+ },
+ "Pedro Viveiros": {
+  "county": "Hampshire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Leadership & Governance",
+   "room": "Conference Room 2",
+   "role": null
+  }
+ },
+ "Phil Woodward": {
+  "county": "",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Facilities",
+   "room": "Conference Room 1",
+   "role": null
+  }
+ },
+ "Ray Sempill": {
+  "county": "Cumberland FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Community",
+   "room": "Main Room 1",
+   "role": null
+  }
+ },
+ "Rebecca Garlick": {
+  "county": "",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Coaches",
+   "room": "Main Room 2",
+   "role": "lead"
+  }
+ },
+ "Reece Sockett": {
+  "county": "West Riding FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Community",
+   "room": "Main Room 1",
+   "role": null
+  }
+ },
+ "Richard Neal": {
+  "county": "",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": "lead"
+  },
+  "pillar": {
+   "pillar": "Leadership & Governance",
+   "room": "Conference Room 2",
+   "role": "lead"
+  }
+ },
+ "Rus Smith": {
+  "county": "",
+  "days": [
+   1
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Community",
+   "room": "Main Room 1",
+   "role": "facilitator"
+  }
+ },
+ "Ruth Ward": {
+  "county": "Suffolk FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Coaches",
+   "room": "Main Room 2",
+   "role": null
+  }
+ },
+ "Ryan Starkey": {
+  "county": "Norfolk FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Facilities",
+   "room": "Conference Room 1",
+   "role": null
+  }
+ },
+ "Sam Buttress": {
+  "county": "Kent FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Volunteers",
+   "room": "Main Room 2",
+   "role": null
+  }
+ },
+ "Sara Stubbs": {
+  "county": "Nottinghamshire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Coaches",
+   "room": "Main Room 2",
+   "role": null
+  }
+ },
+ "Sarah Cummings": {
+  "county": "",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": "lead"
+  },
+  "pillar": {
+   "pillar": "Community",
+   "room": "Main Room 1",
+   "role": "lead"
+  }
+ },
+ "Sean Rudd": {
+  "county": "Nottinghamshire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Community",
+   "room": "Main Room 1",
+   "role": null
+  }
+ },
+ "Simon Hitchcox": {
+  "county": "Nottinghamshire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Facilities",
+   "room": "Conference Room 1",
+   "role": null
+  }
+ },
+ "Simon Wood": {
+  "county": "",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Facilities",
+   "room": "Conference Room 1",
+   "role": "facilitator"
+  }
+ },
+ "Skye Smith": {
+  "county": "Gloucestershire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Volunteers",
+   "room": "Main Room 2",
+   "role": null
+  }
+ },
+ "Sophie Hughes": {
+  "county": "Westmorland FA",
+  "days": [
+   1
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Leadership & Governance",
+   "room": "Conference Room 2",
+   "role": null
+  }
+ },
+ "Sophie Swangreenwick": {
+  "county": "Nottinghamshire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Volunteers",
+   "room": "Main Room 2",
+   "role": null
+  }
+ },
+ "Stacey Tegg": {
+  "county": "Berks & Bucks FA",
+  "days": [
+   1
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Community",
+   "room": "Main Room 1",
+   "role": null
+  }
+ },
+ "Steph Powell": {
+  "county": "",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Volunteers",
+   "room": "Main Room 2",
+   "role": "lead"
+  }
+ },
+ "Steve Maker": {
+  "county": "",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Volunteers",
+   "room": "Main Room 2",
+   "role": null
+  }
+ },
+ "Stuart Houlton": {
+  "county": "Lincolnshire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Leadership & Governance",
+   "room": "Conference Room 2",
+   "role": null
+  }
+ },
+ "Thomas Crabtree": {
+  "county": "Derbyshire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Facilities",
+   "room": "Conference Room 1",
+   "role": null
+  }
+ },
+ "Toby Elgar": {
+  "county": "Kent FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Facilities",
+   "room": "Conference Room 1",
+   "role": null
+  }
+ },
+ "Tom Lee": {
+  "county": "",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": "lead"
+  },
+  "pillar": {
+   "pillar": "Leadership & Governance",
+   "room": "Conference Room 2",
+   "role": "facilitator"
+  }
+ },
+ "Tom Penfield-Hill": {
+  "county": "Suffolk FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Volunteers",
+   "room": "Main Room 2",
+   "role": null
+  }
+ },
+ "Will Hungerford": {
+  "county": "Hertfordshire FA",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "National League System",
+   "room": "Main Room 2",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Volunteers",
+   "room": "Main Room 2",
+   "role": null
+  }
+ },
+ "Zoe Draper": {
+  "county": "",
+  "days": [
+   1,
+   2
+  ],
+  "workshop": {
+   "title": "A Digital Journey",
+   "room": "Main Room 1",
+   "role": null
+  },
+  "pillar": {
+   "pillar": "Leadership & Governance",
+   "room": "Conference Room 2",
+   "role": null
+  }
+ }
+}

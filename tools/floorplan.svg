@@ -1,6 +1,6 @@
 <svg class="plan" viewBox="50 0 560 322" role="img" aria-labelledby="plan-title plan-desc" xmlns="http://www.w3.org/2000/svg">
   <title id="plan-title">Ground floor of the East Midlands Conference Centre</title>
-  <desc id="plan-desc">Simplified plan, not to scale. The entrance and reception are on the right. Main Room 1 and Main Room 2 sit side by side on the left. Conference Room 1 and Conference Room 2 are along the top, off the concourse. The prayer room and toilets are in the middle, beside the Conference Theatre.</desc>
+  <desc id="plan-desc">Simplified plan, not to scale. The entrance and reception are on the right. Main Room 1 and Main Room 2 sit side by side on the left. Conference Room 1 and Conference Room 2 are along the top, off the concourse. Conference Room 2 is partitioned: delegates use the right-hand half, and the left-hand half is for staff only. The prayer room and toilets are in the middle, beside the Conference Theatre.</desc>
 
   <!-- public concourse -->
   <path class="plan-public" d="M235 22 H500 V62 H566 V104 C598 128 606 160 600 178 C604 208 574 240 500 250 V312 H235 Z"/>
@@ -20,7 +20,9 @@
   <rect class="plan-main" x="60" y="163" width="175" height="85"/>
   <line class="plan-divider" x1="60" y1="163" x2="235" y2="163"/>
   <rect class="plan-conf" x="405" y="33" width="90" height="42"/>
-  <rect class="plan-conf" x="262" y="33" width="90" height="42"/>
+  <rect class="plan-conf" x="307" y="33" width="45" height="42"/>
+  <rect class="plan-staff" x="262" y="33" width="45" height="42"/>
+  <line class="plan-partition" x1="307" y1="33" x2="307" y2="75"/>
 
   <!-- facilities -->
   <rect class="plan-facility" x="240" y="222" width="52" height="42"/>
@@ -35,7 +37,7 @@
   </g>
   <g class="plan-key plan-key-conf">
     <rect x="434.5" y="38.5" width="31" height="31"/><text x="450" y="61.5">3</text>
-    <rect x="291.5" y="38.5" width="31" height="31"/><text x="307" y="61.5">4</text>
+    <rect x="314" y="38.5" width="31" height="31"/><text x="329.5" y="61.5">4</text>
   </g>
   <g class="plan-letter">
     <text x="266" y="251">P</text>

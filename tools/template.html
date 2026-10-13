@@ -132,7 +132,20 @@
 <section class="block" id="yours" aria-labelledby="yours-h">
   <div class="wrap">
     <h2 id="yours-h">Your sessions</h2>
-    <p class="lead">Some sessions split into smaller groups. Choose your County FA to see where to go for Teamwork and Collaboration and for Lead, Manage, Do.</p>
+    <p class="lead">Some sessions split into smaller groups. Find your breakout workshop and pillar by your name, and your group sessions by your County FA.</p>
+
+    <h3 class="picker-h">Breakout workshop and Pillar Networking</h3>
+    <div class="picker">
+      <label for="person">Your name</label>
+      <select id="person">
+        <option value="">Choose your name</option>
+        {{PERSON_OPTIONS}}
+      </select>
+    </div>
+    <div id="person-result" class="result" aria-live="polite" hidden></div>
+    <p class="hint gap-s">Not listed, or something looks wrong? Ask at registration.</p>
+
+    <h3 class="picker-h">Teamwork and Collaboration, and Lead, Manage, Do</h3>
     <div class="picker">
       <label for="county">Your County FA</label>
       <select id="county">
@@ -141,11 +154,7 @@
       </select>
     </div>
     <div id="county-result" class="result" aria-live="polite" hidden></div>
-    <noscript><p>Open Teamwork and Collaboration (Day 1) and Lead, Manage, Do (Day 2) in the agenda to see every group.</p></noscript>
-    <div class="pending">
-      <h3>Breakout workshop and Pillar Networking</h3>
-      <p>Your breakout workshop and your pillar will be listed here before the conference and confirmed at registration.</p>
-    </div>
+    <noscript><p>Open each session in the agenda to see every group and room.</p></noscript>
   </div>
 </section>
 
@@ -178,7 +187,7 @@
       <li><span class="key key-main">1</span><div><strong>Main Room 1</strong><span>Signed as Banqueting Suite B</span></div></li>
       <li><span class="key key-main">2</span><div><strong>Main Room 2</strong><span>Signed as Banqueting Suite A</span></div></li>
       <li><span class="key key-conf">3</span><div><strong>Conference Room 1</strong><span>Signed as Conference Suite 1</span></div></li>
-      <li><span class="key key-conf">4</span><div><strong>Conference Room 2</strong><span>Signed as Conference Suite 2</span></div></li>
+      <li><span class="key key-conf">4</span><div><strong>Conference Room 2</strong><span>Signed as Conference Suite 2. Use the open half: the other half is partitioned off for staff</span></div></li>
       <li><span class="key key-line">E</span><div><strong>Entrance and reception</strong></div></li>
       <li><span class="key key-line">T</span><div><strong>Toilets</strong></div></li>
       <li><span class="key key-line">P</span><div><strong>Prayer room</strong></div></li>
@@ -303,6 +312,7 @@
 
 <script type="application/json" id="schedule">{{SCHEDULE_JSON}}</script>
 <script type="application/json" id="groups">{{GROUPS_JSON}}</script>
+<script type="application/json" id="people-data">{{PEOPLE_JSON}}</script>
 <script src="assets/site.js?v={{JS_V}}" defer></script>
 </body>
 </html>
