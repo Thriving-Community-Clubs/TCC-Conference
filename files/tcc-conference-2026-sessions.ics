@@ -131,9 +131,9 @@ DTSTAMP:20261013T000000Z
 DTSTART:20261020T153000Z
 DTEND:20261020T180000Z
 SUMMARY:Conference: Hotel check-in and downtime
-LOCATION:Check in at The Orchard Hotel\, use the facilities\, catch up wi
- th colleagues or just relax.\, East Midlands Conference Centre\, Beeston
-  Lane\, Nottingham NG7 2RJ
+LOCATION:Check in for The Orchard Hotel at the tables in the Main Concour
+ se\, then use the facilities\, catch up with colleagues or just relax.\,
+  East Midlands Conference Centre\, Beeston Lane\, Nottingham NG7 2RJ
 DESCRIPTION:Agenda and slides: https://thriving-community-clubs.github.io
  /TCC-Conference/#d1-checkin
 URL:https://thriving-community-clubs.github.io/TCC-Conference/
@@ -145,8 +145,9 @@ DTSTART:20261020T180000Z
 DTEND:20261020T220000Z
 SUMMARY:Conference: Drinks reception\, street food dinner and interactive
   games
-LOCATION:Main Room 1 and Main Room 2. Dress is smart casual.\, East Midla
- nds Conference Centre\, Beeston Lane\, Nottingham NG7 2RJ
+LOCATION:Drinks and street food in the Main Concourse\, and games in Main
+  Room 1. Dress is smart casual.\, East Midlands Conference Centre\, Bees
+ ton Lane\, Nottingham NG7 2RJ
 DESCRIPTION:Agenda and slides: https://thriving-community-clubs.github.io
  /TCC-Conference/#d1-evening
 URL:https://thriving-community-clubs.github.io/TCC-Conference/

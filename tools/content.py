@@ -136,7 +136,7 @@ GROUPS = [
 
 PILLAR_ROOMS = [
     ("Leadership & Governance", "lg", CR2, "Richard Neal, Frank Bell, Mark Hilton and Tom Lee"),
-    ("Coaches", "cv", MR2, "Rebecca Garlick, Lee Brown and Andy Somers"),
+    ("Coaches", "cv", MR2, "Rebecca Garlick and Lee Brown, with Andy Somers"),
     ("Volunteers", "cv", MR2, "Steph Powell, Ellie Reid, Mick Baikie and Laura Smith"),
     ("Facilities", "facilities", CR1, "Ian Grange, Liam Devlin, Mark Pover and Simon Wood"),
     ("Community", "community", MR1, "Sarah Cummings, Andy Baker and Rus Smith"),
@@ -532,10 +532,10 @@ DAY1 = [
      "more": ("About Tom Bradshaw", "#illustrator")},
     {"id": "d1-checkin", "kind": "pause", "start": "16:30", "end": "19:00",
      "title": "Hotel check-in and downtime",
-     "note": "Check in at The Orchard Hotel, use the facilities, catch up with colleagues or just relax."},
+     "note": "Check in for The Orchard Hotel at the tables in the Main Concourse, then use the facilities, catch up with colleagues or just relax."},
     {"id": "d1-evening", "kind": "pause", "start": "19:00", "end": "23:00", "hide_end": True,
      "title": "Drinks reception, street food dinner and interactive games",
-     "note": "Main Room 1 and Main Room 2. Dress is smart casual."},
+     "note": "Drinks and street food in the Main Concourse, and games in Main Room 1. Dress is smart casual."},
 ]
 
 DAY2 = [

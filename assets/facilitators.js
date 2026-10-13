@@ -197,7 +197,23 @@
     box.hidden = false;
   }
 
+  /* Day 1 / Day 2 switch for the running order, like the delegate agenda. */
+  function dayTabs() {
+    var tabs = document.querySelector(".ro-tabs");
+    if (!tabs) return;
+    var days = Array.prototype.slice.call(document.querySelectorAll(".ro-day"));
+    var buttons = Array.prototype.slice.call(tabs.querySelectorAll("button"));
+    function show(id) {
+      days.forEach(function (d) { d.hidden = d.id !== id; });
+      buttons.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.day === id)); });
+    }
+    buttons.forEach(function (b) { b.addEventListener("click", function () { show(b.dataset.day); }); });
+    tabs.hidden = false;
+    show(Date.now() >= Date.parse("2026-10-21T00:00:00+01:00") ? "ro-day2" : "ro-day1");
+  }
+
   function enhance() {
+    dayTabs();
     var holder = document.getElementById("fac-data");
     if (!holder) return;
     var data = JSON.parse(holder.textContent);

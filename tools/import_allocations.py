@@ -23,6 +23,8 @@ import content as C  # noqa: E402
 
 WORKSHOPS = {"NLS Workshop": "National League System", "Data & Digital Workshop": "A Digital Journey"}
 ROLE = {"Session Lead": "lead", "Facilitator": "facilitator"}
+# Corrections Tom has confirmed since the sheet was written (13 Oct).
+ROLE_FIX = {("Andy Somers", "pillar"): "facilitator"}
 
 
 def split(value):
@@ -54,6 +56,9 @@ def main():
             place, role = split(v)
             pillar, room = [x.strip() for x in place.split(",", 1)]
             entry["pillar"] = {"pillar": pillar, "room": room, "role": role}
+        for (who, key), role in ROLE_FIX.items():
+            if who == name and key in entry:
+                entry[key]["role"] = role
         if "workshop" in entry or "pillar" in entry:
             people[name] = entry
 
