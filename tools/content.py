@@ -91,6 +91,7 @@ SESSION_LEADS = [
     ("Luke Bailey", "Club and Facilities Officer"),
     ("Richard Neal", "National Club Development Manager (NLS)"),
     ("Andy Clay", "Clubs and Facilities Development Manager"),
+    ("Steve Maker", "Regional Network Manager (East)"),
     ("Ian Grange", "Senior National Development Manager (Networks & Programmes)"),
 ]
 
