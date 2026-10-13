@@ -6,7 +6,7 @@
    Everything else: use the saved copy if there is one, otherwise fetch and keep it. */
 "use strict";
 
-var VERSION = "4c22045f8e";
+var VERSION = "9de19cb04f";
 var CORE = "tcc26-core-" + VERSION;
 var EXTRA = "tcc26-extra";
 var CORE_FILES = [

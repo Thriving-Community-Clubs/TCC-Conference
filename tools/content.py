@@ -507,7 +507,7 @@ DAY1 = [
     {"id": "d1-lunch", "kind": "pause", "start": "12:00", "end": "13:00", "title": "Lunch"},
     {"id": "d1-teamwork", "kind": "session", "start": "13:00", "end": "14:00",
      "title": "Teamwork and Collaboration", "room": "Starts in Main Room 1, then your group",
-     "who": "Andy Clay",
+     "who": "Steve Maker",
      "about": "See what great collaboration looks like through real examples from across the network. Tackle a real challenge, see what colleagues elsewhere are doing, and decide what you are taking back. Leave with one thing somebody else is doing that could make your job easier.",
      "workbook": 6, "groups": "d1",
      "slides": ["d1-teamwork"]},
