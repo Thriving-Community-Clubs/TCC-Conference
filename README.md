@@ -27,6 +27,7 @@ After a change, run this from the top of the repository:
 | Update who goes to which breakout and pillar ("Choose your name") | run `python3 tools/import_allocations.py "/path/to/Attendee Session Allocation.xlsx"`, then rebuild. It stops if a County FA's groups in the sheet disagree with `GROUPS` |
 | Add files to a session in the agenda | `SESSION_RESOURCES`, keyed by session id |
 | Show the three club stories on Day 2 | `SHOW_CLUB_STORIES = True` |
+| Use a session's own final deck | list its pages as "f1", "f2"... in `SLIDE_PAGES`, run `python3 tools/make_session_slides.py <session-id> "/path/to/deck.pdf"`, then rebuild |
 | Change which slides delegates see | `SLIDE_PAGES` (page numbers of the master deck PDF), then re-run `make_slides.py` |
 
 ### Refreshing the slides from a new deck

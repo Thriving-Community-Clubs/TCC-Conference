@@ -6,7 +6,7 @@ METHOD:PUBLISH
 X-WR-CALNAME:Thriving Community Clubs Conference 2026\, every session
 BEGIN:VEVENT
 UID:d1-registration@thriving-community-clubs.github.io
-DTSTAMP:20261013T000000Z
+DTSTAMP:20261014T000000Z
 DTSTART:20261020T083000Z
 DTEND:20261020T093000Z
 SUMMARY:Conference: Registration\, refreshments and networking
@@ -18,7 +18,7 @@ URL:https://thriving-community-clubs.github.io/TCC-Conference/
 END:VEVENT
 BEGIN:VEVENT
 UID:d1-welcome@thriving-community-clubs.github.io
-DTSTAMP:20261013T000000Z
+DTSTAMP:20261014T000000Z
 DTSTART:20261020T093000Z
 DTEND:20261020T094000Z
 SUMMARY:Conference: Hello and welcome
@@ -31,7 +31,7 @@ URL:https://thriving-community-clubs.github.io/TCC-Conference/
 END:VEVENT
 BEGIN:VEVENT
 UID:d1-scene@thriving-community-clubs.github.io
-DTSTAMP:20261013T000000Z
+DTSTAMP:20261014T000000Z
 DTSTART:20261020T094000Z
 DTEND:20261020T100000Z
 SUMMARY:Conference: Setting the scene
@@ -43,7 +43,7 @@ URL:https://thriving-community-clubs.github.io/TCC-Conference/
 END:VEVENT
 BEGIN:VEVENT
 UID:d1-breakout@thriving-community-clubs.github.io
-DTSTAMP:20261013T000000Z
+DTSTAMP:20261014T000000Z
 DTSTART:20261020T100000Z
 DTEND:20261020T110000Z
 SUMMARY:Conference: Breakout workshops
@@ -55,7 +55,7 @@ URL:https://thriving-community-clubs.github.io/TCC-Conference/
 END:VEVENT
 BEGIN:VEVENT
 UID:d1-lunch@thriving-community-clubs.github.io
-DTSTAMP:20261013T000000Z
+DTSTAMP:20261014T000000Z
 DTSTART:20261020T110000Z
 DTEND:20261020T120000Z
 SUMMARY:Conference: Lunch
@@ -67,7 +67,7 @@ URL:https://thriving-community-clubs.github.io/TCC-Conference/
 END:VEVENT
 BEGIN:VEVENT
 UID:d1-teamwork@thriving-community-clubs.github.io
-DTSTAMP:20261013T000000Z
+DTSTAMP:20261014T000000Z
 DTSTART:20261020T120000Z
 DTEND:20261020T130000Z
 SUMMARY:Conference: Teamwork and Collaboration
@@ -79,7 +79,7 @@ URL:https://thriving-community-clubs.github.io/TCC-Conference/
 END:VEVENT
 BEGIN:VEVENT
 UID:d1-pillar@thriving-community-clubs.github.io
-DTSTAMP:20261013T000000Z
+DTSTAMP:20261014T000000Z
 DTSTART:20261020T130000Z
 DTEND:20261020T140000Z
 SUMMARY:Conference: Pillar Networking
@@ -91,7 +91,7 @@ URL:https://thriving-community-clubs.github.io/TCC-Conference/
 END:VEVENT
 BEGIN:VEVENT
 UID:d1-break@thriving-community-clubs.github.io
-DTSTAMP:20261013T000000Z
+DTSTAMP:20261014T000000Z
 DTSTART:20261020T140000Z
 DTEND:20261020T142000Z
 SUMMARY:Conference: Break
@@ -103,7 +103,7 @@ URL:https://thriving-community-clubs.github.io/TCC-Conference/
 END:VEVENT
 BEGIN:VEVENT
 UID:d1-progression@thriving-community-clubs.github.io
-DTSTAMP:20261013T000000Z
+DTSTAMP:20261014T000000Z
 DTSTART:20261020T142000Z
 DTEND:20261020T151000Z
 SUMMARY:Conference: Accelerating Progression
@@ -115,7 +115,7 @@ URL:https://thriving-community-clubs.github.io/TCC-Conference/
 END:VEVENT
 BEGIN:VEVENT
 UID:d1-roundup@thriving-community-clubs.github.io
-DTSTAMP:20261013T000000Z
+DTSTAMP:20261014T000000Z
 DTSTART:20261020T151000Z
 DTEND:20261020T153000Z
 SUMMARY:Conference: Day 1 round up and group photo
@@ -127,7 +127,7 @@ URL:https://thriving-community-clubs.github.io/TCC-Conference/
 END:VEVENT
 BEGIN:VEVENT
 UID:d1-checkin@thriving-community-clubs.github.io
-DTSTAMP:20261013T000000Z
+DTSTAMP:20261014T000000Z
 DTSTART:20261020T153000Z
 DTEND:20261020T180000Z
 SUMMARY:Conference: Hotel check-in and downtime
@@ -140,7 +140,7 @@ URL:https://thriving-community-clubs.github.io/TCC-Conference/
 END:VEVENT
 BEGIN:VEVENT
 UID:d1-evening@thriving-community-clubs.github.io
-DTSTAMP:20261013T000000Z
+DTSTAMP:20261014T000000Z
 DTSTART:20261020T180000Z
 DTEND:20261020T220000Z
 SUMMARY:Conference: Drinks reception\, street food dinner and interactive
@@ -154,7 +154,7 @@ URL:https://thriving-community-clubs.github.io/TCC-Conference/
 END:VEVENT
 BEGIN:VEVENT
 UID:d2-registration@thriving-community-clubs.github.io
-DTSTAMP:20261013T000000Z
+DTSTAMP:20261014T000000Z
 DTSTART:20261021T080000Z
 DTEND:20261021T083000Z
 SUMMARY:Conference: Registration\, refreshments\, networking and hotel ch
@@ -167,7 +167,7 @@ URL:https://thriving-community-clubs.github.io/TCC-Conference/
 END:VEVENT
 BEGIN:VEVENT
 UID:d2-welcome@thriving-community-clubs.github.io
-DTSTAMP:20261013T000000Z
+DTSTAMP:20261014T000000Z
 DTSTART:20261021T083000Z
 DTEND:20261021T084000Z
 SUMMARY:Conference: Hello and welcome
@@ -180,7 +180,7 @@ URL:https://thriving-community-clubs.github.io/TCC-Conference/
 END:VEVENT
 BEGIN:VEVENT
 UID:d2-workforce@thriving-community-clubs.github.io
-DTSTAMP:20261013T000000Z
+DTSTAMP:20261014T000000Z
 DTSTART:20261021T084000Z
 DTEND:20261021T095000Z
 SUMMARY:Conference: Empowering the Club Workforce
@@ -193,7 +193,7 @@ URL:https://thriving-community-clubs.github.io/TCC-Conference/
 END:VEVENT
 BEGIN:VEVENT
 UID:d2-break@thriving-community-clubs.github.io
-DTSTAMP:20261013T000000Z
+DTSTAMP:20261014T000000Z
 DTSTART:20261021T095000Z
 DTEND:20261021T101000Z
 SUMMARY:Conference: Break
@@ -205,7 +205,7 @@ URL:https://thriving-community-clubs.github.io/TCC-Conference/
 END:VEVENT
 BEGIN:VEVENT
 UID:d2-keynote@thriving-community-clubs.github.io
-DTSTAMP:20261013T000000Z
+DTSTAMP:20261014T000000Z
 DTSTART:20261021T101000Z
 DTEND:20261021T110000Z
 SUMMARY:Conference: Keynote: Leading the Orchestra
@@ -218,7 +218,7 @@ URL:https://thriving-community-clubs.github.io/TCC-Conference/
 END:VEVENT
 BEGIN:VEVENT
 UID:d2-lmd@thriving-community-clubs.github.io
-DTSTAMP:20261013T000000Z
+DTSTAMP:20261014T000000Z
 DTSTART:20261021T110000Z
 DTEND:20261021T113000Z
 SUMMARY:Conference: Lead\, Manage\, Do
@@ -230,7 +230,7 @@ URL:https://thriving-community-clubs.github.io/TCC-Conference/
 END:VEVENT
 BEGIN:VEVENT
 UID:d2-lunch@thriving-community-clubs.github.io
-DTSTAMP:20261013T000000Z
+DTSTAMP:20261014T000000Z
 DTSTART:20261021T113000Z
 DTEND:20261021T123000Z
 SUMMARY:Conference: Lunch
@@ -242,7 +242,7 @@ URL:https://thriving-community-clubs.github.io/TCC-Conference/
 END:VEVENT
 BEGIN:VEVENT
 UID:d2-growing@thriving-community-clubs.github.io
-DTSTAMP:20261013T000000Z
+DTSTAMP:20261014T000000Z
 DTSTART:20261021T123000Z
 DTEND:20261021T133000Z
 SUMMARY:Conference: Growing Pains
@@ -254,7 +254,7 @@ URL:https://thriving-community-clubs.github.io/TCC-Conference/
 END:VEVENT
 BEGIN:VEVENT
 UID:d2-impact@thriving-community-clubs.github.io
-DTSTAMP:20261013T000000Z
+DTSTAMP:20261014T000000Z
 DTSTART:20261021T133000Z
 DTEND:20261021T140000Z
 SUMMARY:Conference: Demonstrating Impact
@@ -266,7 +266,7 @@ URL:https://thriving-community-clubs.github.io/TCC-Conference/
 END:VEVENT
 BEGIN:VEVENT
 UID:d2-vision@thriving-community-clubs.github.io
-DTSTAMP:20261013T000000Z
+DTSTAMP:20261014T000000Z
 DTSTART:20261021T140000Z
 DTEND:20261021T141500Z
 SUMMARY:Conference: Future Vision
@@ -278,7 +278,7 @@ URL:https://thriving-community-clubs.github.io/TCC-Conference/
 END:VEVENT
 BEGIN:VEVENT
 UID:d2-roundup@thriving-community-clubs.github.io
-DTSTAMP:20261013T000000Z
+DTSTAMP:20261014T000000Z
 DTSTART:20261021T141500Z
 DTEND:20261021T144500Z
 SUMMARY:Conference: Day 2 round up and conference reflections

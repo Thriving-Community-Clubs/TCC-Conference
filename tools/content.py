@@ -114,8 +114,8 @@ GROUPS = [
     },
     {
         "counties": ["Berks & Bucks FA", "Kent FA", "Cheshire FA", "Sheffield & Hallamshire FA", "Leicestershire FA", "Manchester FA", "Liverpool FA", "Devon FA"],
-        "d1": {"room": MR1, "group": "Group 2", "leads": "Andy Baker and Ashley Donovan"},
-        "d2": {"room": MR1, "group": "Group 2", "leads": "Ashley Donovan"},
+        "d1": {"room": MR1, "group": "Group 2", "leads": "Andy Baker, Ashley Donovan and Toby Elgar"},
+        "d2": {"room": MR1, "group": "Group 2", "leads": "Ashley Donovan and Toby Elgar"},
     },
     {
         "counties": ["Derbyshire FA", "Northamptonshire FA", "Middlesex FA", "Gloucestershire FA", "Hertfordshire FA", "Lincolnshire FA", "London FA", "Norfolk FA", "Sussex FA"],
@@ -138,7 +138,7 @@ PILLAR_ROOMS = [
     ("Leadership & Governance", "lg", CR2, "Richard Neal, Frank Bell, Mark Hilton and Tom Lee"),
     ("Coaches", "cv", MR2, "Rebecca Garlick and Lee Brown, with Andy Somers"),
     ("Volunteers", "cv", MR2, "Steph Powell, Ellie Reid, Mick Baikie and Laura Smith"),
-    ("Facilities", "facilities", CR1, "Ian Grange, Liam Devlin, Mark Pover and Simon Wood"),
+    ("Facilities", "facilities", CR1, "Ian Grange, Liam Devlin, Mark Pover, Simon Wood and Anna Quick"),
     ("Community", "community", MR1, "Sarah Cummings, Andy Baker and Rus Smith"),
 ]
 
@@ -608,23 +608,70 @@ DAYS = [
 # Slides shown to delegates, by page number of the master deck PDF.
 # Each set unlocks on the page when its session starts.
 SLIDE_PAGES = {
+    # Plain numbers: pages of the old master deck. "f1", "f2"...: pages of the session's own
+    # final deck (made with tools/make_session_slides.py). Final decks received 14 Oct.
     "d1-welcome": [4],
-    "d1-scene": list(range(13, 23)),
+    "d1-scene": ["f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8", "f9", "f10"],
     "d1-digital": [25, 26, 27, 28, 30, 34],
     "d1-nls": [35],
-    "d1-teamwork": list(range(42, 49)),
-    "d1-pillar": [53, 54, 55, 56, 57, 58, 59, 60],
-    "d1-progression": [65, 66, 67, 68],
+    "d1-teamwork": ["f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8"],
+    "d1-pillar": ["f1", "f2"],
+    "d1-progression": ["f1", "f2", "f3"],
     "d2-welcome": [77],
-    "d2-workforce": [85, 86, 87, 89, 90, 91, 92],
-    "d2-lmd": list(range(102, 110)),
+    "d2-workforce": ["f1", "f2", "f3", "f4", "f5", "f6"],
+    "d2-lmd": ["f1", "f3", "f4", "f5", "f6", "f7", "f8", "f9"],  # f2 is the groupings slide: not shown
     "d2-impact": [120, 121],
-    "d2-vision": [127, 128, 129, 130, 131],
+    "d2-vision": ["f1", "f2", "f3", "f4", "f5", "f6"],
     "d2-roundup": [141],
 }
 
 # Short descriptions for people who cannot see the slide images.
 SLIDE_ALT = {
+    # Final session decks (14 Oct), keyed by (session, page).
+    ("d1-scene", "f1"): 'Setting the scene.',
+    ("d1-scene", "f2"): "We've made a strong start: foundations, practice, impact.",
+    ("d1-scene", "f3"): "Proof it's working: 95% positive difference, 93% stronger relationships, 76% more proactive, 88% long-term mindset, 98% intervention support.",
+    ("d1-scene", "f4"): 'The next 2 years: stronger clubs, system and opportunities.',
+    ("d1-scene", "f5"): 'The route to 1,000 is clear.',
+    ("d1-scene", "f6"): 'Success factors: know your patch gives insight, teamwork and collaboration gives capability, and a development mindset joins the two.',
+    ("d1-scene", "f7"): 'Understand the club.',
+    ("d1-scene", "f8"): 'Tailor the support: understand, support, progress.',
+    ("d1-scene", "f9"): 'Progress that lasts: trusted relationships, continuous learning, generational impact.',
+    ("d1-scene", "f10"): 'National ambition, local progress: which clubs, what commitment, what support?',
+    ("d1-teamwork", "f1"): 'Teamwork and Collaboration.',
+    ("d1-teamwork", "f2"): "The activity: 1 Connect and Share, tackle a real challenge from the network. 2 Steal and Adapt, see what colleagues elsewhere are doing. 3 Act, decide what you're taking back.",
+    ("d1-teamwork", "f3"): 'You told us: workforce capacity, accessing the right expertise, Club Consultant relationships, stretched volunteers, working across teams.',
+    ("d1-teamwork", "f4"): 'The aim: leave with one thing somebody else is doing that could make your job easier.',
+    ("d1-teamwork", "f5"): 'Connect and Share: pick one card, flip it, tackle it.',
+    ("d1-teamwork", "f6"): 'Steal and Adapt: find your station, get underneath why it worked, what could you steal?',
+    ("d1-teamwork", "f7"): "Act: what's the one thing you're stealing? Who will you stay connected with? Capture it in your workbook.",
+    ("d1-teamwork", "f8"): "Thank you. Hopefully you've just stolen a great example.",
+    ("d1-pillar", "f1"): 'Pillar Networking.',
+    ("d1-pillar", "f2"): "The activity: 1 Root causes, what's driving these ratings, not just the symptom. 2 Blocking progress, where root causes exist and what's blocking progress. 3 Tactics and interventions to remedy the root cause and unblock progression.",
+    ("d1-progression", "f1"): 'Accelerating Progression.',
+    ("d1-progression", "f2"): 'Our Pyramid of Progression: red at risk, amber developing, green strong, gold thriving, each with its focus and tools.',
+    ("d1-progression", "f3"): 'The activity: 1 Sequencing activity, what comes first and second and when FA Club Consultant one-to-one support is deployed. 2 Tactics and practices. 3 Accelerating progress, developing the people versus accelerating club progression.',
+    ("d2-workforce", "f1"): 'Empowering the Club Workforce. Workbook page 9.',
+    ("d2-workforce", "f2"): 'The activity: 1 Club challenges, reflections from your pillar networking session. 2 Understanding the current offer. 3 Creating a TCC workforce plan.',
+    ("d2-workforce", "f3"): 'Setting the scene: 70% of club administrators and officials are satisfied in their role, workload is landing on a few key officials, and over half of Thriving Community Clubs want to evolve their volunteer structure but have no plan.',
+    ("d2-workforce", "f4"): 'Growth and capacity mapped to the Pyramid of Progression, from role profiles and operational structure up to the strategic development of volunteers.',
+    ("d2-workforce", "f5"): 'FA Volunteer Development Framework: grow, diversify, learning and development, celebrate.',
+    ("d2-workforce", "f6"): '70-20-10 learning model: in club and in action, networking and on action, formal learning.',
+    ("d2-lmd", "f1"): 'Lead, Manage, Do.',
+    ("d2-lmd", "f3"): 'The journey: Development Mindset asks what does this club need next; Lead, Manage, Do asks what is my role in making that happen.',
+    ("d2-lmd", "f4"): 'The aim: are we actually putting it into practice?',
+    ("d2-lmd", "f5"): 'The activity: what needs to happen, who have I got around me, what is my role?',
+    ("d2-lmd", "f6"): 'What needs to happen? Start with a real club, priority or challenge. Ask what actually needs to change here.',
+    ("d2-lmd", "f7"): 'Who have I got around me? Within your County FA, FA support and Club Consultants, partners and the wider network.',
+    ("d2-lmd", "f8"): 'What is my role? Lead: create direction, prioritise, influence. Manage: bring the right people together and coordinate. Do: step in where your own expertise adds value.',
+    ("d2-lmd", "f9"): 'The challenge: what am I currently doing that somebody else might be better equipped to do?',
+    ("d2-vision", "f1"): 'Future Vision, with Phil Woodward and Mick Baikie.',
+    ("d2-vision", "f2"): 'What the board told us: backed, challenged, looking ahead.',
+    ("d2-vision", "f3"): 'Ambition: 1,000, stronger.',
+    ("d2-vision", "f4"): 'Why stronger clubs matter: more football, inclusion, value.',
+    ("d2-vision", "f5"): 'Beyond 2028: better facilities, more opportunities, community connection, stronger people, stronger leadership.',
+    ("d2-vision", "f6"): 'Our shared task: national ambition, local leadership, lasting impact.',
+
     4: "Day 1 agenda, from Hello and welcome at 10.30am to the evening reception at 7.00pm.",
     13: "Setting the scene.",
     14: "We've made a strong start: foundations in 2024-25, practice in 2025-26, impact in 2026-28.",

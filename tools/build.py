@@ -61,7 +61,7 @@ def slides_block(day, start, key, label):
     pages = C.SLIDE_PAGES.get(key, [])
     if not pages:
         return ""
-    items = [{"f": slide_name(key, p), "a": C.SLIDE_ALT.get(p, "")} for p in pages]
+    items = [{"f": slide_name(key, p), "a": C.SLIDE_ALT.get((key, p), C.SLIDE_ALT.get(p, ""))} for p in pages]
     n = len(items)
     count = "1 slide" if n == 1 else f"{n} slides"
     return (

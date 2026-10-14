@@ -24,7 +24,7 @@ import content as C  # noqa: E402
 WORKSHOPS = {"NLS Workshop": "National League System", "Data & Digital Workshop": "A Digital Journey"}
 ROLE = {"Session Lead": "lead", "Facilitator": "facilitator"}
 # Corrections Tom has confirmed since the sheet was written (13 Oct).
-ROLE_FIX = {("Andy Somers", "pillar"): "facilitator"}
+ROLE_FIX = {("Andy Somers", "pillar"): "facilitator", ("Anna Quick", "pillar"): "facilitator"}  # Anna added 14 Oct
 
 
 def split(value):
