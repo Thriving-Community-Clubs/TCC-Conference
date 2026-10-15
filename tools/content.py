@@ -8,7 +8,7 @@ TZ = "+01:00"
 
 # Switch to True once the clubs have confirmed. Adds the three club stories
 # to the Day 2 agenda and shortens the sessions before them to match the deck.
-SHOW_CLUB_STORIES = False
+SHOW_CLUB_STORIES = True
 
 # The Slido event. Set SLIDO_URL to "" to hide the Slido section and buttons.
 SLIDO_URL = "https://app.sli.do/event/b9EDPXgxX4wQAkY91z1iSJ"
@@ -553,7 +553,8 @@ DAY2 = [
      "slides": ["d2-workforce"]},
     {"id": "d2-club1", "kind": "session", "club": True, "start": "10:30", "end": "10:50",
      "title": "Club story: AFC Pogmoor", "room": MR1,
-     "who": "In conversation with Charlotte Richardson"},
+     "who": "James Livesey (AFC Pogmoor) and Tom Measham (Sheffield & Hallamshire FA), in conversation with Charlotte Richardson",
+     "about": "How a club carried by a few people built a plan for who steps up next, and the support that helped."},
     {"id": "d2-break", "kind": "pause", "start": "10:50", "end": "11:10", "title": "Break"},
     {"id": "d2-keynote", "kind": "session", "start": "11:10", "end": "12:00",
      "title": "Keynote: Leading the Orchestra", "room": MR1,
@@ -575,7 +576,8 @@ DAY2 = [
      "workbook": 11},
     {"id": "d2-club2", "kind": "session", "club": True, "start": "14:10", "end": "14:30",
      "title": "Club story: Knowle FC", "room": MR1,
-     "who": "In conversation with Charlotte Richardson"},
+     "who": "Stuart Lanyon (Knowle FC) and Jim McGettrick (Birmingham FA), in conversation with Charlotte Richardson",
+     "about": "A club winning on the pitch while carrying a risk nobody could see, and how fixing the foundations opened up everything else."},
     {"id": "d2-impact", "kind": "session", "start": "14:30", "end": "15:00", "end_clubs": "14:40",
      "title": "Demonstrating Impact", "room": MR1,
      "who": "Sarah Cummings and Luke Bailey",
@@ -583,8 +585,9 @@ DAY2 = [
      "workbook": 12,
      "slides": ["d2-impact"]},
     {"id": "d2-club3", "kind": "session", "club": True, "start": "14:40", "end": "15:00",
-     "title": "Club story: Brereton FC", "room": MR1,
-     "who": "In conversation with Charlotte Richardson"},
+     "title": "Club story: Brereton Social FC", "room": MR1,
+     "who": "Danny Hickenbottom (Brereton Social FC) and Alex Scott (Staffordshire FA), in conversation with Charlotte Richardson",
+     "about": "Turning division into direction: bringing a club divided by structure, communication and local politics together, and into the National League System."},
     {"id": "d2-vision", "kind": "session", "start": "15:00", "end": "15:15",
      "title": "Future Vision", "room": MR1,
      "who": "Phil Woodward and Mick Baikie",
