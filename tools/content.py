@@ -18,6 +18,10 @@ SLIDO_CODE = "1283463"
 FEEDBACK_URL = ""
 # The workbook PDF, made by tools/make_workbook.py. Set to "" to take the workbook off the page.
 WORKBOOK_FILE = "files/delegate-workbook.pdf"
+# The Better Everywhere animation, shown at the top of the page once the conference has finished.
+AFTER_FILM = "files/better-everywhere-animation.mp4"
+AFTER_FILM_POSTER = "img/animation-poster.webp"
+AFTER_FILM_CAPTION = "Better Everywhere: the whole story of the two days, in one film."
 
 LINKS = {
     "parking": "https://nottingham.firstparking.co.uk/Event/Register/hXFbnJEB",
@@ -144,6 +148,16 @@ PILLAR_ROOMS = [
 
 # Resources shown inside a session in the agenda, keyed by session id.
 SESSION_RESOURCES = {
+    "d1-evening": [
+        {
+            "title": "Street food buffet menu",
+            "pdf": "files/street-food-buffet-menu.pdf",
+            "pages": [
+                ("resources/street-food-buffet-menu/page-1.webp", 1241, 1755,
+                 "Street food buffet menu. Pulled lamb shawarma with flatbreads (DF). Chicken and chorizo paella (GF, DF). Mini gluten-free beer-battered fish and chips with tartare sauce (GF, DF). Louisiana hot honey chicken slider on a brioche bun. Vegan sausage with braised sauerkraut (VG, V, GF, DF). Aloo tikki chaat with tamarind chutney, mint and pomegranate (VG, V, GF, DF). Jamaican jerk cauliflower with charred pineapple salsa (VG, V, GF, DF). Steamed bao buns with hoisin-glazed oyster mushrooms (VG, V, DF). Desserts: mini chocolate dorayaki (V), churros with warm Biscoff sauce (VG, V, DF), mango and passion fruit coconut yoghurt (VG, V, GF, DF). Key: VG vegan, V vegetarian, GF gluten free, DF dairy free. Speak to a member of the venue team for full allergen information."),
+            ],
+        },
+    ],
     "d1-teamwork": [
         {
             "title": "Steal & Adapt: good practice from your band",
@@ -167,12 +181,16 @@ PILLAR_RESOURCES = {
     "Leadership & Governance": [
         {
             "title": "Leadership & Governance: help and support guide",
-            "pdf": "files/leadership-governance-support-guide.pdf",
+            "pdf": "files/leadership-governance-support-guide-oct26.pdf",
             "pages": [
-                ("resources/leadership-governance-support-guide/page-1.webp", 1240, 1752,
+                ("resources/leadership-governance-support-guide-oct26/page-1.webp", 1240, 1752,
                  "Leadership & Governance help and support guide, page 1. Everything currently available under this pillar, and where to find it. One, the Club Leadership Programme with UCFB. Two, Financial Controls from England Football. Three, legal and governance support from The FA and Muckle LLP, with FA Bitesize Guides and guidance on data protection and club structures. Four, video guides on The Club Hub on YouTube. The links are listed below the pages."),
-                ("resources/leadership-governance-support-guide/page-2.webp", 1240, 1752,
-                 "Leadership & Governance help and support guide, page 2. Five, tools and guidance in the PlayBook: VAT assessment information, VAT guidance, a VAT flow chart and a VAT case study toolkit for clubs, the Club Structures Assistant and the Resource Sharing Agreement. Six, workshops for 2026 in the PlayBook: Financial Controls and VAT, and Club Legal Structures and Governance."),
+                ("resources/leadership-governance-support-guide-oct26/page-2.webp", 1240, 1752,
+                 "Page 2. Five, tools and guidance in the PlayBook: VAT assessment information, VAT guidance, a VAT flow chart and a VAT case study toolkit for clubs, the Club Structures Assistant and the Resource Sharing Agreement. Six, workshops for 2026 in the PlayBook: Financial Controls and VAT, and Club Legal Structures and Governance."),
+                ("resources/leadership-governance-support-guide-oct26/page-3.webp", 1240, 1752,
+                 "Page 3. Seven, maturity pathway resources, new in the PlayBook in October 2026: 41 resources for workforce use with clubs. Vision and strategic planning templates, situational analysis templates such as PESTLE, SWOT, stakeholder and audience analysis, resources analysis, organisational structure and a RASCI matrix, strategic communications templates, and the start of the people plan and board recruitment resources."),
+                ("resources/leadership-governance-support-guide-oct26/page-4.webp", 1240, 1752,
+                 "Page 4. Maturity pathway resources continued: skills audit and performance guidance, terms of office, vacancies, succession plan and board recruitment templates, role profiles, governance, operational and teams structure templates, meeting agenda and minutes templates, declaration of interests template and guidance, a risk register template and A Guide to Club Structures."),
             ],
             # The guide's links, so they can be opened from the page. The image of the guide cannot be clicked.
             "links": [
@@ -554,7 +572,8 @@ DAY2 = [
     {"id": "d2-club1", "kind": "session", "club": True, "start": "10:30", "end": "10:50",
      "title": "Club story: AFC Pogmoor", "room": MR1,
      "who": "James Livesey (AFC Pogmoor) and Tom Measham (Sheffield & Hallamshire FA), in conversation with Charlotte Richardson",
-     "about": "How a club carried by a few people built a plan for who steps up next, and the support that helped."},
+     "about": "How a club carried by a few people built a plan for who steps up next, and the support that helped.",
+     "slides": ["d2-club1"]},
     {"id": "d2-break", "kind": "pause", "start": "10:50", "end": "11:10", "title": "Break"},
     {"id": "d2-keynote", "kind": "session", "start": "11:10", "end": "12:00",
      "title": "Keynote: Leading the Orchestra", "room": MR1,
@@ -577,7 +596,8 @@ DAY2 = [
     {"id": "d2-club2", "kind": "session", "club": True, "start": "14:10", "end": "14:30",
      "title": "Club story: Knowle FC", "room": MR1,
      "who": "Stuart Lanyon (Knowle FC) and Jim McGettrick (Birmingham FA), in conversation with Charlotte Richardson",
-     "about": "A club winning on the pitch while carrying a risk nobody could see, and how fixing the foundations opened up everything else."},
+     "about": "A club winning on the pitch while carrying a risk nobody could see, and how fixing the foundations opened up everything else. The club's film appears here when the session starts.",
+     "youtube": ("MPX3uehhJ-4", "Knowle FC club story")},
     {"id": "d2-impact", "kind": "session", "start": "14:30", "end": "15:00", "end_clubs": "14:40",
      "title": "Demonstrating Impact", "room": MR1,
      "who": "Sarah Cummings and Luke Bailey",
@@ -587,7 +607,8 @@ DAY2 = [
     {"id": "d2-club3", "kind": "session", "club": True, "start": "14:40", "end": "15:00",
      "title": "Club story: Brereton Social FC", "room": MR1,
      "who": "Danny Hickenbottom (Brereton Social FC) and Alex Scott (Staffordshire FA), in conversation with Charlotte Richardson",
-     "about": "Turning division into direction: bringing a club divided by structure, communication and local politics together, and into the National League System."},
+     "about": "Turning division into direction: bringing a club divided by structure, communication and local politics together, and into the National League System.",
+     "slides": ["d2-club3"]},
     {"id": "d2-vision", "kind": "session", "start": "15:00", "end": "15:15",
      "title": "Future Vision", "room": MR1,
      "who": "Phil Woodward and Mick Baikie",
@@ -613,24 +634,94 @@ DAYS = [
 SLIDE_PAGES = {
     # Plain numbers: pages of the old master deck. "f1", "f2"...: pages of the session's own
     # final deck (made with tools/make_session_slides.py). Final decks received 14 Oct.
-    "d1-welcome": [4],
+    "d1-welcome": ['f1', 'f2', 'f3', 'f4', 'f5'],
     "d1-scene": ["f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8", "f9", "f10"],
-    "d1-digital": [25, 26, 27, 28, 30, 34],
-    "d1-nls": [35],
+    "d1-digital": ['f1', 'f2', 'f3', 'f4'],
+    "d1-nls": ['f1', 'f2', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8', 'f9', 'f10', 'f11', 'f12', 'f13', 'f14', 'f15', 'f16', 'f17', 'f18', 'f19', 'f20', 'f21', 'f22'],
     "d1-teamwork": ["f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8"],
     "d1-pillar": ["f1", "f2"],
     "d1-progression": ["f1", "f2", "f3"],
-    "d2-welcome": [77],
+    "d2-welcome": ['f1', 'f2', 'f3', 'f4', 'f5'],
     "d2-workforce": ["f1", "f2", "f3", "f4", "f5", "f6"],
     "d2-lmd": ["f1", "f3", "f4", "f5", "f6", "f7", "f8", "f9"],  # f2 is the groupings slide: not shown
-    "d2-impact": [120, 121],
+    "d2-club1": ['f1', 'f2', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8', 'f9', 'f10', 'f11', 'f12', 'f13'],
+    "d2-club3": ['f1', 'f2', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8', 'f9'],
+    "d2-impact": ['f1', 'f2', 'f3', 'f4'],
     "d2-vision": ["f1", "f2", "f3", "f4", "f5", "f6"],
-    "d2-roundup": [141],
+    "d2-roundup": ['f1', 'f2', 'f3', 'f4', 'f5', 'f6'],
 }
 
 # Short descriptions for people who cannot see the slide images.
 SLIDE_ALT = {
-    # Final session decks (14 Oct), keyed by (session, page).
+    # Final session decks (14 and 15 Oct), keyed by (session, page).
+    ("d1-welcome", "f1"): 'Your conference toolkit: scan the hub, fill your workbook, join Slido with code 1283463.',
+    ("d1-welcome", "f2"): 'Illustration: thank you, with the PlayBook and funding.',
+    ("d1-welcome", "f3"): 'Illustration: resources, collaboration and sharing expertise.',
+    ("d1-welcome", "f4"): 'Illustration: foundations, practice, impact. Time for kick-off.',
+    ("d1-welcome", "f5"): 'Illustration: half time 1-0. Development mindset: know your patch, teamwork and collaboration.',
+    ("d1-digital", "f1"): 'A Digital Journey. Workbook page 5.',
+    ("d1-digital", "f2"): 'A Digital Journey: Power BI answers which clubs, the Club Programme Platform answers what support, and The Playbook answers what next step.',
+    ("d1-digital", "f3"): 'The aim: turn insight into impact. Use the digital journey to make better decisions and provide the right clubs, the right support, at the right time.',
+    ("d1-digital", "f4"): "Which clubs? Build your Thriving Community Clubs pipeline: identify 5 clubs that are strategically important in your County FA, looking at strong pathways, the National League System and Women's Football Pyramid, and facility investment.",
+    ("d2-welcome", "f1"): 'Your conference toolkit: scan the hub, fill your workbook, join Slido with code 1283463.',
+    ("d2-welcome", "f2"): 'Illustration: half time 1-0. Development mindset: know your patch, teamwork and collaboration.',
+    ("d2-welcome", "f3"): 'Illustration: 1,000 stronger clubs. Time for a stronger second half.',
+    ("d2-welcome", "f4"): 'Illustration: yesterday we set the scene, foundations.',
+    ("d2-welcome", "f5"): 'Illustration: teamwork and collaboration, your own data, a two-season plan for your own clubs: stronger opportunities, systems and clubs.',
+    ("d2-impact", "f1"): 'Demonstrating Impact. Workbook page 12.',
+    ("d2-impact", "f2"): 'Your impact so far: around 1,800 clubs named.',
+    ("d2-impact", "f3"): 'Success stories: Knowle and AFC Pogmoor.',
+    ("d2-impact", "f4"): 'Club Development Reviews plus success stories at scale equals impact demonstrated.',
+    ("d2-roundup", "f1"): 'Illustration: teamwork and collaboration, your own data, a two-season plan for your own clubs.',
+    ("d2-roundup", "f2"): 'Illustration: sustain, grow. Today has been about you.',
+    ("d2-roundup", "f3"): 'Illustration: know your patch, teamwork, development mindset.',
+    ("d2-roundup", "f4"): 'Illustration: thriving clubs all over the country. Which clubs? What support? What commitment?',
+    ("d2-roundup", "f5"): 'Illustration: review and prepare. Thriving 90:00.',
+    ("d2-roundup", "f6"): "Illustration: let's make the pledge, bringing the whole story together.",
+    ("d1-nls", "f1"): "Men's National League System. Workbook page 5.",
+    ("d1-nls", "f2"): "Men's National League System poster.",
+    ("d1-nls", "f3"): "Women's Football Pyramid 2026/27 poster.",
+    ("d1-nls", "f4"): 'The National League System is scaling fast: more teams in NLS clubs and more 3-star accredited NLS clubs.',
+    ("d1-nls", "f5"): 'NLS topics: relationships with NLS clubs, stadium accreditation, supporting clubs to progress, club licensing, and NLS clubs placed to grow football.',
+    ("d1-nls", "f6"): 'Relationships, the activity: rank, discuss, actions.',
+    ("d1-nls", "f7"): 'Ideas for improving relationships with NLS clubs.',
+    ("d1-nls", "f8"): 'Ideas for improving relationships, continued.',
+    ("d1-nls", "f9"): 'Stadium accreditation 2026-27: the NLS and WFP criteria merged into one document.',
+    ("d1-nls", "f10"): 'Stadium accreditation: what role for County FAs?',
+    ("d1-nls", "f11"): 'Clubs progressing into and through the NLS.',
+    ("d1-nls", "f12"): 'Progress into the NLS, the activity: identify, discuss, actions.',
+    ("d1-nls", "f13"): 'National League System Club Licensing Project.',
+    ("d1-nls", "f14"): 'The current club licence: financial; governance, legal and admin; facilities and stadia.',
+    ("d1-nls", "f15"): 'Club knowledge: why licensing is being reviewed.',
+    ("d1-nls", "f16"): 'Overview of scope and recommendations for club and league licensing.',
+    ("d1-nls", "f17"): 'What will the club licence cover?',
+    ("d1-nls", "f18"): 'Criteria by step.',
+    ("d1-nls", "f19"): "What we do and don't want the licence to be.",
+    ("d1-nls", "f20"): 'Work to date.',
+    ("d1-nls", "f21"): 'Agreed direction of travel: the licensing roadmap.',
+    ("d1-nls", "f22"): 'Clubs in the NLS are uniquely placed to grow the game.',
+    ("d2-club1", "f1"): 'Introducing AFC Pogmoor with James Livesey and Tom Measham.',
+    ("d2-club1", "f2"): 'Club case study: AFC Pogmoor, more than just a place to play football.',
+    ("d2-club1", "f3"): 'A growing club, season on season: workforce 189, workforce hours 44,593, 28 teams, 167 girls players.',
+    ("d2-club1", "f4"): 'Club Impact Calculator: £1.6M of social value created by the club in 2026/27.',
+    ("d2-club1", "f5"): 'What AFC Pogmoor means to our people: enjoyable, fun, safe, exciting, community.',
+    ("d2-club1", "f6"): 'A Pogmoor parent: this club saved us as a family.',
+    ("d2-club1", "f7"): 'A Pogmoor player: Pogmoor means a lot to me.',
+    ("d2-club1", "f8"): 'A Pogmoor player: the atmosphere at my club is amazing.',
+    ("d2-club1", "f9"): 'Our volunteers go above and beyond.',
+    ("d2-club1", "f10"): 'A club volunteer: being part of this club helps.',
+    ("d2-club1", "f11"): 'Volunteer spotlight: Mark Stell.',
+    ("d2-club1", "f12"): 'Looking after our own pitches.',
+    ("d2-club1", "f13"): 'AFC Pogmoor in conversation: live Q&A.',
+    ("d2-club3", "f1"): 'Introducing Brereton Social FC with Danny Hickenbottom and Alex Scott.',
+    ("d2-club3", "f2"): 'Brereton Social FC with Staffordshire FA: turning division into direction.',
+    ("d2-club3", "f3"): 'Fragmented to thriving: bringing together a club divided by structure, communication and local politics.',
+    ("d2-club3", "f4"): 'Club Development Review.',
+    ("d2-club3", "f5"): 'Staffordshire FA reviews across three seasons.',
+    ("d2-club3", "f6"): 'Facilities 2024 to 2026.',
+    ("d2-club3", "f7"): 'Desktop review and club chemistry.',
+    ("d2-club3", "f8"): 'Significant developments: facilities, governance and leadership, volunteers.',
+    ("d2-club3", "f9"): "What's next: legal structure, revenue, volunteer action plan, grass pitch plan, Howdens kitchen, club coach lead.",
     ("d1-scene", "f1"): 'Setting the scene.',
     ("d1-scene", "f2"): "We've made a strong start: foundations, practice, impact.",
     ("d1-scene", "f3"): "Proof it's working: 95% positive difference, 93% stronger relationships, 76% more proactive, 88% long-term mindset, 98% intervention support.",

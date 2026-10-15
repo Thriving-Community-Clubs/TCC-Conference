@@ -237,8 +237,29 @@
     box.dataset.open = "true";
   }
 
+  function buildFilm(box) {
+    var frame = doc.createElement("iframe");
+    frame.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(box.dataset.id) + "?rel=0";
+    frame.title = box.dataset.title;
+    frame.allow = "accelerometer; encrypted-media; picture-in-picture; fullscreen";
+    frame.allowFullscreen = true;
+    frame.loading = "lazy";
+    box.textContent = "";
+    box.appendChild(frame);
+    var p = el("p", "hint");
+    var a = el("a", null, "Watch on YouTube");
+    a.href = "https://youtu.be/" + encodeURIComponent(box.dataset.id);
+    a.rel = "noopener";
+    p.appendChild(a);
+    box.appendChild(p);
+    box.dataset.open = "true";
+  }
+
   function updateSlides() {
     var n = now();
+    $all(".yt").forEach(function (box) {
+      if (!box.dataset.open && n >= Date.parse(box.dataset.unlock)) buildFilm(box);
+    });
     $all(".slides").forEach(function (box) {
       if (box.dataset.open) return;
       if (n >= Date.parse(box.dataset.unlock)) buildSlides(box);

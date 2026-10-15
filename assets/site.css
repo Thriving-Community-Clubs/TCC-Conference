@@ -377,3 +377,10 @@ ul, ol { padding: 0; list-style: none; }
 @media print { .offline { display: none; } }
 .picker-h { margin-top: 26px; font-size: 18px; }
 .picker-h + .picker { margin-top: 10px; }
+
+/* films */
+.yt iframe { display: block; width: 100%; aspect-ratio: 16 / 9; height: auto; border: 0; margin-top: 12px; background: var(--navy); }
+.film { margin: 18px 0 6px; }
+.film video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: var(--navy); }
+.film figcaption { font-size: 15px; margin-top: 8px; }
+.row.pause .res { margin-top: 10px; }

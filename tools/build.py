@@ -72,6 +72,15 @@ def slides_block(day, start, key, label):
     )
 
 
+def youtube_block(day, start, video, label):
+    """A YouTube film that appears when the session starts, like the slides."""
+    vid, title = video
+    return (
+        f'<div class="yt" data-unlock="{iso(day, start)}" data-id="{e(vid)}" data-title="{e(title)}">'
+        f'<p class="slides-locked">The film will appear here when this session starts at {clock(start)}.</p></div>'
+    )
+
+
 def slido_button():
     if not C.SLIDO_URL:
         return ""
@@ -92,7 +101,7 @@ def groups_list(which):
     )
 
 
-def resources_fold(pillar, items=None, label=None):
+def resources_fold(pillar, items=None, heading=None):
     """Resources for one pillar (or a session), folded away. Nothing when there are none."""
     if items is None:
         items = getattr(C, "PILLAR_RESOURCES", {}).get(pillar, [])
@@ -146,7 +155,7 @@ def resources_fold(pillar, items=None, label=None):
             f'{shown}<p class="hint">{tip} {link}</p>{links_html}</figure>'
         )
     return (
-        f'<details class="fold res"><summary>{e(label or "Resources for " + pillar)} ({len(items)})</summary>'
+        f'<details class="fold res"><summary>{e(heading or "Resources for " + pillar)} ({len(items)})</summary>'
         f'<div class="fold-body">{"".join(out)}</div></details>'
     )
 
@@ -168,6 +177,8 @@ def session_html(day, s):
     time = f'<time datetime="{day}T{start}">{clock(start)}</time>'
     if s["kind"] == "pause":
         note = f'<p class="note">{e(s["note"])}</p>' if s.get("note") else ""
+        if getattr(C, "SESSION_RESOURCES", {}).get(s["id"]):
+            note += resources_fold(None, C.SESSION_RESOURCES[s["id"]], "What's on the menu")
         return (
             f'<li class="row pause" {attrs}><div class="when">{time}</div>'
             f'<div class="what"><h3>{e(s["title"])}</h3>{note}</div></li>'
@@ -201,6 +212,8 @@ def session_html(day, s):
             body.append(f'<p class="workbook"><a href="#workbook-page-{n}">Workbook page {n}</a></p>')
         else:
             body.append(f'<p class="workbook">Workbook page {n}</p>')
+    if s.get("youtube"):
+        body.append(youtube_block(day, start, s["youtube"], s["title"]))
     for key in s.get("slides", []):
         body.append(slides_block(day, start, key, s["title"]))
     if s.get("slides") or s.get("options"):
@@ -352,6 +365,13 @@ def slido_html():
 
 def after_html():
     parts = []
+    film = getattr(C, "AFTER_FILM", "")
+    if film:
+        parts.append(
+            f'<figure class="film"><video controls playsinline preload="none" poster="{e(C.AFTER_FILM_POSTER)}" '
+            f'width="1920" height="1080"><source src="{e(film)}" type="video/mp4"></video>'
+            f'<figcaption>{e(C.AFTER_FILM_CAPTION)} <a href="{e(film)}" download>Download the film (MP4, {file_size(film)})</a></figcaption></figure>'
+        )
     if C.FEEDBACK_URL:
         parts.append(
             '<p>Tell us what worked and what we should change. It takes a few minutes.</p>'
