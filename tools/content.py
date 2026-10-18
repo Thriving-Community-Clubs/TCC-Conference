@@ -592,7 +592,8 @@ DAY2 = [
      "title": "Growing Pains", "room": MR1,
      "who": "Richard Neal, Frank Bell and Mark Pover",
      "about": "Get ready for the growth pressures that come with Thriving Community Clubs, with real examples. Leave knowing the pressures clubs face when they grow quickly, how to spot them on the horizon, and what to have ready.",
-     "workbook": 11},
+     "workbook": 11,
+     "slides": ["d2-growing"]},
     {"id": "d2-club2", "kind": "session", "club": True, "start": "14:10", "end": "14:30",
      "title": "Club story: Knowle FC", "room": MR1,
      "who": "Stuart Lanyon (Knowle FC) and Jim McGettrick (Birmingham FA), in conversation with Charlotte Richardson",
@@ -644,6 +645,7 @@ SLIDE_PAGES = {
     "d2-welcome": ['f1', 'f2', 'f3', 'f4', 'f5'],
     "d2-workforce": ["f1", "f2", "f3", "f4", "f5", "f6"],
     "d2-lmd": ["f1", "f3", "f4", "f5", "f6", "f7", "f8", "f9"],  # f2 is the groupings slide: not shown
+    "d2-growing": ["f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8", "f9", "f10"],
     "d2-club1": ['f1', 'f2', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8', 'f9', 'f10', 'f11', 'f12', 'f13'],
     "d2-club3": ['f1', 'f2', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8', 'f9'],
     "d2-impact": ['f1', 'f2', 'f3', 'f4'],
@@ -653,7 +655,21 @@ SLIDE_PAGES = {
 
 # Short descriptions for people who cannot see the slide images.
 SLIDE_ALT = {
-    # Final session decks (14 and 15 Oct), keyed by (session, page).
+    # Final session decks (14, 15 and 18 Oct), keyed by (session, page).
+    ("d2-impact", "f1"): 'Demonstrating Impact. Workbook page 12.',
+    ("d2-impact", "f2"): 'Success stories: Knowle and AFC Pogmoor, among 1,800 clubs.',
+    ("d2-impact", "f3"): 'Club Development Reviews plus success stories at scale equals impact demonstrated.',
+    ("d2-impact", "f4"): 'Behind every name, a story to tell: the names of clubs across the programme.',
+    ("d2-growing", "f1"): 'Growing Pains, with Richard Neal. Workbook page 11.',
+    ("d2-growing", "f2"): 'The 2024-25 English club landscape: the share of teams in clubs of different sizes, and by 2028 half of teams will be in clubs of more than 20 teams.',
+    ("d2-growing", "f3"): 'The 2026-27 English club landscape: fewer clubs, more of the game. 13% of clubs run 55% of all teams.',
+    ("d2-growing", "f4"): 'A 3-star club is a different organisation: 5 teams on average at 1-star, 24 at 2-star and 43 at 3-star.',
+    ("d2-growing", "f5"): 'Stronger clubs carry our priorities: women and girls, and disability football, increasingly live in 2 and 3-star clubs.',
+    ("d2-growing", "f6"): 'The National League System is scaling fast: 3-star accredited NLS clubs up from 144 to 194, with an ambition of 400.',
+    ("d2-growing", "f7"): 'Stronger clubs create greater value: £342.7m combined estimated impact from 197 accredited clubs, and higher average value per club at each star level.',
+    ("d2-growing", "f8"): 'More clubs are growing. Are we ready? What breaks first when a club grows fast, what a 43-team club needs that a 5-team club does not, and what we change in how we support them.',
+    ("d2-growing", "f9"): 'The activity: what growing pains your biggest clubs have experienced and which are the next big clubs (5 minutes), what your County FA can do (15 minutes), and what The FA can do (10 minutes).',
+    ("d2-growing", "f10"): 'The challenge: who are my growing clubs, what are their growing pains, and how can the County FA support them? Workbook page 11.',
     ("d1-welcome", "f1"): 'Your conference toolkit: scan the hub, fill your workbook, join Slido with code 1283463.',
     ("d1-welcome", "f2"): 'Illustration: thank you, with the PlayBook and funding.',
     ("d1-welcome", "f3"): 'Illustration: resources, collaboration and sharing expertise.',
@@ -668,10 +684,6 @@ SLIDE_ALT = {
     ("d2-welcome", "f3"): 'Illustration: 1,000 stronger clubs. Time for a stronger second half.',
     ("d2-welcome", "f4"): 'Illustration: yesterday we set the scene, foundations.',
     ("d2-welcome", "f5"): 'Illustration: teamwork and collaboration, your own data, a two-season plan for your own clubs: stronger opportunities, systems and clubs.',
-    ("d2-impact", "f1"): 'Demonstrating Impact. Workbook page 12.',
-    ("d2-impact", "f2"): 'Your impact so far: around 1,800 clubs named.',
-    ("d2-impact", "f3"): 'Success stories: Knowle and AFC Pogmoor.',
-    ("d2-impact", "f4"): 'Club Development Reviews plus success stories at scale equals impact demonstrated.',
     ("d2-roundup", "f1"): 'Illustration: teamwork and collaboration, your own data, a two-season plan for your own clubs.',
     ("d2-roundup", "f2"): 'Illustration: sustain, grow. Today has been about you.',
     ("d2-roundup", "f3"): 'Illustration: know your patch, teamwork, development mindset.',

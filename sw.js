@@ -6,7 +6,7 @@
    Everything else: use the saved copy if there is one, otherwise fetch and keep it. */
 "use strict";
 
-var VERSION = "4fb8db1415";
+var VERSION = "dccf918491";
 var CORE = "tcc26-core-" + VERSION;
 var EXTRA = "tcc26-extra";
 var CORE_FILES = [
@@ -43,6 +43,7 @@ var CORE_FILES = [
   "slides/1a049b2b3766.webp",
   "slides/1a4e91a015a9.webp",
   "slides/1e13b75f912a.webp",
+  "slides/2395bf4ca0af.webp",
   "slides/249179cb9bb3.webp",
   "slides/2570d5d805e8.webp",
   "slides/288a95ac2d27.webp",
@@ -52,6 +53,7 @@ var CORE_FILES = [
   "slides/2f390152ecbe.webp",
   "slides/324b70859b69.webp",
   "slides/324c42344375.webp",
+  "slides/32cb89e6cb4b.webp",
   "slides/337d399e15d6.webp",
   "slides/36eab4b8f033.webp",
   "slides/3b440f9d798f.webp",
@@ -71,12 +73,14 @@ var CORE_FILES = [
   "slides/4ee8c506fb05.webp",
   "slides/4f66393065b7.webp",
   "slides/51b2209159e2.webp",
+  "slides/535d0f3be9e4.webp",
   "slides/57155d722223.webp",
   "slides/5822fcbaa95c.webp",
   "slides/583ce6afe31f.webp",
   "slides/5f21500a4ed2.webp",
   "slides/606413281f08.webp",
   "slides/64cd40ff2e94.webp",
+  "slides/660711302053.webp",
   "slides/6a6dff17c822.webp",
   "slides/730172bdce9a.webp",
   "slides/75a15f82369e.webp",
@@ -85,6 +89,7 @@ var CORE_FILES = [
   "slides/7a62f1fc871b.webp",
   "slides/7c7e865e9b7d.webp",
   "slides/7cfecbfe6046.webp",
+  "slides/80ba53f186cb.webp",
   "slides/817133305b13.webp",
   "slides/8223e093745d.webp",
   "slides/869601e6650d.webp",
@@ -96,6 +101,7 @@ var CORE_FILES = [
   "slides/8edc8d0b3a9b.webp",
   "slides/95b2557e4e89.webp",
   "slides/9633bdfe568d.webp",
+  "slides/9a2b71166b93.webp",
   "slides/9aab21919ff4.webp",
   "slides/9aec65072f1f.webp",
   "slides/9c4bfa44f384.webp",
@@ -105,15 +111,18 @@ var CORE_FILES = [
   "slides/a5b02901ece7.webp",
   "slides/a67f1bcaf1a6.webp",
   "slides/a85c01098774.webp",
+  "slides/acae37af37df.webp",
   "slides/addcd26d09ba.webp",
   "slides/b0a9490a387a.webp",
   "slides/b0ca7cf57491.webp",
+  "slides/b0e8fc5e6e73.webp",
   "slides/b1ff927d5294.webp",
   "slides/b2c161baa5d1.webp",
   "slides/b3c64c2fb7fa.webp",
   "slides/b432a4d4113d.webp",
   "slides/b50b05fe7a68.webp",
   "slides/b6b3cda1beb3.webp",
+  "slides/bcc67e0ebf7a.webp",
   "slides/c0f8de383416.webp",
   "slides/c2f93c9ae21f.webp",
   "slides/c396aeddf288.webp",
@@ -138,6 +147,7 @@ var CORE_FILES = [
   "slides/ef710089b7ed.webp",
   "slides/f11341a3d089.webp",
   "slides/f1f01a8354ae.webp",
+  "slides/f50c0d2da97d.webp",
   "slides/f5a10db5af36.webp",
   "slides/fa08317a2a2c.webp",
   "slides/faebf70908b3.webp",
