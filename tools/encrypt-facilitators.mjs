@@ -26,17 +26,18 @@ if (!relative(root, resolve(sourcePath)).startsWith("..")) {
 
 const tidy = (code) => code.trim().toLowerCase().replace(/[\s_.,]+/g, "-").replace(/-+/g, "-");
 
-// The delegate floor plan, with the partitioned half of Conference Room 2 marked as the team base.
+// The delegate floor plan, with Conference Suite 3 marked as the team base (moved there 19 Oct).
 let plan = readFileSync(join(here, "floorplan.svg"), "utf8");
 plan = plan
-  .replace('<rect class="plan-staff" x="262" y="33" width="45" height="42"/>',
-           '<rect class="plan-staffroom" x="262" y="33" width="45" height="42"/>')
+  .replace('<rect class="plan-line" x="262" y="275" width="90" height="36"/>',
+           '<rect class="plan-staffroom" x="262" y="275" width="90" height="36"/>')
+  .replace('<text x="307" y="297">Conference Suite 3</text>', "")
   .replace("<!-- labels shown on wider screens -->",
-           '<g class="plan-key-staff"><rect x="269" y="38.5" width="31" height="31"/><text x="284.5" y="61.5">S</text></g>\n  <!-- labels shown on wider screens -->')
-  .replace("and the left-hand half is for staff only.",
-           "and the left-hand half is the team base for facilitators and the conference team.");
+           '<g class="plan-key-staff"><rect x="291.5" y="277.5" width="31" height="31"/><text x="307" y="300.5">S</text></g>\n  <!-- labels shown on wider screens -->')
+  .replace("The prayer room and toilets are in the middle, beside the Conference Theatre.",
+           "The prayer room and toilets are in the middle, beside the Conference Theatre. Conference Suite 3, at the bottom, is the team base for facilitators and the conference team.");
 if (!plan.includes("plan-staffroom") || !plan.includes("plan-key-staff")) {
-  console.error("Could not mark the team base on the plan. Has tools/floorplan.svg changed?");
+  console.error("Could not mark Conference Suite 3 on the plan. Has tools/floorplan.svg changed?");
   process.exit(1);
 }
 
